@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/timepickerlin"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/daojishibuttonlinear"
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/daojishirelativ"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/daojishibuttonlinear"
+        android:visibility="gone"
+         >
+        <ImageView
+            android:id="@+id/daojishimin_dial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/min_dial" />
+
+        <ImageView
+            android:id="@+id/daojishimin_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/min_progress"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/daojishimin_progress_hand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/min_progress_hand" />
+
+        <TextView
+            android:id="@+id/daojishitvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="00:00.0"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/daojishihoursoflinear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/daojishitvTime"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="invisible" >
+
+            <TextView
+                android:id="@+id/daojishihours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="小时"
+                android:textSize="13sp" />
+        </LinearLayout>
+<LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/daojishimin_dial"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            
+            >
+        
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="100sp"
+             >
+
+            <ImageView
+                android:id="@+id/daojishihour_dial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/hour_dial" />
+
+            <ImageView
+                android:id="@+id/daojishihour_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/hour_progress"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/daojishihour_progress_hand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/hour_progress_hand" />
+        </RelativeLayout>
+        
+        <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+            <ImageView
+                android:id="@+id/daojishisecond_dial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/second_dial" />
+
+            <ImageView
+                android:id="@+id/daojishisecond_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/second_progress"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/daojishisecond_progress_hand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/second_progress_hand" />
+        </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    
+    
+    
+
+       
+       <LinearLayout 
+           android:id="@+id/daojishibuttonlinear"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_alignParentBottom="true"
+           android:orientation="vertical"
+           >
+    <RelativeLayout 
+           android:layout_width="match_parent"
+           android:layout_height="50sp"
+           android:background="@drawable/v5_bottom_bar_bg_light"
+          
+        >
+        <TextView 
+            android:layout_width="wrap_content"
+       android:layout_height="wrap_content"  
+            android:text="结束后铃声提醒"
+            android:layout_marginLeft="20sp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+             android:layout_centerVertical="true"
+            />
+               <com.example.jishiqi.SlipButton
+       android:layout_width="80sp"
+       android:layout_height="27sp" 
+       android:id="@+id/ringtixing"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+       />
+   </RelativeLayout> 
+           
+           
+           
+           <RelativeLayout 
+           android:layout_width="match_parent"
+           android:layout_height="50sp"
+           android:background="@drawable/v5_bottom_bar_bg_light"
+        >
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"  
+            android:text="计时中屏幕常亮"
+            android:layout_marginLeft="20sp"
+            android:layout_centerVertical="true"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            />
+       <com.example.jishiqi.SlipButton
+       android:layout_width="80sp"
+       android:layout_height="27sp" 
+       android:id="@+id/scroonlisht"
+       android:layout_centerVertical="true"
+       android:layout_alignParentRight="true"
+       />
+    </RelativeLayout> 
+           
+           
+           
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="74sp"
+        android:background="@drawable/v5_bottom_bar_bg_light"
+        android:orientation="horizontal" >
+            <Button
+            android:id="@+id/daojishistartbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="50sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8sp"
+            android:layout_marginRight="3sp"
+            android:layout_weight="1"
+            android:background="@drawable/startbutton"
+            android:text="开始" />
+        <Button
+            android:id="@+id/daojishijicubutton"
+            android:layout_width="wrap_content"
+            android:layout_height="50sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="8sp"
+            android:layout_weight="1"
+            android:layout_marginLeft="3sp"
+            android:background="@drawable/startbutton"
+            android:text="取消" />
+</LinearLayout>
+</LinearLayout>
+</RelativeLayout>

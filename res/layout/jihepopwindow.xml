@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/scrollView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:background="#FFFFFF"
+            >
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+   
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/JH1button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button" 
+            android:background="@drawable/zhengnbianxing"/>
+
+        <ImageButton
+            android:id="@+id/JH1button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button" 
+             android:background="@drawable/renyisanjiaoxing"/>
+
+    
+        
+        <ImageButton
+            android:id="@+id/JH1button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button" 
+             android:background="@drawable/yuan"/>
+
+       
+        
+        <ImageButton
+            android:id="@+id/JH1button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button"
+             android:background="@drawable/tuoyuan" />
+
+        
+        <ImageButton
+            android:id="@+id/JH1button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button" 
+             android:background="@drawable/zhengsanjiaoxing"/>
+
+      <ImageButton
+            android:id="@+id/JH1button6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button" 
+             android:background="@drawable/zhuiti"/>
+        <ImageButton
+            android:id="@+id/JH1button7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button" 
+             android:background="@drawable/tuoqiu"/>
+<ImageButton
+            android:id="@+id/JH1button8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button" 
+             android:background="@drawable/zhuti"/>
+        
+    </LinearLayout>
+ 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1" >
+
+        <ImageButton
+            android:id="@+id/JH2button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            android:layout_weight="1" 
+            android:background="@drawable/zhijiaosanjiaoxing" />
+
+      
+        
+        <ImageButton
+            android:id="@+id/JH2button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            android:layout_weight="1" 
+             android:background="@drawable/dengyaosanjiaoxing" />
+
+        <ImageButton
+            android:id="@+id/JH2button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button"
+             android:background="@drawable/lingxing" />
+       
+        
+        <ImageButton
+            android:id="@+id/JH2button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            android:layout_weight="1"  
+             android:background="@drawable/tixing"/>
+
+        
+        <ImageButton
+            android:id="@+id/JH2button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            android:layout_weight="1"  
+             android:background="@drawable/pingxingsibianxing"/>
+
+          <ImageButton
+            android:id="@+id/JH2button6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            android:layout_weight="1"  
+             android:background="@drawable/qiu"/>
+        <ImageButton
+            android:id="@+id/JH2button7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            android:layout_weight="1"  
+             android:background="@drawable/simianti"/>
+<ImageButton
+            android:id="@+id/JH2button8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            android:layout_weight="1"  
+             android:background="@drawable/yuanzhu"/>
+    </LinearLayout>
+  
+  
+</LinearLayout>
+</HorizontalScrollView>

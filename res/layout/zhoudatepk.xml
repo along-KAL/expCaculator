@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/zhoudatepk"
+    android:background="#fff"
+    android:orientation="vertical" >
+    <TextView
+       
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:gravity="center"
+        
+        android:text="选择开学第一周中的日期"
+      />
+ <TextView
+       
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:gravity="center"
+        
+        android:text="   ——————————————————————————————————————————————"
+      />
+     <DatePicker
+        
+        android:id="@+id/ZHOUdatePicker"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+     
+        android:layout_gravity="center_horizontal"
+        android:calendarViewShown="false"
+        android:spinnersShown="true"  />
+
+    <TextView
+        android:id="@+id/date_picker_ok"
+        android:background="@drawable/dia"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:singleLine="true"
+        android:gravity="center"
+        android:text="OK"
+       android:textColor="#666633" 
+        android:textSize="23dp"/>
+</LinearLayout>

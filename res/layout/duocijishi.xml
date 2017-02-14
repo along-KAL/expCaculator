@@ -1,0 +1,194 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/listjishi" >
+
+        <ImageView
+            android:id="@+id/duocimin_dial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/min_dial" />
+
+        <ImageView
+            android:id="@+id/duocimin_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/min_progress"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/duocimin_progress_hand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/min_progress_hand" />
+
+        <TextView
+            android:id="@+id/duocitvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="00:00.0"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/duocihoursoflinear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/duocitvTime"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="invisible" >
+
+            <TextView
+                android:id="@+id/duocihours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="小时"
+                android:textSize="13sp" />
+        </LinearLayout>
+        
+        
+<LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             android:layout_alignBottom="@+id/duocimin_dial"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            
+            >
+        
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="100sp"
+            >
+
+            <ImageView
+                android:id="@+id/duocihour_dial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/hour_dial" />
+
+            <ImageView
+                android:id="@+id/duocihour_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/hour_progress"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/duocihour_progress_hand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/hour_progress_hand" />
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             
+          >
+
+            <ImageView
+                android:id="@+id/duocisecond_dial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/second_dial" />
+
+            <ImageView
+                android:id="@+id/duocisecond_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/second_progress"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/duocisecond_progress_hand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/second_progress_hand" />
+        </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonlinear"
+        android:layout_width="match_parent"
+        android:layout_height="74sp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/v5_bottom_bar_bg_light"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/duocistartbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="50sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8sp"
+            android:layout_weight="1"
+            android:layout_marginRight="3sp"
+            android:background="@drawable/startbutton"
+            android:text="开始" />
+
+        <Button
+            android:id="@+id/duocijicubutton"
+            android:layout_width="wrap_content"
+            android:layout_height="50sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="8sp"
+            android:layout_marginLeft="3sp"
+            android:layout_weight="1"
+            android:background="@drawable/startbutton"
+            android:text="计次" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/listjishi"
+        android:layout_width="match_parent"
+        android:layout_height="100sp"
+        android:layout_above="@+id/buttonlinear"
+        android:background="@drawable/v5_bottom_bar_bg_light"
+        >
+      <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="100sp"
+            android:layout_centerInParent="true"
+            android:textSize="15sp"
+            android:textColor="#777777"
+            android:textStyle="bold"
+            android:background="@drawable/v5_bottom_bar_bg_light"
+            android:gravity="center"
+            android:id="@+id/textwujici"
+            android:text="无计次"
+    />
+        <ListView
+            android:id="@+id/duocijishilist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+        </ListView> 
+    </RelativeLayout>
+</RelativeLayout>

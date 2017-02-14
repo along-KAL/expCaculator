@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    
+    <RelativeLayout 
+                android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        >
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#dadada"
+        android:id="@+id/gshrefgressergr"
+        android:orientation="horizontal" >
+<RelativeLayout 
+                android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+    
+    
+    >
+        <Button
+            android:id="@+id/onetime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+              />
+        
+</RelativeLayout>
+<RelativeLayout
+                android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+    
+    
+    >
+
+        <Button
+            android:id="@+id/moretime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#00000000"
+             />
+</RelativeLayout>
+    </LinearLayout>
+    
+    
+    
+    
+    <LinearLayout 
+        
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/gshrefgressergr"
+        android:layout_alignTop="@+id/gshrefgressergr"
+        android:orientation="horizontal"
+        >
+            <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/v5_btn_bg_rect_pressed_light"
+        android:id="@+id/youbiao"
+        />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/gshrefgressergr"
+        android:layout_alignTop="@+id/gshrefgressergr"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+             android:textSize="16sp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="秒    表" />
+        
+        <TextView
+            android:id="@+id/moretime"
+            android:layout_width="wrap_content"
+             android:textSize="16sp"
+             android:gravity="center"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="倒计时" />
+
+    </LinearLayout>
+    
+    
+    
+</RelativeLayout>
+
+    
+    
+    
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" >
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>
