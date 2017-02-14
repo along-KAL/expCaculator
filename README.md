@@ -1,5 +1,9 @@
 # expCaculator
 
+
+
+http://www.wandoujia.com/apps/com.example.calculatorjykal（豌豆荚）
+
 *支持复杂表达式输入计算，方便财务报销使用
 *光标任意位置计算和算式修改重算 
 *支持连续计算
