@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="#FFF" > 
+
+<TextView
+    android:id="@+id/gytext"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+  android:layout_marginTop="44dp"
+    android:layout_centerHorizontal="true"
+    android:text="JISUANQI"
+    android:textStyle="bold"
+    android:textSize="50dp" />
+
+<TextView
+    android:id="@+id/gytext1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+  android:layout_below="@id/gytext"
+  android:layout_marginTop="30dp"
+  android:textStyle="bold"
+    android:layout_centerHorizontal="true"
+    android:text="version"
+    
+    android:textSize="38dp" />
+<TextView
+    android:id="@+id/gytext2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+  android:layout_below="@id/gytext1"
+    android:layout_centerHorizontal="true"
+    android:textStyle="italic"
+    android:text="1.1.8"
+    android:textSize="22dp" />
+<TextView
+    android:id="@+id/gytext3"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+  android:layout_below="@id/gytext2"
+    android:layout_centerHorizontal="true"
+    android:textStyle="bold"
+    android:text="QQ"
+    android:textSize="33dp" />
+<TextView
+    android:id="@+id/gytext4"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+  android:layout_below="@id/gytext3"
+    android:layout_marginTop="10dp"
+    android:layout_centerHorizontal="true"
+        android:textStyle="italic"
+    android:text="947364355"
+    android:textSize="22dp" />
+<TextView
+    android:id="@+id/gytext5"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+  android:layout_below="@id/gytext4"
+    android:layout_marginTop="10dp"
+    android:layout_centerHorizontal="true"
+    android:textStyle="bold"
+    android:text="mailBox"
+    android:textSize="33dp" />
+<TextView
+    android:id="@+id/gytext6"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+  android:layout_below="@id/gytext5"
+    android:layout_centerHorizontal="true"
+     android:textStyle="italic"
+    android:text="947364355@QQ.com"
+    android:textSize="22dp" />
+    
+    </RelativeLayout>
+       
+    
+

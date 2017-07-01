@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AlongCalculateApp.iml" filepath="$PROJECT_DIR$/AlongCalculateApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/alongbox/alongbox.iml" filepath="$PROJECT_DIR$/alongbox/alongbox.iml" />
+      <module fileurl="file://$PROJECT_DIR$/menudrawer/menudrawer.iml" filepath="$PROJECT_DIR$/menudrawer/menudrawer.iml" />
+    </modules>
+  </component>
+</project>

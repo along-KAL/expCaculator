@@ -1,0 +1,35 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        applicationId "com.example.calculatorjykal"
+        minSdkVersion 14
+        targetSdkVersion 19
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+    compileOptions {
+        encoding "GBK"
+    }
+}
+
+dependencies {
+    compile project(':menudrawer')
+    compile 'com.actionbarsherlock:actionbarsherlock:4.4.0@aar'
+    compile 'com.android.support:support-v4:19.1.0'
+    compile files('libs/bsh-2.0b4.jar')
+    compile files('libs/com.umeng.fb.5.2.0.jar')
+    compile files('libs/commons-math3-3.5.jar')
+    compile files('libs/Jama-1.0.3.jar')
+    compile files('libs/mframework.jar')
+    compile files('libs/umeng-analytics-v5.2.4.jar')
+    compile files('libs/umeng-update-v2.4.2.jar')
+}

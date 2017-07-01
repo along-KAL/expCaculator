@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/datepicker"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+<EditText android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/e1"
+    android:hint="此处填写事件"
+  android:paddingLeft="22dp"
+  android:layout_marginTop="22dp"
+  android:singleLine="true"
+    android:background="@drawable/editt"/>
+    
+  <TextView
+       
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:gravity="center"
+        
+        android:text="   ——————————————————————————————————————————————"
+      />
+     <DatePicker
+        
+        android:id="@+id/datePicker"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+     
+        android:layout_gravity="center_horizontal"
+        android:calendarViewShown="false"
+        android:spinnersShown="true"  />
+
+    <TextView
+        android:id="@+id/date_picker_ok"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:singleLine="true"
+          android:gravity="center"
+        android:text="OK"
+        android:background="@drawable/dia"
+       android:textColor="#666633" 
+        android:textSize="23dp"/>
+
+   
+
+</LinearLayout>

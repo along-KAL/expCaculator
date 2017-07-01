@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:background="#FFF"
+     android:orientation="vertical" >
+    
+    <TextView
+        android:id="@+id/textview2"
+         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+  android:textColor="#2F4F4F"
+    android:textSize="16dp"
+        android:text="二进制"/>
+	<EditText 
+	 android:textCursorDrawable="@null" 
+	 android:id="@+id/edittext2"
+android:background="@drawable/editt"
+android:textColor="#666633"
+android:layout_marginLeft="2dp"
+android:layout_marginRight="2dp"
+
+         android:layout_width="fill_parent"
+        android:layout_height="80dp"/>
+   <TextView
+        android:id="@+id/textview8"
+         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:textColor="#2F4F4F"
+        android:textSize="16dp"
+        android:text="八进制"/>
+        <EditText 
+             android:textCursorDrawable="@null" 
+            android:background="@drawable/editt"
+	 android:id="@+id/edittext8"
+	 android:textColor="#666633"
+	 android:layout_marginLeft="2dp"
+android:layout_marginRight="2dp"
+         android:layout_width="fill_parent"
+        android:layout_height="55dp"/>
+        <TextView
+        android:id="@+id/textview10"
+         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+         android:textColor="#2F4F4F"
+        android:text="十进制"/>
+        <EditText 
+             android:textCursorDrawable="@null" 
+	 android:id="@+id/edittext10"
+	 android:layout_marginLeft="2dp"
+android:layout_marginRight="2dp"
+	 android:background="@drawable/editt"
+         android:layout_width="fill_parent"
+         android:textColor="#666633"
+        android:layout_height="50dp"/>
+         <TextView
+        android:id="@+id/textview16"
+         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+         android:textColor="#2F4F4F"
+        android:text="十六进制"/>
+         <EditText 
+              android:textCursorDrawable="@null" 
+	 android:id="@+id/edittext16"
+	 android:layout_marginLeft="2dp"
+android:layout_marginRight="2dp"
+	 android:background="@drawable/editt"
+         android:layout_width="fill_parent"
+         android:textColor="#666633"
+        android:layout_height="50dp"/>
+         <TableLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+     
+       >
+     
+       <TableRow
+           android:id="@+id/TableRow11"
+         android:layout_width="fill_parent"
+         android:layout_height="fill_parent"
+         android:layout_weight="1"
+            >
+            <Button 
+               	 	android:id="@+id/threeo"
+               	 	android:layout_height="fill_parent"
+               	 	android:layout_width="fill_parent"
+               		 android:layout_weight="0.25"
+               		 android:textSize="25dp"
+               		 android:background="@drawable/funclk"
+               		 android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 		
+		    		android:text="000"/>
+            <Button 
+               	 	android:id="@+id/twoo"
+               	 	android:layout_height="fill_parent"
+               	 	android:layout_width="fill_parent"
+               		 android:layout_weight="0.25"
+               		 android:textSize="25dp"
+               		 android:background="@drawable/funclk"
+               	  android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="00"/>
+            <Button 
+               	 	android:id="@+id/oneo"
+               	 	android:layout_height="fill_parent"
+               	 	android:layout_width="fill_parent"
+               		 android:layout_weight="0.25"
+               		 android:textSize="28dp"
+               		 android:background="@drawable/funclk"
+               	 android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 		
+		    		android:text="0"/>
+            <Button 
+               	 	android:id="@+id/yi"
+               	 	android:layout_height="fill_parent"
+               	 	android:layout_width="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="28dp"
+               		 android:background="@drawable/funclk"
+               	android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 		
+		    		android:text="1"/>
+            <Button 
+		    android:id="@+id/tuige"
+		    android:layout_height="fill_parent"
+		    android:layout_width="fill_parent"
+		    android:layout_weight="0.25"
+		    
+		     android:textSize="18dp"
+               		 android:background="@drawable/funclk"
+		  android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="2dp"
+		    android:textColor="#666633"
+		    		android:textStyle="bold"
+		    android:text="清除"
+		    />
+            
+         </TableRow>   
+         
+       
+       <TableRow 
+            android:id="@+id/TableRow22"
+           android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_weight="1">
+          <Button 
+               	 	android:id="@+id/fuhao"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		 android:textSize="28dp"
+               		 android:background="@drawable/funclk"
+               	 	android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="-"/> 
+		    		<Button 
+               	 	android:id="@+id/er"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="28dp"
+               		 android:background="@drawable/funclk"
+               	 	android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="2"/>
+		    		<Button 
+               	 	android:id="@+id/san"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="28dp"
+               		 android:background="@drawable/funclk"
+               android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="3"/>
+		    		<Button 
+               	 	android:id="@+id/si"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="28dp"
+               		 android:background="@drawable/funclk"
+               	 android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    	android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="4"/>
+					    		<Button 
+					    android:id="@+id/wu"
+					    android:layout_height="fill_parent"
+					    android:layout_weight="0.25"
+					   
+					   android:textColor="#666633"
+		    		android:textStyle="bold"
+					     android:textSize="28dp"
+               		 android:background="@drawable/funclk"
+					 android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="2dp"
+					    android:text="5" />
+		    		</TableRow>
+           
+       
+       
+       		<TableRow 
+       		     android:id="@+id/TableRow33"
+       		     android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_weight="1">
+		    		<Button 
+               	 	android:id="@+id/liu"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="28dp"
+               		 android:background="@drawable/funclk"
+               	 android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="6"/>
+		    		<Button 
+               	 	android:id="@+id/qi"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="28dp"
+               		 android:background="@drawable/funclk"
+               	 android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="7"/>
+		    		<Button 
+               	 	android:id="@+id/ba"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="28dp"
+               		 android:background="@drawable/funclk"
+        android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="8"/>
+		    		<Button 
+               	 	android:id="@+id/jiu"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="28dp"
+               		 android:background="@drawable/funclk"
+               	 android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="9"/>
+		    		<Button 
+               	 	android:id="@+id/a"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="23dp"
+               		 android:background="@drawable/funclk"
+               	 android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    	android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 		
+		    		android:text="a"/>
+		    		</TableRow>
+		    		
+       		
+       		
+       <TableRow 
+            android:id="@+id/TableRow44"
+           android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_weight="1">
+		    		<Button 
+		    android:id="@+id/b"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="0.25"
+		   
+		    android:textSize="23dp"
+               		 android:background="@drawable/funclk"
+		android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		 android:textColor="#666633"
+		    		android:textStyle="bold"
+		 
+		    android:text="b"
+		   />
+            <Button 
+		    android:id="@+id/c"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="0.25"
+		   
+		    android:textSize="23dp"
+               		 android:background="@drawable/funclk"
+	android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		   
+		 android:textColor="#666633"
+		    		android:textStyle="bold"
+		    android:text="c"
+		   />
+            <Button 
+               	 	android:id="@+id/d"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="23dp"
+               		 android:background="@drawable/funclk"
+               android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    	android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 		
+		    		android:text="d"/>
+            <Button 
+               	 	android:id="@+id/e"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		 android:textSize="23dp"
+               		 android:background="@drawable/funclk"
+        android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="e"/>
+            <Button 
+               	 	android:id="@+id/f"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="23dp"
+               		 android:background="@drawable/funclk"
+               	 android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="f"/>
+       </TableRow>
+        </TableLayout>
+    </LinearLayout>

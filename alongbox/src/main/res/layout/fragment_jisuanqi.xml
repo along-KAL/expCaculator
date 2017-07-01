@@ -1,0 +1,645 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+android:background="#FFF"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:id="@+id/lay"
+     >
+    <EditText 
+       
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="2dp"
+        android:textCursorDrawable="@null"  
+        android:textColor="#666633"
+        android:textSize="10pt"
+        android:gravity="top"
+      android:background="@drawable/editt"
+        android:id="@+id/rsText"
+        />
+   <TableLayout 
+      
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+     
+       >
+     
+       <TableRow
+           android:id="@+id/TableRow1"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+            >
+          
+            
+             <Button 
+               	 	android:id="@+id/ln"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		 android:textSize="18dp"
+               		  android:background="@drawable/funclk"
+               		   android:layout_marginTop="1dp"
+               	 	android:layout_marginBottom="1dp"
+		    		android:layout_marginLeft="1dp"
+		    		android:layout_marginRight="5dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 		android:paddingBottom="7dp"
+		    		android:text="ln"/>
+            <Button 
+               	 	android:id="@+id/lg"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		 android:textSize="18dp"
+               		  android:background="@drawable/funclk"
+               		   android:layout_marginTop="1dp"
+               	 	android:layout_marginBottom="1dp"
+		    		android:layout_marginLeft="5dp"
+		    		android:layout_marginRight="5dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 		android:paddingBottom="7dp"
+		    		android:text="lg"/>
+            	<Button 
+               	 	android:id="@+id/pi"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		 android:textSize="18dp"
+               		  android:background="@drawable/funclk"
+               		   android:layout_marginTop="1dp"
+               	 	android:layout_marginBottom="1dp"
+		    	android:layout_marginLeft="5dp"
+		    		android:layout_marginRight="5dp"
+		    		  android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 		android:paddingBottom="7dp"
+		    		android:text="∏"/>
+		    		<Button 
+               	 	android:id="@+id/e"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:background="@drawable/funclk"
+               		 android:textSize="22dp"
+               		  android:layout_marginTop="1dp"
+               	 	android:layout_marginBottom="1dp"
+		    		android:layout_marginLeft="5dp"
+		    		android:layout_marginRight="5dp"
+		    		  android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 		android:paddingBottom="7dp"
+		    		android:text="e"/>
+            <Button 
+		    android:id="@+id/tonone"
+		   	android:layout_height="fill_parent"
+               	 	android:layout_weight="0.25"
+		     android:background="@drawable/funclk"
+		   
+		    android:layout_marginTop="1dp"
+		    android:textSize="22dp"
+		    android:layout_marginBottom="1dp"
+		    android:layout_marginLeft="5dp"
+		    		android:layout_marginRight="1dp"
+		    android:textColor="#666633"
+		    		android:textStyle="bold"
+		    android:text="C"  />
+		  
+           
+         </TableRow>   
+         
+       
+       <TableRow 
+           android:id="@+id/TableRow2"
+           
+           android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_weight="1">
+          <Button 
+               	 	android:id="@+id/sin"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		 android:textSize="18dp"
+               		  android:background="@drawable/funclk"
+               	 	android:layout_marginBottom="1dp"
+		    		android:layout_marginLeft="1dp"
+		    		android:layout_marginRight="5dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 		android:paddingBottom="7dp"
+		    		android:text="sin"/> 
+		    		<Button 
+               	 	android:id="@+id/cos"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		 android:textSize="18dp"
+               	 	android:layout_marginBottom="1dp"
+		    		android:layout_marginLeft="5dp"
+		    		android:layout_marginRight="5dp"
+		    		 android:background="@drawable/funclk"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 		android:paddingBottom="7dp"
+		    		android:text="cos"/>
+		    		<Button 
+               	 	android:id="@+id/tan"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:background="@drawable/funclk"
+               		 android:textSize="18dp"
+               	 	android:layout_marginBottom="1dp"
+		    		android:layout_marginLeft="5dp"
+		    		android:layout_marginRight="5dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 		android:paddingBottom="7dp"
+		    		android:text="tan"/>
+		    		
+		    		<Button 
+               	 	android:id="@+id/changshu"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		 android:textSize="18dp"
+               		  android:background="@drawable/funclk"
+               	 	android:layout_marginBottom="1dp"
+		    		android:layout_marginLeft="5dp"
+		    		android:layout_marginRight="5dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 		android:paddingBottom="7dp"
+		    		android:text="常数"/>
+					    		<Button 
+					    android:id="@+id/delete"
+					    android:layout_height="fill_parent"
+					    android:layout_weight="0.25"
+					    android:background="@drawable/funclk"
+					    android:textColor="#666633"
+		    		android:textStyle="bold"
+					    android:textSize="18dp"
+					    android:layout_marginLeft="5dp"
+		    		android:layout_marginRight="1dp"
+					    android:layout_marginBottom="1dp"
+					    android:text="清除" />
+		    		</TableRow>
+           
+       
+       
+       		<TableRow 
+       		    android:id="@+id/TableRow3"
+       		     android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_weight="1">
+		    		<Button 
+               	 	android:id="@+id/asin"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		 android:textSize="18dp"
+               	 	android:layout_marginBottom="1dp"
+               	 	 android:background="@drawable/funclk"
+		    		android:layout_marginLeft="1dp"
+		    		android:layout_marginRight="5dp"
+		    		  android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 		android:paddingBottom="7dp"
+		    		android:text="asin"/>
+		    		<Button 
+               	 	android:id="@+id/acos"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		 android:textSize="18dp"
+               	 	android:layout_marginBottom="1dp"
+		    		android:layout_marginLeft="5dp"
+		    		android:layout_marginRight="5dp"
+		    		  android:textColor="#666633"
+		    		android:textStyle="bold"
+		    		 android:background="@drawable/funclk"
+		   	 		android:paddingBottom="7dp"
+		    		android:text="acos"/>
+		    		<Button 
+               	 	android:id="@+id/atan"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		 android:textSize="18dp"
+               		  android:background="@drawable/funclk"
+               	 	android:layout_marginBottom="1dp"
+		    	android:layout_marginLeft="5dp"
+		    		android:layout_marginRight="5dp"
+		    		  android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 		android:paddingBottom="7dp"
+		    		android:text="atan"/>
+		    	
+            <Button 
+               	 	android:id="@+id/huiche"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		 android:textSize="25dp"
+               	 	android:layout_marginBottom="1dp"
+               	 	 android:background="@drawable/funclk"
+		    		android:layout_marginLeft="5dp"
+		    		android:layout_marginRight="5dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 		android:paddingBottom="7dp"
+		    		android:text="↓"/>
+            <Button 
+                android:enabled="true"
+               	 	android:id="@+id/houtui"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		
+               		 android:textSize="18dp"
+               		 android:background="@drawable/funclk"
+               	 	android:layout_marginBottom="1dp"
+		    		android:layout_marginLeft="5dp"
+		    		
+		    		android:layout_marginRight="1dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 		android:paddingBottom="7dp"
+		   	 		
+		   	 		android:text="▲"/>
+		    		</TableRow>
+		    		
+       		
+       		
+       <TableRow 
+           android:id="@+id/TableRow4"
+           android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_weight="1">
+		    		<Button 
+		    android:id="@+id/left"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="0.25"
+		    android:background="@drawable/funclk"
+		    android:textSize="18dp"
+		    android:layout_marginBottom="1dp"
+		  android:layout_marginLeft="1dp"
+		    		android:layout_marginRight="5dp"
+		   android:textColor="#666633"
+		    		android:textStyle="bold"
+		    android:paddingBottom="7dp"
+		    android:text="("
+		   />
+            <Button 
+		    android:id="@+id/right"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="0.25"
+		   android:background="@drawable/funclk"
+		    android:textSize="18dp"
+		    android:layout_marginBottom="1dp"
+		    android:layout_marginLeft="5dp"
+		    		android:layout_marginRight="5dp"
+		    android:paddingBottom="7dp"
+		    android:textColor="#666633"
+		    		android:textStyle="bold"
+		    android:text=")"
+		   />
+            <Button 
+               	 	android:id="@+id/guangbiaotui"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		
+               		  android:background="@drawable/funclk"
+               		 android:textSize="28dp"
+               	 	android:layout_marginBottom="1dp"
+		    		android:layout_marginLeft="5dp"
+		    		android:layout_marginRight="5dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 		android:paddingBottom="7dp"
+		    		android:text="◁"/>
+            <Button 
+                
+               	 	android:id="@+id/guangbiaoqian"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               	 	 android:background="@drawable/funclk"
+               		
+               		 android:textSize="28dp"
+               	 	android:layout_marginBottom="1dp"
+		    		android:layout_marginLeft="5dp"
+		    		android:layout_marginRight="5dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 		android:paddingBottom="7dp"
+		    		android:text="▷"/>
+           
+            
+            <Button 
+               	 	android:id="@+id/qianjin"
+               	 	android:layout_height="fill_parent"
+               	 	
+               		 android:layout_weight="0.25"
+               		android:layout_marginTop="1dp"
+               		 android:textSize="18dp"
+               		  android:background="@drawable/funclk"
+               	 	android:layout_marginBottom="1dp"
+		    		android:layout_marginLeft="5dp"
+		    		android:layout_marginRight="1dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 		android:paddingBottom="7dp"
+		    		android:text="▼"/>
+       </TableRow> 
+       
+       
+       
+       
+       <TableRow
+           android:id="@+id/TableRow5"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+            >
+            <Button 
+               	 	android:id="@+id/shuangguohao"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		 android:textSize="22dp"
+               		  android:background="@drawable/funclk"
+               	 	android:layout_marginBottom="1dp"
+		    		android:layout_marginLeft="1dp"
+		    		android:layout_marginRight="5dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 		android:paddingBottom="7dp"
+		    		android:text="()"/>
+	   	<Button 
+		    android:id="@+id/num7"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="0.25"
+		    android:background="@drawable/funclk"
+		    android:textColor="#666633"
+		    		android:textStyle="bold"
+		    android:textSize="27dp"
+		    android:layout_marginLeft="5dp"
+		    		android:layout_marginRight="5dp"
+		    android:layout_marginBottom="1dp"
+		    android:text="7" />
+	   	
+	   	<Button 
+		    android:id="@+id/num8"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="0.25"
+		   android:background="@drawable/funclk"
+		   android:layout_marginLeft="5dp"
+		    		android:layout_marginRight="5dp"
+		    android:textColor="#666633"
+		    		android:textStyle="bold"
+		    android:textSize="27dp"
+		    android:layout_marginBottom="1dp"
+		    android:text="8"  />
+	   	
+	  	<Button 
+		    android:id="@+id/num9"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="0.25"
+		  android:background="@drawable/funclk"
+		  
+		   android:textColor="#666633"
+		    		android:textStyle="bold"
+		    android:textSize="27dp"
+		    android:layout_marginLeft="5dp"
+		    		android:layout_marginRight="5dp"
+		    android:layout_marginBottom="1dp"
+		    android:text="9" />
+	  	<Button 
+		    android:id="@+id/plus"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="0.25"
+		    android:background="@drawable/funclk"
+		    android:layout_marginLeft="5dp"
+		    		android:layout_marginRight="1dp"
+		   android:textColor="#666633"
+		    		android:textStyle="bold"
+		    android:textSize="22dp"
+		    android:layout_marginBottom="1dp"
+		    android:text="+" />
+	  	
+	  	
+	   	
+	   	
+	   	</TableRow>
+	   	
+       <TableRow
+           android:id="@+id/TableRow6"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+            >
+	   	<Button 
+               	 	android:id="@+id/genhao"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		 android:textSize="22dp"
+               		  android:background="@drawable/funclk"
+               	 	android:layout_marginBottom="1dp"
+		    		android:layout_marginLeft="1dp"
+		    		android:layout_marginRight="5dp"
+		    		 android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 		android:paddingBottom="7dp"
+		    		android:text="√"/>
+	   	<Button 
+		    android:id="@+id/num4"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="0.25"
+		     android:background="@drawable/funclk"
+		   android:textColor="#666633"
+		    		android:textStyle="bold"
+		    android:textSize="27dp"
+		    android:layout_marginLeft="5dp"
+		    		android:layout_marginRight="5dp"
+		    android:layout_marginBottom="1dp"
+		    android:text="4" />
+	   	
+	   	<Button 
+		    android:id="@+id/num5"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="0.25"
+		    android:background="@drawable/funclk"
+		   android:layout_marginLeft="5dp"
+		    		android:layout_marginRight="5dp"
+		  android:textColor="#666633"
+		    		android:textStyle="bold"
+		    android:textSize="27dp"
+		    android:layout_marginBottom="1dp"
+		    android:text="5"  />
+	   	
+	  	<Button 
+		    android:id="@+id/num6"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="0.25"
+		    android:background="@drawable/funclk"
+		    android:layout_marginLeft="5dp"
+		    		android:layout_marginRight="5dp"
+		   android:textColor="#666633"
+		    		android:textStyle="bold"
+		    android:textSize="27dp"
+		    android:layout_marginBottom="1dp"
+		    android:text="6" />
+	  	<Button 
+		    android:id="@+id/minus"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="0.25"
+		     android:background="@drawable/funclk"
+		   android:layout_marginLeft="5dp"
+		    		android:layout_marginRight="1dp"
+		     android:textColor="#666633"
+		    		android:textStyle="bold"
+		    android:textSize="22dp"
+		    android:layout_marginBottom="1dp"
+		    android:text="-" />
+	   	</TableRow>
+	   	
+       
+       
+	    <TableRow
+	        android:id="@+id/TableRow7"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+            >
+	   	<Button 
+               	 	android:id="@+id/cifang"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		 android:textSize="22dp"
+               		  android:background="@drawable/funclk"
+               	 	android:layout_marginBottom="1dp"
+		    		android:layout_marginLeft="1dp"
+		    		android:layout_marginRight="5dp"
+		    		  android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 		android:paddingBottom="7dp"
+		    		android:text="^"/>
+	   	<Button 
+		    android:id="@+id/num1"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="0.25"
+		     android:background="@drawable/funclk"
+		     android:textColor="#666633"
+		    		android:textStyle="bold"
+		    android:textSize="27dp"
+		    android:layout_marginLeft="5dp"
+		    		android:layout_marginRight="5dp"
+		    android:layout_marginBottom="1dp"
+		    android:text="1" />
+	   	
+	   	<Button 
+		    android:id="@+id/num2"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="0.25"
+		     android:background="@drawable/funclk"
+		    android:layout_marginLeft="5dp"
+		    		android:layout_marginRight="5dp"
+		     android:textColor="#666633"
+		    		android:textStyle="bold"
+		    android:textSize="27dp"
+		    android:layout_marginBottom="1dp"
+		    android:text="2"  />
+	   	
+	  	<Button 
+		    android:id="@+id/num3"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="0.25"
+		     android:background="@drawable/funclk"
+		    android:layout_marginLeft="5dp"
+		    		android:layout_marginRight="5dp"
+		      android:textColor="#666633"
+		    		android:textStyle="bold"
+		    android:textSize="27dp"
+		    android:layout_marginBottom="1dp"
+		    android:text="3" />
+	  	<Button 
+		    android:id="@+id/multiply"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="0.25"
+		  android:background="@drawable/funclk"
+		    android:layout_marginLeft="5dp"
+		    		android:layout_marginRight="1dp"
+		    android:textColor="#666633"
+		    		android:textStyle="bold"
+		    android:textSize="22dp"
+		    android:layout_marginBottom="1dp"
+		    android:text="×" />
+	   	</TableRow>
+	   	
+	    
+	    
+		    <TableRow
+		        android:id="@+id/TableRow8"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+            >
+	  	<Button 
+               	 	android:id="@+id/baifenhao"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		 android:textSize="22dp"
+               		  android:background="@drawable/funclk"
+               	 	android:layout_marginBottom="1dp"
+		    		android:layout_marginLeft="1dp"
+		    		android:layout_marginRight="5dp"
+		    		 android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 		android:paddingBottom="7dp"
+		    		android:text="%"/>
+	  	<Button 
+		    android:id="@+id/num0"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="0.25"
+		     android:background="@drawable/funclk"
+		    android:layout_marginLeft="5dp"
+		    		android:layout_marginRight="5dp"
+		    android:textColor="#666633"
+		    		android:textStyle="bold"
+		    android:textSize="27dp"
+		    android:layout_marginBottom="1dp"
+		    android:text="0"  />
+	   	<Button 
+		    android:id="@+id/dot"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="0.25"
+		     android:background="@drawable/funclk"
+		    android:textColor="#666633"
+		    		android:textStyle="bold"
+		    android:textSize="18dp"
+		    android:layout_marginLeft="5dp"
+		    		android:layout_marginRight="5dp"
+		    android:layout_marginBottom="1dp"
+		    android:text="." />
+	  	<Button 
+		    android:id="@+id/equ"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="0.25"
+		    android:background="@drawable/funclk"
+		  android:layout_marginLeft="5dp"
+		    		android:layout_marginRight="5dp"
+		     android:textColor="#666633"
+		    		android:textStyle="bold"
+		    android:textSize="22dp"
+		    android:layout_marginBottom="1dp"
+		    android:text="=" />
+	  	<Button 
+		    android:id="@+id/division"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="0.25"
+		    android:background="@drawable/funclk"
+		   android:layout_marginLeft="5dp"
+		    		android:layout_marginRight="1dp"
+		    android:textColor="#666633"
+		    		android:textStyle="bold"
+		    android:textSize="22dp"
+		    android:layout_marginBottom="1dp"
+		    android:text="÷" />
+	   	</TableRow>
+	   	
+   	</TableLayout>
+   	
+</LinearLayout>

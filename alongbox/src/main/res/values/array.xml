@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item >计算器</item>
+        <item >矩阵计算</item>
+        <item >几何图形计算</item>
+        <item >统计</item>
+       <item >进制转换</item>
+          <item >计时器</item>
+        <item >关于我们</item>
+        <item >分享一下</item>
+        <item >评一下分</item>
+         <item >更多功能</item>
+
+         
+    </string-array>
+    
+    <!-- Nav Drawer List Item Icons <item >统计</item>-->
+    <!-- Keep them in order as the titles are in -->
+    <array name="nav_drawer_icons">
+        <item>@drawable/anniu2</item>
+        <item>@drawable/anniu2</item>
+        <item>@drawable/anniu2</item>
+        <item>@drawable/anniu2</item>
+        <item>@drawable/anniu2</item>
+        <item>@drawable/anniu2</item>
+         <item>@drawable/anniu2</item>
+     <item>@drawable/anniu2</item>
+     <item>@drawable/anniu2</item>
+      <item>@drawable/anniu2</item>
+    <item>@drawable/anniu2</item>
+    </array>
+    
+    <!-- 矩阵 -->
+   
+    <string-array name="spinnername">
+        <item>矩阵行列式</item>
+        <item>矩阵转置</item>
+        <item>矩阵的秩</item>
+        <item>矩阵迹</item>
+        <item>逆矩阵</item>
+         <item>特征值组成的矩阵</item>
+         <item>特征向量组成的矩阵</item>
+         <item>A^2</item>
+          <item>A^3</item>
+    </string-array>
+ <string-array name="spinnernameAB">
+        <item>A+B</item>
+        <item>A-B</item>
+        <item>B-A</item>
+        <item>A×B</item>
+        <item>B×A</item>
+    </string-array>
+</resources>

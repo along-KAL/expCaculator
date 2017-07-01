@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/scrollView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+             android:background="#FFFFFF"
+            >
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+   <TextView 
+       android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:text="最小数"
+    android:textColor="#666633"
+	android:textStyle="bold"
+	android:textSize="27dp"
+	android:layout_marginTop="3dp"
+	
+    />
+    <TextView 
+        android:id="@+id/textView_Pop1"
+       android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:text="最小数"
+    android:layout_marginTop="3dp"
+    />
+    
+    
+    <TextView 
+       android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:text="最大数"
+      android:textColor="#666633"
+	android:textStyle="bold"
+	android:textSize="27dp"
+	android:layout_marginTop="3dp"
+    /><TextView 
+    android:id="@+id/textView_Pop2"
+       android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:text="最大数"
+    android:layout_marginTop="3dp"
+    />
+    
+    
+    <TextView 
+       android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:text="和"
+      android:textColor="#666633"
+	android:textStyle="bold"
+	android:textSize="27dp"
+	android:layout_marginTop="3dp"
+    />
+  <TextView 
+      android:id="@+id/textView_Pop3"
+       android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:text="和"
+    android:layout_marginTop="3dp"
+    />
+  
+  <TextView 
+       android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:text="乘积"
+      android:textColor="#666633"
+	android:textStyle="bold"
+	android:textSize="27dp"
+	android:layout_marginTop="3dp"
+    />
+  <TextView 
+      android:id="@+id/textView_Pop4"
+       android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:text="乘积"
+    android:layout_marginTop="3dp"/>
+  
+  
+  
+  <TextView 
+       android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:text="中位数"
+      android:textColor="#666633"
+	android:textStyle="bold"
+	android:textSize="27dp"
+	android:layout_marginTop="3dp"
+    />
+  <TextView 
+      android:id="@+id/textView_Pop5"
+       android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:text="中位数"
+    android:layout_marginTop="3dp"/>
+  
+  
+  
+  
+  <TextView 
+       android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:text=" 百分位数"
+      android:textColor="#666633"
+	android:textStyle="bold"
+	android:textSize="27dp"
+	android:layout_marginTop="3dp"
+    />
+  <TextView 
+      android:id="@+id/textView_Pop6"
+       android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:text=" 百分位数"
+    android:layout_marginTop="3dp"/>
+  
+  
+  
+   <TextView 
+       android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:text=" 算术平均数 "
+      android:textColor="#666633"
+	android:textStyle="bold"
+	android:textSize="27dp"
+	android:layout_marginTop="3dp"
+    />
+  <TextView 
+      android:id="@+id/textView_Pop7"
+       android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:text=" 算术平均数 "
+    android:layout_marginTop="3dp"
+    />
+  
+  
+    <TextView 
+       android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:text=" 几何平均数 "
+      android:textColor="#666633"
+	android:textStyle="bold"
+	android:textSize="27dp"
+	android:layout_marginTop="3dp"
+    />
+  <TextView 
+      android:id="@+id/textView_Pop8"
+       android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:text=" 几何平均数 "
+    android:layout_marginTop="3dp"/>
+  
+  
+  
+      <TextView 
+       android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:text=" 平方和 "
+      android:textColor="#666633"
+	android:textStyle="bold"
+	android:textSize="27dp"
+	android:layout_marginTop="3dp"
+    />
+  <TextView 
+      android:id="@+id/textView_Pop9"
+       android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:text=" 平方和 "
+    android:layout_marginTop="3dp"/>
+  
+  
+  
+   <TextView 
+       android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:text=" 方差 "
+      android:textColor="#666633"
+	android:textStyle="bold"
+	android:textSize="27dp"
+	android:layout_marginTop="3dp"
+    />
+  <TextView 
+      android:id="@+id/textView_Pop10"
+       android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:text=" 方差 "
+    android:layout_marginTop="3dp"/>
+  
+  
+   <TextView 
+       android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:text=" 半方差 "
+      android:textColor="#666633"
+	android:textStyle="bold"
+	android:textSize="27dp"
+	android:layout_marginTop="3dp"
+    />
+  <TextView 
+      android:id="@+id/textView_Pop11"
+       android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:text=" 半方差 "
+    android:layout_marginTop="3dp"/>
+  
+  
+  
+   <TextView 
+       android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:text=" 标准偏差 "
+      android:textColor="#666633"
+	android:textStyle="bold"
+	android:textSize="27dp"
+	android:layout_marginTop="3dp"
+    />
+  <TextView 
+      android:id="@+id/textView_Pop12"
+       android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:text=" 标准偏差 "
+    android:layout_marginTop="3dp"/>
+  
+  
+     <TextView 
+       android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:text=" 峰度 "
+      android:textColor="#666633"
+	android:textStyle="bold"
+	android:textSize="27dp"
+	android:layout_marginTop="3dp"
+    />
+  <TextView 
+      android:id="@+id/textView_Pop13"
+       android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:text=" 峰度 "
+    android:layout_marginTop="3dp"/>
+  
+  
+  
+  <TextView 
+       android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:text=" 偏度 "
+      android:textColor="#666633"
+	android:textStyle="bold"
+	android:textSize="27dp"
+	android:layout_marginTop="3dp"
+    />
+  <TextView 
+      android:id="@+id/textView_Pop14"
+       android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:text=" 偏度 "
+    android:layout_marginTop="3dp"
+      android:layout_marginBottom="3dp"/>
+</LinearLayout>
+</ScrollView>

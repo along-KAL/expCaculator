@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+<Button
+        android:id="@+id/button_TJPop"
+     android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:visibility="gone"
+  >
+        
+    </Button>
+    <EditText
+        android:id="@+id/editText_TJ"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+       android:layout_weight="1" 
+       android:background="@drawable/editt"
+       android:layout_marginLeft="3dp"
+       android:layout_marginTop="3dp"
+       android:layout_marginRight="3dp"
+       android:layout_marginBottom="3dp"
+        android:hint="在此输入数据，请用下划线分隔">
+
+        <requestFocus />
+    </EditText>
+<TableLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+      android:layout_weight="1"
+      android:id="@+id/tj_tl"
+       >
+     
+      
+       <TableRow 
+            android:id="@+id/TableRow22"
+           android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_weight="1">
+          <Button 
+               	 	android:id="@+id/guangbiaoL_TJ"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		 android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+               	 	android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="◁"/> 
+		    		<Button 
+               	 	android:id="@+id/guangbiaoR_TJ"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+               	 	android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="▷"/>
+		    		<Button 
+               	 	android:id="@+id/douhao_TJ"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+               android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="＿"/>
+		    		<Button 
+               	 	android:id="@+id/dian_TJ"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+               android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="."/>
+		    		<Button 
+               	 	android:id="@+id/jisuan_TJ"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+               	 android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    	android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="计算"/>
+					    		<Button 
+					    android:id="@+id/qingchu_TJ"
+					    android:layout_height="fill_parent"
+					    android:layout_weight="0.25"
+					   
+					   android:textColor="#666633"
+		    		android:textStyle="bold"
+					     android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+					 android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="2dp"
+					    android:text="←" />
+		    		</TableRow>
+           
+       
+       
+       		<TableRow 
+       		     android:id="@+id/TableRow33"
+       		     android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_weight="1">
+		    		<Button 
+               	 	android:id="@+id/lin_TJ"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+               	 android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="0"/>
+		    		<Button 
+               	 	android:id="@+id/yi_TJ"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+               	 android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="1"/>
+		    		<Button 
+               	 	android:id="@+id/er_TJ"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+        android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="2"/>
+		    		<Button 
+               	 	android:id="@+id/san_TJ"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+               	 android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="3"/>
+		    		<Button 
+               	 	android:id="@+id/si_TJ"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+               	 android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    	android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 		
+		    		android:text="4"/>
+		    		</TableRow>
+		    		
+       		
+       		
+       <TableRow 
+            android:id="@+id/TableRow44"
+           android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_weight="1">
+		    		<Button 
+		    android:id="@+id/wu_TJ"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="0.25"
+		   
+		    android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+		android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		 android:textColor="#666633"
+		    		android:textStyle="bold"
+		 
+		    android:text="5"
+		   />
+            <Button 
+		    android:id="@+id/liu_TJ"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="0.25"
+		   
+		    android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+	android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		   
+		 android:textColor="#666633"
+		    		android:textStyle="bold"
+		    android:text="6"
+		   />
+            <Button 
+               	 	android:id="@+id/qi_TJ"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+               android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    	android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 		
+		    		android:text="7"/>
+            <Button 
+               	 	android:id="@+id/ba_TJ"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		 android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+        android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="8"/>
+            <Button 
+               	 	android:id="@+id/jiu_TJ"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+               	 android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="9"/>
+       </TableRow>
+        </TableLayout>
+</LinearLayout>

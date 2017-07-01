@@ -1,0 +1,461 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+ <Button
+        android:id="@+id/btn_test_popupwindow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center"
+        android:background="@drawable/jz_anniu"
+        android:text="︾" />
+
+ <ScrollView
+     android:id="@+id/scrollView_jh"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content" 
+       >
+     <LinearLayout
+          android:id="@+id/jh_ll"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical" >
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.10" >
+
+        <TextView
+             android:layout_weight="1"
+            android:id="@+id/textView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="面积(A)" 
+            android:visibility="gone"/>
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:ems="10" 
+              android:visibility="gone">
+
+            <requestFocus />
+        </EditText>
+
+    </LinearLayout>
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.10" >
+        
+        <TextView
+             android:layout_weight="1"
+            android:id="@+id/textView2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="周长(P)" 
+              android:visibility="gone"/>
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:ems="10" 
+              android:visibility="gone">
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.10" >
+        
+        <TextView
+             android:layout_weight="1"
+            android:id="@+id/textView3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="边数(N)" 
+              android:visibility="gone"/>
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:ems="10" 
+              android:visibility="gone">
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.10" >
+        
+        <TextView
+             android:layout_weight="1"
+            android:id="@+id/textView4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="边长(a)" 
+              android:visibility="gone"/>
+
+        <EditText
+            android:id="@+id/editText4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:ems="10"
+              android:visibility="gone"
+             >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.10" >
+        
+        <TextView
+             android:layout_weight="1"
+            android:id="@+id/textView5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="a所对的角(α)" 
+              android:visibility="gone"/>
+
+        <EditText
+            android:id="@+id/editText5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:ems="10" 
+              android:visibility="gone">
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.10" >
+        
+        <TextView
+             android:layout_weight="1"
+            android:id="@+id/textView6"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="a所对的角(α)"
+              android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/editText6"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:ems="10" 
+              android:visibility="gone">
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+         <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.10" >
+        
+        <TextView
+             android:layout_weight="1"
+            android:id="@+id/textView7"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="a所对的角(α)" 
+              android:visibility="gone"
+           />
+
+        <EditText
+            android:id="@+id/editText7"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:ems="10"
+              android:visibility="gone"
+   
+             >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.10" >
+        
+        <TextView
+             android:layout_weight="1"
+            android:id="@+id/textView8"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="a所对的角(α)"
+            android:visibility="gone"
+           />
+
+        <EditText
+            android:id="@+id/editText8"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:ems="10" 
+              android:visibility="gone">
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+         
+         
+     </LinearLayout>
+ </ScrollView>
+ 
+     <TableLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+      android:layout_gravity="bottom"
+      android:id="@+id/jh_tl"
+       >
+     
+      
+       <TableRow 
+            android:id="@+id/jhTableRow"
+           android:layout_width="fill_parent"
+         android:layout_height="fill_parent"
+         android:layout_weight="1">
+         
+		    		<Button 
+               	 	android:id="@+id/dian_jh"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+               android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="."/>
+		    		<Button 
+               	 	android:id="@+id/quanshan_jh"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+               android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="清除"/>
+		    		<Button 
+               	 	android:id="@+id/jisuan_jh"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+               android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="计算"/>
+					    		<Button 
+					    android:id="@+id/qingchu_jh"
+					    android:layout_height="fill_parent"
+					    android:layout_weight="0.25"
+					   
+					   android:textColor="#666633"
+		    		android:textStyle="bold"
+					     android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+					 android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="2dp"
+					    android:text="←" />
+		    		</TableRow>
+           
+       
+       
+       		<TableRow 
+       		     android:id="@+id/TableRow33"
+       		     android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_weight="1">
+		    		<Button 
+               	 	android:id="@+id/lin_jh"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+               	 android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="0"/>
+		    		<Button 
+               	 	android:id="@+id/yi_jh"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+               	 android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="1"/>
+		    		<Button 
+               	 	android:id="@+id/er_jh"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+        android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="2"/>
+		    		<Button 
+               	 	android:id="@+id/san_jh"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+               	 android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="3"/>
+		    		<Button 
+               	 	android:id="@+id/si_jh"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+               	 android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    	android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 		
+		    		android:text="4"/>
+		    		</TableRow>
+		    		
+       		
+       		
+       <TableRow 
+            android:id="@+id/TableRow44"
+           android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_weight="1">
+		    		<Button 
+		    android:id="@+id/wu_jh"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="0.25"
+		   
+		    android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+		android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		 android:textColor="#666633"
+		    		android:textStyle="bold"
+		 
+		    android:text="5"
+		   />
+            <Button 
+		    android:id="@+id/liu_jh"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="0.25"
+		   
+		    android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+	android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		   
+		 android:textColor="#666633"
+		    		android:textStyle="bold"
+		    android:text="6"
+		   />
+            <Button 
+               	 	android:id="@+id/qi_jh"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+               android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    	android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 		
+		    		android:text="7"/>
+            <Button 
+               	 	android:id="@+id/ba_jh"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		 android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+        android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="8"/>
+            <Button 
+               	 	android:id="@+id/jiu_jh"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+               	 android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="9"/>
+       </TableRow>
+        </TableLayout>
+</LinearLayout>

@@ -1,0 +1,453 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+      android:background="#FFFFFF"
+    android:orientation="vertical" >
+<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:id="@+id/jz_ll1"
+         >
+        <TextView
+    android:id="@+id/editText1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:text="矩阵A:"
+    android:textSize="20dp"
+    android:textColor="#666633"
+    android:layout_weight="1"
+    android:layout_marginLeft="5dp"
+     android:layout_marginTop="8dp">
+        </TextView>
+
+         <Spinner
+             android:id="@+id/spinnerA"
+             android:layout_width="wrap_content"
+             android:layout_height="40dp" 
+               android:layout_marginTop="5dp"
+                   android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+              android:layout_weight="1"
+              android:textColor="#666633"
+               android:background="@drawable/jz_anniu"/>
+
+         <Button
+             android:id="@+id/JZbutton_A"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="计算" 
+             android:textColor="#666633"
+              android:background="@drawable/jz_anniu"
+              android:layout_weight="1"
+           android:layout_marginTop="5dp"
+                   android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="3dp"
+             />
+
+    </LinearLayout>
+
+  
+        <EditText
+        android:id="@+id/editText_A"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+     	android:gravity="top"
+        android:background="@drawable/editt"
+      android:textColor="#666633"
+      android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+         android:layout_weight="0.25"
+         android:hint="在此输入矩阵，请用下划线分隔"
+        >
+
+        
+    </EditText>
+
+   <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"  
+         android:layout_weight="0.083"
+         android:id="@+id/jz_ll2">
+<TextView
+    android:id="@+id/editText2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:text="矩阵B:"
+    android:textColor="#666633"
+    android:layout_weight="1"
+     android:textSize="20dp" 
+      android:layout_marginLeft="5dp"
+       android:layout_marginTop="8dp">
+        </TextView>
+     <Spinner
+        android:id="@+id/spinnerB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#666633"
+          android:layout_weight="1"
+             android:layout_marginTop="5dp"
+                   android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+            android:background="@drawable/jz_anniu"/>
+
+    <Button
+        android:id="@+id/JZbutton_B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:text="计算" 
+              android:background="@drawable/jz_anniu"
+         android:layout_weight="1"
+            android:layout_marginTop="5dp"
+                   android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="3dp"
+                    android:textColor="#666633"
+          />
+</LinearLayout>
+    
+        <EditText
+        android:id="@+id/editText_B"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:background="@drawable/editt" 
+        android:textColor="#666633"
+           android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+         android:layout_weight="0.25"
+           android:hint="在此输入矩阵，请用下划线分隔">
+
+        
+    </EditText>
+
+   
+
+    
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+     android:layout_weight="0.083" 
+     android:id="@+id/jz_ll3">
+    <TextView
+    android:id="@+id/editText_AB"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:text="矩阵AB:" 
+    android:textColor="#666633"
+    android:layout_weight="1"
+     android:textSize="20dp"
+      android:layout_marginLeft="5dp"
+       android:layout_marginTop="8dp">
+        </TextView>
+   
+     <Spinner
+        android:id="@+id/spinnerAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:textColor="#666633"
+       android:layout_weight="1"
+          android:layout_marginTop="5dp"
+                   android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+         android:background="@drawable/jz_anniu"/>
+      <Button
+        android:id="@+id/JZbutton_AB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:text="计算" 
+       android:textColor="#666633"
+              android:background="@drawable/jz_anniu"
+       android:layout_weight="1"
+        android:layout_marginTop="5dp"
+                   android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="3dp"
+        />
+</LinearLayout>
+
+   
+     <TableLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+      android:layout_weight="0.25"
+      android:id="@+id/jz_tl"
+       >
+     
+      
+       <TableRow 
+            android:id="@+id/TableRow22"
+           android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_weight="1">
+          <Button 
+               	 	android:id="@+id/guangbiaoL_JZ"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		 android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+               	 	android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="◁"/> 
+		    		<Button 
+               	 	android:id="@+id/guangbiaoR_JZ"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+               	 	android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="▷"/>
+		    		<Button 
+               	 	android:id="@+id/douhao_JZ"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+               android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="＿"/>
+		    		<Button 
+               	 	android:id="@+id/dian_JZ"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+               android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="."/>
+		    		<Button 
+               	 	android:id="@+id/huiche_JZ"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+               	 android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    	android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="↓"/>
+					    		<Button 
+					    android:id="@+id/qingchu_JZ"
+					    android:layout_height="fill_parent"
+					    android:layout_weight="0.25"
+					   
+					   android:textColor="#666633"
+		    		android:textStyle="bold"
+					     android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+					 android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="2dp"
+					    android:text="←" />
+		    		</TableRow>
+           
+       
+       
+       		<TableRow 
+       		     android:id="@+id/TableRow33"
+       		     android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_weight="1">
+					    			<Button 
+               	 	android:id="@+id/fuhao_JZ"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+               	 android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="-"/>
+		    		<Button 
+               	 	android:id="@+id/lin_JZ"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+               	 android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="0"/>
+		    		<Button 
+               	 	android:id="@+id/yi_JZ"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+               	 android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="1"/>
+		    		<Button 
+               	 	android:id="@+id/er_JZ"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+        android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="2"/>
+		    		<Button 
+               	 	android:id="@+id/san_JZ"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+               	 android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="3"/>
+		    		<Button 
+               	 	android:id="@+id/si_JZ"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+               	 android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    	android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 		
+		    		android:text="4"/>
+		    		</TableRow>
+		    		
+       		
+       		
+       <TableRow 
+            android:id="@+id/TableRow44"
+           android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_weight="1">
+		    		<Button 
+		    android:id="@+id/wu_JZ"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="0.25"
+		   
+		    android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+		android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		 android:textColor="#666633"
+		    		android:textStyle="bold"
+		 
+		    android:text="5"
+		   />
+            <Button 
+		    android:id="@+id/liu_JZ"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="0.25"
+		   
+		    android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+	android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		   
+		 android:textColor="#666633"
+		    		android:textStyle="bold"
+		    android:text="6"
+		   />
+            <Button 
+               	 	android:id="@+id/qi_JZ"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+               android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    	android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 		
+		    		android:text="7"/>
+            <Button 
+               	 	android:id="@+id/ba_JZ"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		 android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+        android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="8"/>
+            <Button 
+               	 	android:id="@+id/jiu_JZ"
+               	 	android:layout_height="fill_parent"
+               		 android:layout_weight="0.25"
+               		  android:textSize="27dp"
+               		 android:background="@drawable/jz_anniu"
+               	 android:layout_marginTop="3dp"
+               	 	android:layout_marginBottom="3dp"
+		    		android:layout_marginLeft="2dp"
+		    		android:layout_marginRight="3dp"
+		    		android:textColor="#666633"
+		    		android:textStyle="bold"
+		   	 	
+		    		android:text="9"/>
+       </TableRow>
+        </TableLayout>
+</LinearLayout>

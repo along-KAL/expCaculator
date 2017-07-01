@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="list_item_title">#666633</color>
+    <color name="list_background">#fff</color>
+    <color name="list_background_pressed">#fff</color>
+    <color name="list_divider">#2fff</color>
+    <color name="counter_text_bg">#666633</color>
+    <color name="counter_text_color">#666633</color>
+    <color name="zhouanniu">#C0C0C0</color>
+    
+    <!-- 矩阵对话框 -->
+      <color name="trans">#00000000</color>
+    <color name="black">#000000</color>
+    <color name="alertdialog_line">#c6c6c6</color>
+    <color name="actionsheet_blue">#037BFF</color>
+    <color name="actionsheet_red">#FD4A2E</color>
+    <color name="actionsheet_gray">#8F8F8F</color>
+</resources>
