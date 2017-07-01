@@ -1,7 +1,6 @@
 package com.example.module.other;
 
 
-
 import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.os.Bundle;

@@ -17,7 +17,7 @@ android {
         }
     }
     compileOptions {
-        encoding "GBK"
+        encoding "GB2312"
     }
 }
 

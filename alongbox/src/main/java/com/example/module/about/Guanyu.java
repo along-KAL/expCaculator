@@ -1,8 +1,6 @@
 package com.example.module.about;
 
 
-
-
 import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.os.Bundle;
@@ -16,7 +14,6 @@ import android.view.animation.TranslateAnimation;
 import android.widget.TextView;
 
 import com.example.main.R;
-
 
 
 @SuppressLint("NewApi")
@@ -67,22 +64,22 @@ public class Guanyu extends Fragment {
       
         t1.setAnimation(animation11);
         
-       /* Animation animation = new AlphaAnimation(0.0F,1.0f);   //AlphaAnimation ???????????????Ч??
+       /* Animation animation = new AlphaAnimation(0.0F,1.0f);   //AlphaAnimation 控制渐变透明的动画效果
         animation.setDuration(800);
         animation.setStartOffset(200);
-        Animation animation2 = new AlphaAnimation(0.0F,1.0f);   //AlphaAnimation ???????????????Ч??
+        Animation animation2 = new AlphaAnimation(0.0F,1.0f);   //AlphaAnimation 控制渐变透明的动画效果
         animation2.setDuration(800);
         animation2.setStartOffset(300);
-        Animation animation3 = new AlphaAnimation(0.0F,1.0f);   //AlphaAnimation ???????????????Ч??
+        Animation animation3 = new AlphaAnimation(0.0F,1.0f);   //AlphaAnimation 控制渐变透明的动画效果
         animation3.setDuration(800);
         animation3.setStartOffset(400);
-        Animation animation4 = new AlphaAnimation(0.0F,1.0f);   //AlphaAnimation ???????????????Ч??
+        Animation animation4 = new AlphaAnimation(0.0F,1.0f);   //AlphaAnimation 控制渐变透明的动画效果
         animation4.setDuration(800);
         animation4.setStartOffset(500);
-        Animation animation5 = new AlphaAnimation(0.0F,1.0f);   //AlphaAnimation ???????????????Ч??
+        Animation animation5 = new AlphaAnimation(0.0F,1.0f);   //AlphaAnimation 控制渐变透明的动画效果
         animation5.setDuration(800);
         animation5.setStartOffset(600);
-        Animation animation6 = new AlphaAnimation(0.0F,1.0f);   //AlphaAnimation ???????????????Ч??
+        Animation animation6 = new AlphaAnimation(0.0F,1.0f);   //AlphaAnimation 控制渐变透明的动画效果
         animation6.setDuration(800);
         animation6.setStartOffset(700);
         t2.setAnimation(animation);

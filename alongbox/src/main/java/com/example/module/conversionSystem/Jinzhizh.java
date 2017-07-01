@@ -109,10 +109,10 @@ public class Jinzhizh extends Fragment implements OnClickListener{
         chujiaodian(edittext10);
         chujiaodian(edittext16);
         
-      //??????????? 
+      //获取保存数据 
         SharedPreferences sp = getActivity().getSharedPreferences("Edittext",  
                 getActivity().MODE_PRIVATE);  
-        // music_progress?XML??????????  
+        // music_progress为XML文件的文件名  
         edittext2.setText(sp.getString("edittext2", null));
         edittext8.setText(sp.getString("edittext8", null));
         edittext10.setText(sp.getString("edittext10", null));
@@ -133,20 +133,20 @@ public class Jinzhizh extends Fragment implements OnClickListener{
         animation4.setDuration(800);
         animation4.setStartOffset(600);
         t4.setAnimation(animation4);*/
-       // Animation  animation1 = new TranslateAnimation(-30, 0, 0 , 0);    //RotateAnimation  ?????????仯?????Ч??  
+       // Animation  animation1 = new TranslateAnimation(-30, 0, 0 , 0);    //RotateAnimation  控制画平移度变化的动画效果  
        // animation1.setDuration(800); 
-     //   Animation  animation2 = new TranslateAnimation(30, 0, 0 , 0);    //RotateAnimation  ?????????仯?????Ч??  
+     //   Animation  animation2 = new TranslateAnimation(30, 0, 0 , 0);    //RotateAnimation  控制画平移度变化的动画效果  
       //  animation2.setDuration(800);
-        Animation animation = new AlphaAnimation(0.0F,1.0f);   //AlphaAnimation ???????????????Ч??
+        Animation animation = new AlphaAnimation(0.0F,1.0f);   //AlphaAnimation 控制渐变透明的动画效果
         animation.setDuration(800);
        // animation.setStartOffset(500);
-        Animation animation2 = new AlphaAnimation(0.0F,1.0f);   //AlphaAnimation ???????????????Ч??
+        Animation animation2 = new AlphaAnimation(0.0F,1.0f);   //AlphaAnimation 控制渐变透明的动画效果
         animation2.setDuration(800);
         animation2.setStartOffset(100);
-        Animation animation3 = new AlphaAnimation(0.0F,1.0f);   //AlphaAnimation ???????????????Ч??
+        Animation animation3 = new AlphaAnimation(0.0F,1.0f);   //AlphaAnimation 控制渐变透明的动画效果
         animation3.setDuration(800);
         animation3.setStartOffset(300);
-        Animation animation4 = new AlphaAnimation(0.0F,1.0f);   //AlphaAnimation ???????????????Ч??
+        Animation animation4 = new AlphaAnimation(0.0F,1.0f);   //AlphaAnimation 控制渐变透明的动画效果
         animation4.setDuration(800);
         animation4.setStartOffset(500);
         
@@ -236,7 +236,7 @@ public class Jinzhizh extends Fragment implements OnClickListener{
 			SharedPreferences sp = getActivity().getSharedPreferences("Edittext",  
 	        getActivity().MODE_PRIVATE); 
 			Editor editor = sp.edit();
-			//????
+			//星期
 			editor.putString("edittext2", edittext2.getText().toString());
 			editor.putString("edittext8", edittext8.getText().toString());
 			editor.putString("edittext10", edittext10.getText().toString());
@@ -278,7 +278,7 @@ public class Jinzhizh extends Fragment implements OnClickListener{
 			}
 			 
 				}else
-			if(btn.getText().equals("???")){
+			if(btn.getText().equals("清除")){
 				if(index==0){
 					index=1;
 				}else{
@@ -297,8 +297,8 @@ public class Jinzhizh extends Fragment implements OnClickListener{
 					 edittext16.setText("");
 				 }
 			}else{
-				//Toast.makeText(getActivity(), "??????o(?s???t)o?????", Toast.LENGTH_SHORT).show();
-				showToast("??????o(?s???t)o?????");
+				//Toast.makeText(getActivity(), "二进制o(?s□?t)o你懂的！", Toast.LENGTH_SHORT).show();
+				showToast("二进制o(?s□?t)o你懂的！");
 	}
 			edittext2.setSelection(index);
 		}
@@ -321,7 +321,7 @@ if(edittext8.hasFocus()){
 			 edittext16.setText(bi2.toString(16));
 			}
 		}else
-	if(btn.getText().equals("???")){
+	if(btn.getText().equals("清除")){
 		if(index==0){
 			index=1;
 		}else{
@@ -340,7 +340,7 @@ if(edittext8.hasFocus()){
 			 edittext16.setText("");
 		 }
 	}else{
-		showToast("?????o(?s???t)o?????");
+		showToast("八进制o(?s□?t)o你懂的！");
 	}
 	edittext8.setSelection(index);
 	}
@@ -349,6 +349,7 @@ if(edittext10.hasFocus()){
 	if(s2.equals("0")||s2.equals("1")||s2.equals("-")||s2.equals("000")||s2.equals("00")||s2.equals("2")||s2.equals("3")||s2.equals("4")||s2.equals("5")||s2.equals("6")||s2.equals("7")||s2.equals("8")||s2.equals("9"))
 	{
 		index = index+1;
+		
 		if(s2.equals("000"))
 			index=index+2;
 		if(s2.equals("00"))
@@ -360,7 +361,7 @@ if(edittext10.hasFocus()){
 	 edittext2.setText(bi2.toString(2));
 	 edittext16.setText(bi2.toString(16));}
 }else
-	if(btn.getText().equals("???")){
+	if(btn.getText().equals("清除")){
 		if(index==0){
 			index=1;
 		}else{
@@ -377,7 +378,7 @@ if(edittext10.hasFocus()){
 		 edittext2.setText("");
 		 edittext16.setText("");}
 	}else{
-		showToast("?????o(?s???t)o?????");
+		showToast("十进制o(?s□?t)o你懂的！");
 		}
 	edittext10.setSelection(index);
 }
@@ -398,7 +399,7 @@ index = index+1;
 	 edittext10.setText(bi2.toString(10));
 	 edittext2.setText(bi2.toString(2));}
 }else
-	if(btn.getText().equals("???")){
+	if(btn.getText().equals("清除")){
 		if(index==0){
 			index=1;
 		}else{
@@ -416,16 +417,16 @@ index = index+1;
 		 edittext10.setText("");
 		 edittext2.setText("");}
 		}else{
-		showToast("???????o(?s???t)o?????");
+		showToast("十六进制o(?s□?t)o你懂的！");
 	}
 	edittext16.setSelection(index);
 	}}catch(Exception e){
-		showToast("o(?s???t)o??????");
+		showToast("o(?s□?t)o出错喽！");
 	}
 	}
 	
 	
-//???????	
+//除去焦点	
 	public void chujiaodian(EditText et){
 		et.setImeOptions(EditorInfo.IME_FLAG_NO_EXTRACT_UI);  
 
@@ -456,7 +457,7 @@ index = index+1;
 		
 		
 	}
-//???toast????	
+//解决toast问题	
 	private Toast mToast;
     public void showToast(String text) {  
         if(mToast == null) {  
@@ -480,7 +481,7 @@ index = index+1;
             super.getActivity().onBackPressed();  
         }
     
-    //????????
+    //退格长按处理
 //	@Override
 //	public boolean onLongClick(View arg0) {
 //		

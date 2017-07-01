@@ -24,6 +24,7 @@ import java.util.HashMap;
 import java.util.Timer;
 import java.util.TimerTask;
 
+
 public class DuociTimer extends Activity {
 	private long mlCount = 0;
 	private TextView tvTime, hours, textwujici;
@@ -75,7 +76,7 @@ public class DuociTimer extends Activity {
 				.findViewById(R.id.duocihoursoflinear);
 		duocijishilist.setAdapter(null);
 		tvTime.setText("00:00.0");
-		com.example.module.timer.jishiqi.SaveRun.setisjishi(false);
+		SaveRun.setisjishi(false);
 		handler = new Handler() {
 			@Override
 			public void handleMessage(Message msg) {
@@ -164,7 +165,7 @@ public class DuociTimer extends Activity {
 					cishu = 1;
 					init();
 					star();
-					com.example.module.timer.jishiqi.SaveRun.setisjishi(false);
+					SaveRun.setisjishi(false);
 				} else {
 					
 					if (cishu > 1000) {
@@ -208,12 +209,12 @@ public class DuociTimer extends Activity {
 		cishu++;
 	}
 
-	View.OnClickListener startPauseListener = new View.OnClickListener() {
+	OnClickListener startPauseListener = new OnClickListener() {
 		@Override
 		public void onClick(View v) {
 			if (null == timer) {
 				if (null == task) {
-					com.example.module.timer.jishiqi.SaveRun.setisjishi(true);
+					SaveRun.setisjishi(true);
 					btnStartPause.setText("暂停");
 					duocijicubutton.setText("计次");
 					okclear = false;
@@ -237,7 +238,7 @@ public class DuociTimer extends Activity {
 				timer.schedule(task, 100, 100);
 			} else {
 				try {
-					com.example.module.timer.jishiqi.SaveRun.setisjishi(false);
+					SaveRun.setisjishi(false);
 					okclear = true;
 					btnStartPause.setText("继续");
 					duocijicubutton.setText("重置");

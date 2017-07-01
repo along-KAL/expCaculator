@@ -14,7 +14,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnLongClickListener;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.view.WindowManager.LayoutParams;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
@@ -65,7 +64,7 @@ public class Tongji extends Fragment implements OnClickListener,OnLongClickListe
 	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
-		//????????С
+		//获得屏幕大小
 		DisplayMetrics dm = new DisplayMetrics();
 		this.getActivity().getWindowManager().getDefaultDisplay().getMetrics(dm);
 		
@@ -129,20 +128,20 @@ public class Tongji extends Fragment implements OnClickListener,OnLongClickListe
         ba_TJ.setOnClickListener(this);
         jiu_TJ.setOnClickListener(this);
         chujiaodian(editText_TJ);
-        //??????????? 
+        //获取保存数据 
         SharedPreferences sp = getActivity().getSharedPreferences("Edittext",  
                 getActivity().MODE_PRIVATE);  
-        // music_progress?XML??????????  
+        // music_progress为XML文件的文件名  
         editText_TJ.setText(sp.getString("edittextA", null));
     return  rootView;   
 	}
-	//????????
+	//保存数据
 		 public void onDestroy() {
 				super.onDestroy();
 				SharedPreferences sp = getActivity().getSharedPreferences("Edittext",  
 		        getActivity().MODE_PRIVATE); 
 				Editor editor = sp.edit();
-				//????
+				//星期
 				editor.putString("edittextA", editText_TJ.getText().toString());	
 				editor.commit();
 				}
@@ -156,7 +155,7 @@ public class Tongji extends Fragment implements OnClickListener,OnLongClickListe
 
 	@Override
 	public void onClick(View arg0) {
-		Editable edit = editText_TJ.getEditableText();//???EditText??????
+		Editable edit = editText_TJ.getEditableText();//获取EditText的文字
 		
 		index_TJ = editText_TJ.getSelectionStart();
 		
@@ -181,9 +180,9 @@ public class Tongji extends Fragment implements OnClickListener,OnLongClickListe
 	case R.id.douhao_TJ:
 	
 			if (index_TJ < 0 || index_TJ >= edit.length() ){
-				edit.append("??");
+				edit.append("＿");
 			}else{
-				edit.insert(index_TJ,"??");//???????λ?ò???????
+				edit.insert(index_TJ,"＿");//光标所在位置插入文字
 			 }
 			
 		
@@ -195,7 +194,7 @@ public class Tongji extends Fragment implements OnClickListener,OnLongClickListe
 		if (index_TJ < 0 || index_TJ >= edit.length() ){
 			edit.append(".");
 		}else{
-			edit.insert(index_TJ,".");//???????λ?ò???????
+			edit.insert(index_TJ,".");//光标所在位置插入文字
 		 }
 		
 	
@@ -204,10 +203,10 @@ public class Tongji extends Fragment implements OnClickListener,OnLongClickListe
 	break;
 	case R.id.jisuan_TJ:	
 	
-		//?????????
+		//矩阵字符串
     	String JZA = editText_TJ.getText().toString();
-    	//???????
-    	String[] y1 = JZA.split("??");
+    	//获取矩阵
+    	String[] y1 = JZA.split("＿");
     	//String[] y = y1[0].split(",");
     	double[] vals = new double[y1.length];
     	for(int i = 0; i<y1.length;i++)
@@ -221,7 +220,7 @@ public class Tongji extends Fragment implements OnClickListener,OnLongClickListe
     			}
     			catch(Exception e)
     			{
-    				Toast.makeText(getActivity(), "??????????????", Toast.LENGTH_SHORT).show();
+    				Toast.makeText(getActivity(), "请检查格式是否正确！", Toast.LENGTH_SHORT).show();
     				return;
     			}
     		//}
@@ -229,18 +228,18 @@ public class Tongji extends Fragment implements OnClickListener,OnLongClickListe
     	}
     	 Min min = new Min(); 
    	  Max max = new Max();
-   	 Sum sum = new Sum(); //??
-   	 Product product = new Product();//??? 
-   	  Median median = new Median(); // ??λ??
-   	 Percentile percentile = new Percentile(); // ???λ?? 
-    	Mean mean = new Mean(); // ????????? 
-     	  GeometricMean geoMean = new GeometricMean(); //?????????
-    	 SumOfSquares sumOfSquares = new SumOfSquares(); // ?????
-    	 Variance variance = new Variance();//???? 
-    	 SemiVariance semiVariance = new SemiVariance();//????
-    	 StandardDeviation StandardDeviation =new StandardDeviation();//??????    	
-    	  Kurtosis kurtosis = new Kurtosis(); //Kurtosis,??? 
-    	  Skewness skewness = new Skewness(); //Skewness()???;
+   	 Sum sum = new Sum(); //和
+   	 Product product = new Product();//乘积 
+   	  Median median = new Median(); // 中位数
+   	 Percentile percentile = new Percentile(); // 百分位数 
+    	Mean mean = new Mean(); // 算术平均数 
+     	  GeometricMean geoMean = new GeometricMean(); //几何平均数
+    	 SumOfSquares sumOfSquares = new SumOfSquares(); // 平方和
+    	 Variance variance = new Variance();//方差 
+    	 SemiVariance semiVariance = new SemiVariance();//半方差
+    	 StandardDeviation StandardDeviation =new StandardDeviation();//标准偏差    	
+    	  Kurtosis kurtosis = new Kurtosis(); //Kurtosis,峰度 
+    	  Skewness skewness = new Skewness(); //Skewness()偏度;
     	  System.out.println(min.evaluate(vals));
     	 System.out.println(String.valueOf(min.evaluate(vals)));
     	 textView_Pop1.setText("fdsas");
@@ -276,7 +275,7 @@ public class Tongji extends Fragment implements OnClickListener,OnLongClickListe
 			if(index_TJ==0){
 				index_TJ=1;
 			}else{
-				edit.delete(index_TJ-1, index_TJ);//???????λ?ò???????
+				edit.delete(index_TJ-1, index_TJ);//光标所在位置插入文字
 			 }
 			
 		
@@ -288,7 +287,7 @@ public class Tongji extends Fragment implements OnClickListener,OnLongClickListe
 			if (index_TJ < 0 || index_TJ >= edit.length() ){
 				edit.append("0");
 			}else{
-				edit.insert(index_TJ,"0");//???????λ?ò???????
+				edit.insert(index_TJ,"0");//光标所在位置插入文字
 			 }
 			
 	
@@ -300,7 +299,7 @@ public class Tongji extends Fragment implements OnClickListener,OnLongClickListe
 			if (index_TJ < 0 || index_TJ >= edit.length() ){
 				edit.append("1");
 			}else{
-				edit.insert(index_TJ,"1");//???????λ?ò???????
+				edit.insert(index_TJ,"1");//光标所在位置插入文字
 			 }
 	
 		
@@ -311,7 +310,7 @@ public class Tongji extends Fragment implements OnClickListener,OnLongClickListe
 			if (index_TJ < 0 || index_TJ >= edit.length() ){
 				edit.append("2");
 			}else{
-				edit.insert(index_TJ,"2");//???????λ?ò???????
+				edit.insert(index_TJ,"2");//光标所在位置插入文字
 			 }
 			
 		
@@ -322,7 +321,7 @@ public class Tongji extends Fragment implements OnClickListener,OnLongClickListe
 			if (index_TJ < 0 || index_TJ >= edit.length() ){
 				edit.append("3");
 			}else{
-				edit.insert(index_TJ,"3");//???????λ?ò???????
+				edit.insert(index_TJ,"3");//光标所在位置插入文字
 			 }
 			
 		
@@ -333,7 +332,7 @@ public class Tongji extends Fragment implements OnClickListener,OnLongClickListe
 			if (index_TJ < 0 || index_TJ >= edit.length() ){
 				edit.append("4");
 			}else{
-				edit.insert(index_TJ,"4");//???????λ?ò???????
+				edit.insert(index_TJ,"4");//光标所在位置插入文字
 			 }
 			
 		
@@ -344,7 +343,7 @@ public class Tongji extends Fragment implements OnClickListener,OnLongClickListe
 			if (index_TJ < 0 || index_TJ >= edit.length() ){
 				edit.append("5");
 			}else{
-				edit.insert(index_TJ,"5");//???????λ?ò???????
+				edit.insert(index_TJ,"5");//光标所在位置插入文字
 			 }
 			
 		
@@ -355,7 +354,7 @@ public class Tongji extends Fragment implements OnClickListener,OnLongClickListe
 			if (index_TJ < 0 || index_TJ >= edit.length() ){
 				edit.append("6");
 			}else{
-				edit.insert(index_TJ,"6");//???????λ?ò???????
+				edit.insert(index_TJ,"6");//光标所在位置插入文字
 			 }
 			
 		
@@ -366,7 +365,7 @@ public class Tongji extends Fragment implements OnClickListener,OnLongClickListe
 			if (index_TJ < 0 || index_TJ >= edit.length() ){
 				edit.append("7");
 			}else{
-				edit.insert(index_TJ,"7");//???????λ?ò???????
+				edit.insert(index_TJ,"7");//光标所在位置插入文字
 			 }
 			
 		
@@ -377,7 +376,7 @@ public class Tongji extends Fragment implements OnClickListener,OnLongClickListe
 			if (index_TJ < 0 || index_TJ >= edit.length() ){
 				edit.append("8");
 			}else{
-				edit.insert(index_TJ,"8");//???????λ?ò???????
+				edit.insert(index_TJ,"8");//光标所在位置插入文字
 			 }
 			
 	
@@ -388,7 +387,7 @@ public class Tongji extends Fragment implements OnClickListener,OnLongClickListe
 			if (index_TJ < 0 || index_TJ >= edit.length() ){
 				edit.append("9");
 			}else{
-				edit.insert(index_TJ,"9");//???????λ?ò???????
+				edit.insert(index_TJ,"9");//光标所在位置插入文字
 			 }
 			
 	
@@ -403,7 +402,7 @@ public class Tongji extends Fragment implements OnClickListener,OnLongClickListe
 		
 	}
 	}
-	//???????	
+	//除去焦点	
 			public void chujiaodian(EditText et){
 				et.setImeOptions(EditorInfo.IME_FLAG_NO_EXTRACT_UI);  
 
@@ -411,7 +410,7 @@ public class Tongji extends Fragment implements OnClickListener,OnLongClickListe
 			  		
 			          et.setInputType(InputType.TYPE_NULL);
 			  } else {
-			  	getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+			  	getActivity().getWindow().setSoftInputMode(LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 			          try {
 			                  Class<EditText> cls = EditText.class;
 			                  Method setSoftInputShownOnFocus;

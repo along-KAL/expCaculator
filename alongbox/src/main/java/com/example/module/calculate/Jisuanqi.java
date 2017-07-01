@@ -28,8 +28,8 @@ import android.widget.LinearLayout;
 import android.widget.TableRow;
 import android.widget.Toast;
 
-import com.example.module.calculate.utils.Cigen;
 import com.example.main.R;
+import com.example.module.calculate.utils.Cigen;
 
 import java.lang.reflect.Method;
 import java.util.regex.Pattern;
@@ -545,7 +545,7 @@ public void onClick(View e) {
 	if(btn.findViewById(R.id.changshu)!=null){
 		//changshu.startAnimation(dongHua(Anima_Set1));
 		
-		Changshu datePickerView = new Changshu(getActivity(),R.style.CustomDialog,
+		Changshu  datePickerView = new Changshu(getActivity(),R.style.CustomDialog,
       			new Changshu.OnDateSetListener() {
       			@Override
       			public void onDateSet(DatePicker view, int yearz,
@@ -773,12 +773,12 @@ public void onClick(View e) {
 	        	
 			}
 	    
-	        ss=Cigen.ciFang("#("+dd+")#");
+	        ss= Cigen.ciFang("#("+dd+")#");
 	        if(ss==" "){
 	        	d=a;
 	        	
-	    		showToast("o(¨s¡õ¨t)o³ö´íà¶£¡");
-	        	//Toast.makeText(getActivity(), "o(¨s¡õ¨t)o³ö´íà¶£¡", Toast.LENGTH_SHORT).show();
+	    		showToast("o(?s¡õ?t)o³ö´íà¶£¡");
+	        	//Toast.makeText(getActivity(), "o(?s¡õ?t)o³ö´íà¶£¡", Toast.LENGTH_SHORT).show();
 	        	}
 	        else{
 	        if(ss.endsWith(".0"))

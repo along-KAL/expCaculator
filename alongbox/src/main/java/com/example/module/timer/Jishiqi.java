@@ -17,12 +17,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
 
-import com.example.module.timer.jishiqi.FragmentActivityListener;
 import com.example.main.R;
+import com.example.module.timer.jishiqi.FragmentActivityListener;
 import com.example.module.timer.selecttimee.ScreenInfo;
 
 import java.util.ArrayList;
-
 @SuppressLint("NewApi")
 public class Jishiqi extends Fragment{
 	
@@ -123,7 +122,7 @@ public class Jishiqi extends Fragment{
 	}
 
 	class myPagerView extends PagerAdapter {
-		// 锟斤拷示锟斤拷目
+		// 显示数目
 		@Override
 		public int getCount() {
 			return pageViews.size();
@@ -161,9 +160,9 @@ public class Jishiqi extends Fragment{
         	
         	if(SaveRun.getisdaojishi() || SaveRun.getisjishi()){
             new AlertDialog.Builder(this)
-                    .setTitle("锟斤拷示")
-                    .setMessage("锟斤拷锟节硷拷时锟叫ｏ拷确锟斤拷要锟剿筹拷锟斤拷")
-                    .setNegativeButton("取锟斤拷",
+                    .setTitle("提示")
+                    .setMessage("正在计时中，确定要退出吗？")
+                    .setNegativeButton("取消",
                             new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog,
@@ -171,13 +170,13 @@ public class Jishiqi extends Fragment{
                                 	dialog.cancel();
                                 }
                             })
-                    .setPositiveButton("确锟斤拷",
+                    .setPositiveButton("确定",
                             new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog,
                                         int whichButton) {
                                     finish();
                                 }
-                            }).setNeutralButton("锟斤拷台",
+                            }).setNeutralButton("后台",
                             new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog,
                                         int whichButton) {

@@ -37,7 +37,7 @@ import Jama.Matrix;
 
 public class Juzhen extends Fragment implements OnClickListener,OnLongClickListener {
 	int index_JZA=0;
-	int index_JZB=0;//ï¿½ï¿½ï¿?
+	int index_JZB=0;//¹â±ê
 	EditText JU_A;
 	EditText JU_B;
 	Button JSbt_A;
@@ -49,7 +49,7 @@ public class Juzhen extends Fragment implements OnClickListener,OnLongClickListe
 	AlertDialog JZdilog;
 	RelativeLayout rl;
 	LayoutParams param;
-	//ï¿½ï¿½Ä»ï¿½ï¿½
+	//ÆÁÄ»¸ß
 	int pm_G;
 	int pm_K;
 	
@@ -57,18 +57,18 @@ public class Juzhen extends Fragment implements OnClickListener,OnLongClickListe
 	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
-		//ï¿½ï¿½ï¿½ï¿½ï¿½Ä»ï¿½ï¿½Ð?
+		//»ñµÃÆÁÄ»´óÐ¡
 		DisplayMetrics dm = new DisplayMetrics();
 		this.getActivity().getWindowManager().getDefaultDisplay().getMetrics(dm);
-		pm_K = dm.widthPixels;//ï¿½ï¿½ï¿?
-		pm_G = dm.heightPixels ;//ï¿½ß¶ï¿½
+		pm_K = dm.widthPixels;//¿í¶È
+		pm_G = dm.heightPixels ;//¸ß¶È
         View rootView = inflater.inflate(R.layout.fragment_juzhen, container, false);
        JU_A = (EditText)rootView.findViewById(R.id.editText_A);
        JU_B = (EditText)rootView.findViewById(R.id.editText_B);
        JSbt_A = (Button)rootView.findViewById(R.id.JZbutton_A);
        JSbt_B = (Button)rootView.findViewById(R.id.JZbutton_B);
        JSbt_AB = (Button)rootView.findViewById(R.id.JZbutton_AB);
-       //ï¿½ï¿½ï¿½Ã´ï¿½Ð¡
+       //ÉèÖÃ´óÐ¡
        LinearLayout jz_ll1 = (LinearLayout)rootView.findViewById(R.id.jz_ll1);
        LinearLayout jz_ll2 = (LinearLayout)rootView.findViewById(R.id.jz_ll2);
        LinearLayout jz_ll3 = (LinearLayout)rootView.findViewById(R.id.jz_ll3);
@@ -117,109 +117,109 @@ public class Juzhen extends Fragment implements OnClickListener,OnLongClickListe
        ba_JZ.setOnClickListener(this);
        jiu_JZ.setOnClickListener(this);
        fuhao_JZ.setOnClickListener(this);
-       //ï¿½ï¿½ï¿½Ã¿Ø¼ï¿½ï¿½ï¿½Ð¡
-       android.view.ViewGroup.LayoutParams lp_A;        
+       //ÉèÖÃ¿Ø¼þ´óÐ¡
+       ViewGroup.LayoutParams lp_A;
        lp_A=JU_A.getLayoutParams();
        lp_A.height=pm_G/4;        
        JU_A.setLayoutParams(lp_A);
-       android.view.ViewGroup.LayoutParams lp_B;        
+       ViewGroup.LayoutParams lp_B;
        lp_B=JU_B.getLayoutParams();
        lp_B.height=pm_G/4;        
        JU_B.setLayoutParams(lp_B);
-       android.view.ViewGroup.LayoutParams lp_ll1;        
+       ViewGroup.LayoutParams lp_ll1;
        lp_ll1=jz_ll1.getLayoutParams();
        lp_ll1.height=pm_G/12;        
        jz_ll1.setLayoutParams(lp_ll1);
-       android.view.ViewGroup.LayoutParams lp_ll2;        
+       ViewGroup.LayoutParams lp_ll2;
        lp_ll2=jz_ll2.getLayoutParams();
        lp_ll2.height=pm_G/12;        
        jz_ll2.setLayoutParams(lp_ll2);
-       android.view.ViewGroup.LayoutParams lp_ll3;        
+       ViewGroup.LayoutParams lp_ll3;
        lp_ll3=jz_ll3.getLayoutParams();
        lp_ll3.height=pm_G/12;        
        jz_ll3.setLayoutParams(lp_ll3);
-       android.view.ViewGroup.LayoutParams lp_tl;        
+       ViewGroup.LayoutParams lp_tl;
        lp_tl=jz_tl.getLayoutParams();
        lp_tl.height=pm_G/4;        
        jz_tl.setLayoutParams(lp_tl);
-       android.view.ViewGroup.LayoutParams lp_spA;        
+       ViewGroup.LayoutParams lp_spA;
        lp_spA=jz_spA.getLayoutParams();
        lp_spA.height=pm_G/15;        
        jz_spA.setLayoutParams(lp_spA);
-       android.view.ViewGroup.LayoutParams lp_spB;        
+       ViewGroup.LayoutParams lp_spB;
        lp_spB=jz_spB.getLayoutParams();
        lp_spB.height=pm_G/15;        
        jz_spB.setLayoutParams(lp_spB);
-       android.view.ViewGroup.LayoutParams lp_spAB;        
+       ViewGroup.LayoutParams lp_spAB;
        lp_spAB=jz_spAB.getLayoutParams();
        lp_spAB.height=pm_G/15;        
        jz_spAB.setLayoutParams(lp_spAB);
-       android.view.ViewGroup.LayoutParams lp_btA;        
+       ViewGroup.LayoutParams lp_btA;
        lp_btA=JSbt_A.getLayoutParams();
        lp_btA.height=pm_G/15;        
        JSbt_A.setLayoutParams(lp_btA);
-       android.view.ViewGroup.LayoutParams lp_btB;        
+       ViewGroup.LayoutParams lp_btB;
        lp_spAB=JSbt_B.getLayoutParams();
        lp_spAB.height=pm_G/15;        
        JSbt_B.setLayoutParams(lp_spAB);
-       android.view.ViewGroup.LayoutParams lp_btAB;        
+       ViewGroup.LayoutParams lp_btAB;
        lp_spAB=JSbt_AB.getLayoutParams();
        lp_spAB.height=pm_G/15;        
        JSbt_AB.setLayoutParams(lp_spAB);
         JZdilog =  new AlertDialog(Juzhen.this.getActivity()).builder();
       
-		JZdilog.setPositiveButton("È·ï¿½ï¿½", new OnClickListener() {
+		JZdilog.setPositiveButton("È·¶¨", new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 
 			}
-		}).setNegativeButton("ï¿½ï¿½ï¿½ï¿½", new OnClickListener() {
+		}).setNegativeButton("¸´ÖÆ", new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				// ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿? 
+				// µÃµ½¼ôÌù°å¹ÜÀíÆ÷ 
 				ClipboardManager cmb = (ClipboardManager) Juzhen.this.getActivity()
 				.getSystemService(Juzhen.this.getActivity().CLIPBOARD_SERVICE); 
 				cmb.setText(JZdilog.getMsg().trim()); 
 			}
 		});
        
-        // ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½Ø¼ï¿½
+        // ³õÊ¼»¯¿Ø¼þ
         Spinner  mSpinnerA = (Spinner) rootView.findViewById(R.id.spinnerA);
-        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´
+        // ½¨Á¢Êý¾ÝÔ´
         String[] mItemsA = getResources().getStringArray(R.array.spinnername);
-        // ï¿½ï¿½ï¿½ï¿½Adapterï¿½ï¿½ï¿½Ò°ï¿½ï¿½ï¿½ï¿½ï¿½Ô´
+        // ½¨Á¢Adapter²¢ÇÒ°ó¶¨Êý¾ÝÔ´
         ArrayAdapter<String> _AdapterA=new ArrayAdapter<String>(this.getActivity(),android.R.layout.simple_spinner_item, mItemsA);
-        //ï¿½ï¿½ Adapterï¿½ï¿½ï¿½Ø¼ï¿½
+        //°ó¶¨ Adapterµ½¿Ø¼þ
         _AdapterA.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         mSpinnerA.setAdapter(_AdapterA);
         
-        //ï¿½ï¿½ï¿½ï¿½Spinner
+        //¼àÌýSpinner
         mSpinnerA.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view,
                     int position, long id) {
             	 String str=parent.getItemAtPosition(position).toString();
-                if(str.equals("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½")){
+                if(str.equals("¾ØÕóÐÐÁÐÊ½")){
                 	sign_A = 1;	
                 }else
-                if(str.equals("ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½")){
+                if(str.equals("¾ØÕó×ªÖÃ")){
                 	sign_A = 2;
                             }else
-                if(str.equals("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?")){
+                if(str.equals("¾ØÕóµÄÖÈ")){
                 	sign_A = 3;                       
                                }else
-                if(str.equals("ï¿½ï¿½ï¿½ï¿½")){
+                if(str.equals("¾ØÕó¼£")){
                 	sign_A = 4;               
                                }else
-                if(str.equals("ï¿½ï¿½ï¿½ï¿½ï¿?")){
+                if(str.equals("Äæ¾ØÕó")){
                 	sign_A = 5;               	
                               }else
-                if(str.equals("ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ÉµÄ¾ï¿½ï¿½ï¿?")){
+                if(str.equals("ÌØÕ÷Öµ×é³ÉµÄ¾ØÕó")){
                 	sign_A = 6;                                 	
                                   }
                 else
-                    if(str.equals("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÉµÄ¾ï¿½ï¿½ï¿?")){
+                    if(str.equals("ÌØÕ÷ÏòÁ¿×é³ÉµÄ¾ØÕó")){
                     	sign_A = 7;                     	
                                       }else
                 if(str.equals("A^2")){
@@ -237,43 +237,43 @@ public class Juzhen extends Fragment implements OnClickListener,OnLongClickListe
         
         });
         //B
-        // ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½Ø¼ï¿½
+        // ³õÊ¼»¯¿Ø¼þ
         Spinner  mSpinnerB = (Spinner) rootView.findViewById(R.id.spinnerB);
-        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´
+        // ½¨Á¢Êý¾ÝÔ´
         String[] mItemsB = getResources().getStringArray(R.array.spinnername);
-        // ï¿½ï¿½ï¿½ï¿½Adapterï¿½ï¿½ï¿½Ò°ï¿½ï¿½ï¿½ï¿½ï¿½Ô´
+        // ½¨Á¢Adapter²¢ÇÒ°ó¶¨Êý¾ÝÔ´
         ArrayAdapter<String> _AdapterB=new ArrayAdapter<String>(this.getActivity(),android.R.layout.simple_spinner_item, mItemsB);
-        //ï¿½ï¿½ Adapterï¿½ï¿½ï¿½Ø¼ï¿½
+        //°ó¶¨ Adapterµ½¿Ø¼þ
         _AdapterB.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         mSpinnerB.setAdapter(_AdapterB);
         
-        //ï¿½ï¿½ï¿½ï¿½Spinner
+        //¼àÌýSpinner
         mSpinnerB.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view,
                     int position, long id) {
             	 String str=parent.getItemAtPosition(position).toString();
-                if(str.equals("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½")){
+                if(str.equals("¾ØÕóÐÐÁÐÊ½")){
                 	sign_B = 1;	
                 }else
-                if(str.equals("ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½")){
+                if(str.equals("¾ØÕó×ªÖÃ")){
                 	sign_B = 2;
                             }else
-                if(str.equals("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?")){
+                if(str.equals("¾ØÕóµÄÖÈ")){
                 	sign_B = 3;                       
                                }else
-                if(str.equals("ï¿½ï¿½ï¿½ï¿½")){
+                if(str.equals("¾ØÕó¼£")){
                 	sign_B = 4;               
                                }else
-                if(str.equals("ï¿½ï¿½ï¿½ï¿½ï¿?")){
+                if(str.equals("Äæ¾ØÕó")){
                 	sign_B = 5;               	
                               }else
-                if(str.equals("ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ÉµÄ¾ï¿½ï¿½ï¿?")){
+                if(str.equals("ÌØÕ÷Öµ×é³ÉµÄ¾ØÕó")){
                 	sign_B = 6;                                 	
                                   }
                 else
-                    if(str.equals("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÉµÄ¾ï¿½ï¿½ï¿?")){
+                    if(str.equals("ÌØÕ÷ÏòÁ¿×é³ÉµÄ¾ØÕó")){
                     	sign_B = 7;                     	
                                       }else
                 if(str.equals("A^2")){
@@ -291,18 +291,18 @@ public class Juzhen extends Fragment implements OnClickListener,OnLongClickListe
         
         });
         //AB
-        // ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½Ø¼ï¿½
+        // ³õÊ¼»¯¿Ø¼þ
         Spinner  mSpinnerAB = (Spinner) rootView.findViewById(R.id.spinnerAB);
-        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´
+        // ½¨Á¢Êý¾ÝÔ´
         String[] mItemsAB = getResources().getStringArray(R.array.spinnernameAB);
-        // ï¿½ï¿½ï¿½ï¿½Adapterï¿½ï¿½ï¿½Ò°ï¿½ï¿½ï¿½ï¿½ï¿½Ô´
+        // ½¨Á¢Adapter²¢ÇÒ°ó¶¨Êý¾ÝÔ´
         ArrayAdapter<String> _AdapterAB=new ArrayAdapter<String>(this.getActivity(),android.R.layout.simple_spinner_item, mItemsAB);
-        //ï¿½ï¿½ Adapterï¿½ï¿½ï¿½Ø¼ï¿½
+        //°ó¶¨ Adapterµ½¿Ø¼þ
         _AdapterAB.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         mSpinnerAB.setAdapter(_AdapterAB);
         
-        //ï¿½ï¿½ï¿½ï¿½Spinner
+        //¼àÌýSpinner
         mSpinnerAB.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view,
@@ -317,10 +317,10 @@ public class Juzhen extends Fragment implements OnClickListener,OnLongClickListe
                 if(str.equals("B-A")){
                 	sign_AB = 3;                       
                                }else
-                if(str.equals("Aï¿½ï¿½B")){
+                if(str.equals("A¡ÁB")){
                 	sign_AB = 4;               
                                }
-                if(str.equals("Bï¿½ï¿½A")){
+                if(str.equals("B¡ÁA")){
                 	sign_AB = 5;               
                                }
             }
@@ -334,23 +334,23 @@ public class Juzhen extends Fragment implements OnClickListener,OnLongClickListe
         
         chujiaodian(JU_A);
         chujiaodian(JU_B);
-        //ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
+        //»ñÈ¡±£´æÊý¾Ý 
         SharedPreferences sp = getActivity().getSharedPreferences("Edittext",  
                 getActivity().MODE_PRIVATE);  
-        // music_progressÎªXMLï¿½Ä¼ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½  
+        // music_progressÎªXMLÎÄ¼þµÄÎÄ¼þÃû  
         JU_A.setText(sp.getString("edittextA", null));
         JU_B.setText(sp.getString("edittextB", null));
 		return rootView;
         
 	
 	}
-	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	//±£´æÊý¾Ý
 	 public void onDestroy() {
 			super.onDestroy();
 			SharedPreferences sp = getActivity().getSharedPreferences("Edittext",  
 	        getActivity().MODE_PRIVATE); 
 			Editor editor = sp.edit();
-			//ï¿½ï¿½ï¿½ï¿½
+			//ÐÇÆÚ
 			editor.putString("edittextA", JU_A.getText().toString());
 			editor.putString("edittextB", JU_B.getText().toString());
 		
@@ -358,94 +358,94 @@ public class Juzhen extends Fragment implements OnClickListener,OnLongClickListe
 			}
 	@Override
 	public void onClick(View arg0) {
-		Editable editA = JU_A.getEditableText();//ï¿½ï¿½È¡EditTextï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-		Editable editB = JU_B.getEditableText();//ï¿½ï¿½È¡EditTextï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		Editable editA = JU_A.getEditableText();//»ñÈ¡EditTextµÄÎÄ×Ö
+		Editable editB = JU_B.getEditableText();//»ñÈ¡EditTextµÄÎÄ×Ö
 		index_JZA = JU_A.getSelectionStart();
 		index_JZB = JU_B.getSelectionStart();
 		switch (arg0.getId()) {
 		
 		case R.id.JZbutton_A:
-			//ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½
+			//¾ØÕó×Ö·û´®
         	String JZA = JU_A.getText().toString();
-        	//ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½
+        	//»ñÈ¡¾ØÕó
         	String[] y1 = JZA.split("\n");
-        	String[] y = y1[0].split("ï¿½ï¿½");
+        	String[] y = y1[0].split("£ß");
         	double[][] vals = new double[y1.length][y.length];
         	for(int i = 0; i<y1.length;i++)
         	{
-        		String[] y2 = y1[i].split("ï¿½ï¿½");
+        		String[] y2 = y1[i].split("£ß");
         		for(int j = 0;j<y2.length;j++)
         		{
         			try{
         			vals[i][j] = Double.parseDouble( y2[j] );}
         			catch(Exception e)
         			{
-        				Toast.makeText(getActivity(), "ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½Ç·ï¿½ï¿½ï¿½È·ï¿½ï¿?", Toast.LENGTH_SHORT).show();
+        				Toast.makeText(getActivity(), "Çë¼ì²é¸ñÊ½ÊÇ·ñÕýÈ·£¡", Toast.LENGTH_SHORT).show();
         				return;
         			}
         		}
         		
         	}
-        	//×ªï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½
+        	//×ª»»Îª¾ØÕó
         	Matrix A = new Matrix(vals);
  if(sign_A == 1){
-					//A.det();//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
-	 				DecimalFormat df = new DecimalFormat("########.############");  //ï¿½ï¿½ï¿?
+					//A.det();//¾ØÕóÐÐÁÐÊ½
+	 				DecimalFormat df = new DecimalFormat("########.############");  //¹æ¸ñ»¯
 	
-					JZdilog.setTitle("ï¿½Ë¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½");
+					JZdilog.setTitle("´Ë¾ØÕóÐÐÁÐÊ½");
 					 try{
 					 JZdilog.setMsg(String.valueOf(df.format(A.det())));
 					 JZdilog.show();}catch(Exception e){
-						 Toast.makeText(getActivity(), "ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ã£¡", Toast.LENGTH_SHORT).show();
+						 Toast.makeText(getActivity(), "ÎÞ·¨¼ÆËã£¡", Toast.LENGTH_SHORT).show();
 					 }
                 	
 }else if(sign_A == 2){
 				 Matrix ZH_A = null;
 				 double[][] ZH = null;
 				 try{
-					 ZH_A=A.transpose();//ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½
+					 ZH_A=A.transpose();//¾ØÕó×ªÖÃ
 					 ZH = new double[ZH_A.getRowDimension()][ZH_A.getColumnDimension()];
 					 ZH = ZH_A.getArray();
-					 DecimalFormat df = new DecimalFormat("########.############");  //ï¿½ï¿½ï¿?
+					 DecimalFormat df = new DecimalFormat("########.############");  //¹æ¸ñ»¯
 						String s ="";
 					for(int i = 0;i<ZH_A.getRowDimension();i++){
 						for(int j = 0;j<ZH_A.getColumnDimension();j++){
-							s = s + String.valueOf(df.format(ZH[i][j]))+"ï¿½ï¿½";
+							s = s + String.valueOf(df.format(ZH[i][j]))+"£ß";
 						}
 						s = s + "\n";
 					}
-						JZdilog.setTitle("ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½");
+						JZdilog.setTitle("¾ØÕó×ªÖÃ");
 						 JZdilog.setMsg(s);
 	               	 JZdilog.show();
 				 }catch(Exception e){
-					 Toast.makeText(getActivity(), "ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ã£¡", Toast.LENGTH_SHORT).show();
+					 Toast.makeText(getActivity(), "ÎÞ·¨¼ÆËã£¡", Toast.LENGTH_SHORT).show();
 				 }
                 	 
 				
 			 }
  else if(sign_A ==3){
-	 DecimalFormat df = new DecimalFormat("########.############");  //ï¿½ï¿½ï¿?
-					JZdilog.setTitle("ï¿½Ë¾ï¿½ï¿½ï¿½ï¿½ï¿½");
+	 DecimalFormat df = new DecimalFormat("########.############");  //¹æ¸ñ»¯
+					JZdilog.setTitle("´Ë¾ØÕóÖÈ");
 					try{
 					 JZdilog.setMsg(String.valueOf(df.format(A.rank())));}catch(Exception e){
-						 Toast.makeText(getActivity(), "ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ã£¡", Toast.LENGTH_SHORT).show();
+						 Toast.makeText(getActivity(), "ÎÞ·¨¼ÆËã£¡", Toast.LENGTH_SHORT).show();
 					 }
                	 JZdilog.show();
-				// A.rank();//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+				// A.rank();//¾ØÕóÖÈ
 			 }
  else if(sign_A == 4){
-				// A.trace();//ï¿½ï¿½ï¿½ï¿½
-	 DecimalFormat df = new DecimalFormat("########.############");  //ï¿½ï¿½ï¿?
-				 JZdilog.setTitle("ï¿½Ë¾ï¿½ï¿½ï¿½");
+				// A.trace();//¾ØÕó¼£
+	 DecimalFormat df = new DecimalFormat("########.############");  //¹æ¸ñ»¯
+				 JZdilog.setTitle("´Ë¾ØÕó¼£");
 				 try{
 				 JZdilog.setMsg(String.valueOf(df.format(A.trace())));}catch(Exception e){
-					 Toast.makeText(getActivity(), "ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ã£¡", Toast.LENGTH_SHORT).show();
+					 Toast.makeText(getActivity(), "ÎÞ·¨¼ÆËã£¡", Toast.LENGTH_SHORT).show();
 				 }
            	 JZdilog.show();
 			 }
  else if(sign_A == 5){
-	 DecimalFormat df = new DecimalFormat("########.############");  //ï¿½ï¿½ï¿?
-				 Matrix JZN_A = null;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½       
+	 DecimalFormat df = new DecimalFormat("########.############");  //¹æ¸ñ»¯
+				 Matrix JZN_A = null;//¾ØÕóÇóÄæ       
 				 double[][] ZH = null;
 				 try{JZN_A=A.inverse();
 				 ZH = new double[JZN_A.getRowDimension()][JZN_A.getColumnDimension()];
@@ -453,20 +453,20 @@ public class Juzhen extends Fragment implements OnClickListener,OnLongClickListe
 					String s ="";
 					for(int i = 0;i<JZN_A.getRowDimension();i++){
 						for(int j = 0;j<JZN_A.getColumnDimension();j++){
-							s = s + String.valueOf(df.format(ZH[i][j]))+"ï¿½ï¿½";
+							s = s + String.valueOf(df.format(ZH[i][j]))+"£ß";
 						}
 						s = s + "\n";
 					}
-						JZdilog.setTitle("ï¿½ï¿½ï¿½ï¿½ï¿?");
+						JZdilog.setTitle("Äæ¾ØÕó");
 						 JZdilog.setMsg(s);
 	            	 JZdilog.show();
 				 }catch(Exception e){
-					 Toast.makeText(getActivity(), "ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ã£¡", Toast.LENGTH_SHORT).show();
+					 Toast.makeText(getActivity(), "ÎÞ·¨¼ÆËã£¡", Toast.LENGTH_SHORT).show();
 				 }		
 			 }
 else if(sign_A == 6){	
-					//ï¿½ï¿½ï¿½ï¿½Öµ               
-	DecimalFormat df = new DecimalFormat("########.############");  //ï¿½ï¿½ï¿?
+					//ÌØÕ÷Öµ               
+	DecimalFormat df = new DecimalFormat("########.############");  //¹æ¸ñ»¯
                 	 Matrix JZN_A = null;   
     				 double[][] ZH = null;
     				 try{JZN_A=A.eig().getD();
@@ -475,20 +475,20 @@ else if(sign_A == 6){
  					String s ="";
  				for(int i = 0;i<JZN_A.getRowDimension();i++){
  					for(int j = 0;j<JZN_A.getColumnDimension();j++){
- 						s = s + String.valueOf(df.format(ZH[i][j]))+"ï¿½ï¿½";
+ 						s = s + String.valueOf(df.format(ZH[i][j]))+"£ß";
  					}
  					s = s + "\n";
  				}
- 					JZdilog.setTitle("ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ÉµÄ¾ï¿½ï¿½ï¿?");
+ 					JZdilog.setTitle("ÌØÕ÷Öµ×é³ÉµÄ¾ØÕó");
  					 JZdilog.setMsg(s);
              	 JZdilog.show();
     				 }catch(Exception e){
-    					 Toast.makeText(getActivity(), "ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ã£¡", Toast.LENGTH_SHORT).show();
+    					 Toast.makeText(getActivity(), "ÎÞ·¨¼ÆËã£¡", Toast.LENGTH_SHORT).show();
     				 }
 			 }
 else if(sign_A == 7){	
-					//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½		
-	DecimalFormat df = new DecimalFormat("########.############");  //ï¿½ï¿½ï¿?
+					//ÌØÕ÷ÏòÁ¿		
+	DecimalFormat df = new DecimalFormat("########.############");  //¹æ¸ñ»¯
 					 Matrix JZN_A = null;   
     				 double[][] ZH = null;
     				 try{JZN_A=A.eig().getV();
@@ -498,20 +498,20 @@ else if(sign_A == 7){
  					String s ="";
  				for(int i = 0;i<JZN_A.getRowDimension();i++){
  					for(int j = 0;j<JZN_A.getColumnDimension();j++){
- 						s = s + String.valueOf(df.format(ZH[i][j]))+"ï¿½ï¿½";
+ 						s = s + String.valueOf(df.format(ZH[i][j]))+"£ß";
  					}
  					s = s + "\n";
  				}
- 					JZdilog.setTitle("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÉµÄ¾ï¿½ï¿½ï¿?");
+ 					JZdilog.setTitle("ÌØÕ÷ÏòÁ¿×é³ÉµÄ¾ØÕó");
  					 JZdilog.setMsg(s);
              	 JZdilog.show();
     				 }catch(Exception e){
-    					 Toast.makeText(getActivity(), "ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ã£¡", Toast.LENGTH_SHORT).show();
+    					 Toast.makeText(getActivity(), "ÎÞ·¨¼ÆËã£¡", Toast.LENGTH_SHORT).show();
     				 }
 			 }
 else if(sign_A == 8){
 				 //A^2
-	DecimalFormat df = new DecimalFormat("########.############");  //ï¿½ï¿½ï¿?
+	DecimalFormat df = new DecimalFormat("########.############");  //¹æ¸ñ»¯
 				 Matrix JZN_A = null;
 				 double[][] ZH = null;
 				 try{JZN_A  = A.times(A);
@@ -520,7 +520,7 @@ else if(sign_A == 8){
 					String s ="";
 					for(int i = 0;i<JZN_A.getRowDimension();i++){
 						for(int j = 0;j<JZN_A.getColumnDimension();j++){
-							s = s + String.valueOf(df.format(ZH[i][j]))+"ï¿½ï¿½";
+							s = s + String.valueOf(df.format(ZH[i][j]))+"£ß";
 						}
 						s = s + "\n";
 					}
@@ -528,13 +528,13 @@ else if(sign_A == 8){
 						 JZdilog.setMsg(s);
 	            	 JZdilog.show();
 				 }catch(Exception e){
-					 Toast.makeText(getActivity(), "ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ã£¡", Toast.LENGTH_SHORT).show();
+					 Toast.makeText(getActivity(), "ÎÞ·¨¼ÆËã£¡", Toast.LENGTH_SHORT).show();
 				 }		
 			 }
 else if(sign_A == 9){
 				 //A^3
 				 //A^2
-	DecimalFormat df = new DecimalFormat("########.############");  //ï¿½ï¿½ï¿?
+	DecimalFormat df = new DecimalFormat("########.############");  //¹æ¸ñ»¯
 				 Matrix JZN_A = null;
 				 double[][] ZH = null;
 				 try{JZN_A  = A.times(A.times(A));
@@ -544,7 +544,7 @@ else if(sign_A == 9){
 					String s ="";
 				for(int i = 0;i<JZN_A.getRowDimension();i++){
 					for(int j = 0;j<JZN_A.getColumnDimension();j++){
-						s = s + String.valueOf(df.format(ZH[i][j]))+"ï¿½ï¿½";
+						s = s + String.valueOf(df.format(ZH[i][j]))+"£ß";
 					}
 					s = s + "\n";
 				}
@@ -552,92 +552,92 @@ else if(sign_A == 9){
 					 JZdilog.setMsg(s);
             	 JZdilog.show();
 				 }catch(Exception e){
-					 Toast.makeText(getActivity(), "ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ã£¡", Toast.LENGTH_SHORT).show();
+					 Toast.makeText(getActivity(), "ÎÞ·¨¼ÆËã£¡", Toast.LENGTH_SHORT).show();
 				 }		
 			 }    	
 			break;
 		case R.id.JZbutton_B:	
-			//ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½
+			//¾ØÕó×Ö·û´®
         	String JZB = JU_B.getText().toString();
-        	//ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½
+        	//»ñÈ¡¾ØÕó
         	String[] y1B = JZB.split("\n");
-        	String[] yB = y1B[0].split("ï¿½ï¿½");
+        	String[] yB = y1B[0].split("£ß");
         	double[][] valsB = new double[y1B.length][yB.length];
         	for(int i = 0; i<y1B.length;i++)
         	{
-        		String[] y2B = y1B[i].split("ï¿½ï¿½");
+        		String[] y2B = y1B[i].split("£ß");
         		for(int j = 0;j<y2B.length;j++)
         		{
         			try{
         			valsB[i][j] = Double.parseDouble( y2B[j] );}
         			catch(Exception e)
         			{
-        				Toast.makeText(getActivity(), "ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½Ç·ï¿½ï¿½ï¿½È·ï¿½ï¿?", Toast.LENGTH_SHORT).show();
+        				Toast.makeText(getActivity(), "Çë¼ì²é¸ñÊ½ÊÇ·ñÕýÈ·£¡", Toast.LENGTH_SHORT).show();
         				return;
         			}
         		}
         		
         	}
-        	//×ªï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½
+        	//×ª»»Îª¾ØÕó
         	Matrix B = new Matrix(valsB);
  if(sign_B == 1){
-					//A.det();//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
-	 DecimalFormat df = new DecimalFormat("########.############");  //ï¿½ï¿½ï¿?
-					JZdilog.setTitle("ï¿½Ë¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½");
+					//A.det();//¾ØÕóÐÐÁÐÊ½
+	 DecimalFormat df = new DecimalFormat("########.############");  //¹æ¸ñ»¯
+					JZdilog.setTitle("´Ë¾ØÕóÐÐÁÐÊ½");
 					 try{
 					 JZdilog.setMsg(String.valueOf(df.format(B.det())));
 					 JZdilog.show();}catch(Exception e){
-						 Toast.makeText(getActivity(), "ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ã£¡", Toast.LENGTH_SHORT).show();
+						 Toast.makeText(getActivity(), "ÎÞ·¨¼ÆËã£¡", Toast.LENGTH_SHORT).show();
 					 }
                 	
 }else if(sign_B == 2){
-	DecimalFormat df = new DecimalFormat("########.############");  //ï¿½ï¿½ï¿?
+	DecimalFormat df = new DecimalFormat("########.############");  //¹æ¸ñ»¯
 				 Matrix ZH_A = null;
 				 double[][] ZH = null;
 				 try{
-					 ZH_A=B.transpose();//ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½
+					 ZH_A=B.transpose();//¾ØÕó×ªÖÃ
 					 ZH = new double[ZH_A.getRowDimension()][ZH_A.getColumnDimension()];
 					 ZH = ZH_A.getArray();
 						
 						String s ="";
 					for(int i = 0;i<ZH_A.getRowDimension();i++){
 						for(int j = 0;j<ZH_A.getColumnDimension();j++){
-							s = s + String.valueOf(df.format(ZH[i][j]))+"ï¿½ï¿½";
+							s = s + String.valueOf(df.format(ZH[i][j]))+"£ß";
 						}
 						s = s + "\n";
 					}
-						JZdilog.setTitle("ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½");
+						JZdilog.setTitle("¾ØÕó×ªÖÃ");
 						 JZdilog.setMsg(s);
 	               	 JZdilog.show();
 				 }catch(Exception e){
-					 Toast.makeText(getActivity(), "ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ã£¡", Toast.LENGTH_SHORT).show();
+					 Toast.makeText(getActivity(), "ÎÞ·¨¼ÆËã£¡", Toast.LENGTH_SHORT).show();
 				 }
                 	 
 				
 			 }
  else if(sign_B ==3){
-		DecimalFormat df = new DecimalFormat("########.############");  //ï¿½ï¿½ï¿?
-					JZdilog.setTitle("ï¿½Ë¾ï¿½ï¿½ï¿½ï¿½ï¿½");
+		DecimalFormat df = new DecimalFormat("########.############");  //¹æ¸ñ»¯
+					JZdilog.setTitle("´Ë¾ØÕóÖÈ");
 					try{
 					 JZdilog.setMsg(String.valueOf(df.format(B.rank())));}catch(Exception e){
-						 Toast.makeText(getActivity(), "ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ã£¡", Toast.LENGTH_SHORT).show();
+						 Toast.makeText(getActivity(), "ÎÞ·¨¼ÆËã£¡", Toast.LENGTH_SHORT).show();
 					 }
                	 JZdilog.show();
-				// A.rank();//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+				// A.rank();//¾ØÕóÖÈ
 			 }
  else if(sign_B == 4){
-				// A.trace();//ï¿½ï¿½ï¿½ï¿½
-	 DecimalFormat df = new DecimalFormat("########.############");  //ï¿½ï¿½ï¿?
-				 JZdilog.setTitle("ï¿½Ë¾ï¿½ï¿½ï¿½");
+				// A.trace();//¾ØÕó¼£
+	 DecimalFormat df = new DecimalFormat("########.############");  //¹æ¸ñ»¯
+				 JZdilog.setTitle("´Ë¾ØÕó¼£");
 				 try{
 				 JZdilog.setMsg(String.valueOf(df.format(B.trace())));}catch(Exception e){
-					 Toast.makeText(getActivity(), "ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ã£¡", Toast.LENGTH_SHORT).show();
+					 Toast.makeText(getActivity(), "ÎÞ·¨¼ÆËã£¡", Toast.LENGTH_SHORT).show();
 				 }
            	 JZdilog.show();
 			 }
  else if(sign_B == 5){
-	 DecimalFormat df = new DecimalFormat("########.############");  //ï¿½ï¿½ï¿?
-				 Matrix JZN_A = null;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½       
+	 DecimalFormat df = new DecimalFormat("########.############");  //¹æ¸ñ»¯
+				 Matrix JZN_A = null;//¾ØÕóÇóÄæ       
 				 double[][] ZH = null;
 				 try{JZN_A=B.inverse();
 				 ZH = new double[JZN_A.getRowDimension()][JZN_A.getColumnDimension()];
@@ -645,20 +645,20 @@ else if(sign_A == 9){
 					String s ="";
 					for(int i = 0;i<JZN_A.getRowDimension();i++){
 						for(int j = 0;j<JZN_A.getColumnDimension();j++){
-							s = s + String.valueOf(df.format(ZH[i][j]))+"ï¿½ï¿½";
+							s = s + String.valueOf(df.format(ZH[i][j]))+"£ß";
 						}
 						s = s + "\n";
 					}
-						JZdilog.setTitle("ï¿½ï¿½ï¿½ï¿½ï¿?");
+						JZdilog.setTitle("Äæ¾ØÕó");
 						 JZdilog.setMsg(s);
 	            	 JZdilog.show();
 				 }catch(Exception e){
-					 Toast.makeText(getActivity(), "ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ã£¡", Toast.LENGTH_SHORT).show();
+					 Toast.makeText(getActivity(), "ÎÞ·¨¼ÆËã£¡", Toast.LENGTH_SHORT).show();
 				 }		
 			 }
 else if(sign_B == 6){
-					//ï¿½ï¿½ï¿½ï¿½Öµ    
-	DecimalFormat df = new DecimalFormat("########.############");  //ï¿½ï¿½ï¿?
+					//ÌØÕ÷Öµ    
+	DecimalFormat df = new DecimalFormat("########.############");  //¹æ¸ñ»¯
                 	 Matrix JZN_A = null;   
     				 double[][] ZH = null;
     				 try{JZN_A=B.eig().getD();
@@ -667,20 +667,20 @@ else if(sign_B == 6){
  					String s ="";
  				for(int i = 0;i<JZN_A.getRowDimension();i++){
  					for(int j = 0;j<JZN_A.getColumnDimension();j++){
- 						s = s + String.valueOf(df.format(ZH[i][j]))+"ï¿½ï¿½";
+ 						s = s + String.valueOf(df.format(ZH[i][j]))+"£ß";
  					}
  					s = s + "\n";
  				}
- 					JZdilog.setTitle("ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ÉµÄ¾ï¿½ï¿½ï¿?");
+ 					JZdilog.setTitle("ÌØÕ÷Öµ×é³ÉµÄ¾ØÕó");
  					 JZdilog.setMsg(s);
              	 JZdilog.show();
     				 }catch(Exception e){
-    					 Toast.makeText(getActivity(), "ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ã£¡", Toast.LENGTH_SHORT).show();
+    					 Toast.makeText(getActivity(), "ÎÞ·¨¼ÆËã£¡", Toast.LENGTH_SHORT).show();
     				 }
 			 }
 else if(sign_B == 7){	
-					//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½	
-	DecimalFormat df = new DecimalFormat("########.############");  //ï¿½ï¿½ï¿?
+					//ÌØÕ÷ÏòÁ¿	
+	DecimalFormat df = new DecimalFormat("########.############");  //¹æ¸ñ»¯
 					 Matrix JZN_A = null;   
     				 double[][] ZH = null;
     				 try{JZN_A=B.eig().getV();
@@ -690,20 +690,20 @@ else if(sign_B == 7){
  					String s ="";
  				for(int i = 0;i<JZN_A.getRowDimension();i++){
  					for(int j = 0;j<JZN_A.getColumnDimension();j++){
- 						s = s + String.valueOf(df.format(ZH[i][j]))+"ï¿½ï¿½";
+ 						s = s + String.valueOf(df.format(ZH[i][j]))+"£ß";
  					}
  					s = s + "\n";
  				}
- 					JZdilog.setTitle("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÉµÄ¾ï¿½ï¿½ï¿?");
+ 					JZdilog.setTitle("ÌØÕ÷ÏòÁ¿×é³ÉµÄ¾ØÕó");
  					 JZdilog.setMsg(s);
              	 JZdilog.show();
     				 }catch(Exception e){
-    					 Toast.makeText(getActivity(), "ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ã£¡", Toast.LENGTH_SHORT).show();
+    					 Toast.makeText(getActivity(), "ÎÞ·¨¼ÆËã£¡", Toast.LENGTH_SHORT).show();
     				 }
 			 }
 else if(sign_B == 8){
 				 //A^2
-	DecimalFormat df = new DecimalFormat("########.############");  //ï¿½ï¿½ï¿?
+	DecimalFormat df = new DecimalFormat("########.############");  //¹æ¸ñ»¯
 				 Matrix JZN_A = null;
 				 double[][] ZH = null;
 				 try{JZN_A  = B.times(B);
@@ -712,7 +712,7 @@ else if(sign_B == 8){
 					String s ="";
 					for(int i = 0;i<JZN_A.getRowDimension();i++){
 						for(int j = 0;j<JZN_A.getColumnDimension();j++){
-							s = s + String.valueOf(df.format(ZH[i][j]))+"ï¿½ï¿½";
+							s = s + String.valueOf(df.format(ZH[i][j]))+"£ß";
 						}
 						s = s + "\n";
 					}
@@ -720,13 +720,13 @@ else if(sign_B == 8){
 						 JZdilog.setMsg(s);
 	            	 JZdilog.show();
 				 }catch(Exception e){
-					 Toast.makeText(getActivity(), "ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ã£¡", Toast.LENGTH_SHORT).show();
+					 Toast.makeText(getActivity(), "ÎÞ·¨¼ÆËã£¡", Toast.LENGTH_SHORT).show();
 				 }		
 			 }
 else if(sign_B == 9){
 				 //A^3
 				 //A^2
-	DecimalFormat df = new DecimalFormat("########.############");  //ï¿½ï¿½ï¿?
+	DecimalFormat df = new DecimalFormat("########.############");  //¹æ¸ñ»¯
 				 Matrix JZN_A = null;
 				 double[][] ZH = null;
 				 try{JZN_A  = B.times(B.times(B));
@@ -736,7 +736,7 @@ else if(sign_B == 9){
 					String s ="";
 				for(int i = 0;i<JZN_A.getRowDimension();i++){
 					for(int j = 0;j<JZN_A.getColumnDimension();j++){
-						s = s + String.valueOf(df.format(ZH[i][j]))+"ï¿½ï¿½";
+						s = s + String.valueOf(df.format(ZH[i][j]))+"£ß";
 					}
 					s = s + "\n";
 				}
@@ -744,61 +744,61 @@ else if(sign_B == 9){
 					 JZdilog.setMsg(s);
             	 JZdilog.show();
 				 }catch(Exception e){
-					 Toast.makeText(getActivity(), "ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ã£¡", Toast.LENGTH_SHORT).show();
+					 Toast.makeText(getActivity(), "ÎÞ·¨¼ÆËã£¡", Toast.LENGTH_SHORT).show();
 				 }		
 			 }  
 		break;
 		case R.id.JZbutton_AB:	
-			//×ªï¿½ï¿½A
+			//×ª»»A
 			
         	String JZA_AB = JU_A.getText().toString();
-        	//ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½
+        	//»ñÈ¡¾ØÕó
         	String[] y1A_AB = JZA_AB.split("\n");
-        	String[] yA_AB = y1A_AB[0].split("ï¿½ï¿½");
+        	String[] yA_AB = y1A_AB[0].split("£ß");
         	double[][] valsA_AB = new double[y1A_AB.length][yA_AB.length];
         	for(int i = 0; i<y1A_AB.length;i++)
         	{
-        		String[] y2A_AB = y1A_AB[i].split("ï¿½ï¿½");
+        		String[] y2A_AB = y1A_AB[i].split("£ß");
         		for(int j = 0;j<y2A_AB.length;j++)
         		{
         			try{
         				valsA_AB[i][j] = Double.parseDouble( y2A_AB[j] );}
         			catch(Exception e)
         			{
-        				Toast.makeText(getActivity(), "ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½Ç·ï¿½ï¿½ï¿½È·ï¿½ï¿?", Toast.LENGTH_SHORT).show();
+        				Toast.makeText(getActivity(), "Çë¼ì²é¸ñÊ½ÊÇ·ñÕýÈ·£¡", Toast.LENGTH_SHORT).show();
         				return;
         			}
         		}
         		
         	}
-        	//×ªï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½
+        	//×ª»»Îª¾ØÕó
         	Matrix A_AB = new Matrix(valsA_AB);
         	
-        	//×ªï¿½ï¿½B
+        	//×ª»»B
         	String JZB_AB = JU_B.getText().toString();
-        	//ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½
+        	//»ñÈ¡¾ØÕó
         	String[] y1B_AB = JZB_AB.split("\n");
-        	String[] yB_AB = y1B_AB[0].split("ï¿½ï¿½");
+        	String[] yB_AB = y1B_AB[0].split("£ß");
         	double[][] valsB_AB = new double[y1B_AB.length][yB_AB.length];
         	for(int i = 0; i<y1B_AB.length;i++)
         	{
-        		String[] y2B_AB = y1B_AB[i].split("ï¿½ï¿½");
+        		String[] y2B_AB = y1B_AB[i].split("£ß");
         		for(int j = 0;j<y2B_AB.length;j++)
         		{
         			try{
         				valsB_AB[i][j] = Double.parseDouble( y2B_AB[j] );}
         			catch(Exception e)
         			{
-        				Toast.makeText(getActivity(), "ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½Ç·ï¿½ï¿½ï¿½È·ï¿½ï¿?", Toast.LENGTH_SHORT).show();
+        				Toast.makeText(getActivity(), "Çë¼ì²é¸ñÊ½ÊÇ·ñÕýÈ·£¡", Toast.LENGTH_SHORT).show();
         			}
         		}
         		
         	}
-        	//×ªï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½
+        	//×ª»»Îª¾ØÕó
         	Matrix B_AB = new Matrix(valsB_AB);
         	
 if(sign_AB == 1){
-	DecimalFormat df = new DecimalFormat("########.############");  //ï¿½ï¿½ï¿?
+	DecimalFormat df = new DecimalFormat("########.############");  //¹æ¸ñ»¯
 	 Matrix JZN_A = null;
 	 double[][] ZH = null;
 	 try{JZN_A  = B_AB.plus(A_AB);
@@ -808,7 +808,7 @@ if(sign_AB == 1){
 		String s ="";
 	for(int i = 0;i<JZN_A.getRowDimension();i++){
 		for(int j = 0;j<JZN_A.getColumnDimension();j++){
-			s = s + String.valueOf(df.format(ZH[i][j]))+"ï¿½ï¿½";
+			s = s + String.valueOf(df.format(ZH[i][j]))+"£ß";
 		}
 		s = s + "\n";
 	}
@@ -816,12 +816,12 @@ if(sign_AB == 1){
 		 JZdilog.setMsg(s);
 	 JZdilog.show();
 	 }catch(Exception e){
-		 Toast.makeText(getActivity(), "ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ã£¡", Toast.LENGTH_SHORT).show();
+		 Toast.makeText(getActivity(), "ÎÞ·¨¼ÆËã£¡", Toast.LENGTH_SHORT).show();
 	 }	
 				
             	
 }else if(sign_AB == 2){
-	DecimalFormat df = new DecimalFormat("########.############");  //ï¿½ï¿½ï¿?
+	DecimalFormat df = new DecimalFormat("########.############");  //¹æ¸ñ»¯
 	 Matrix JZN_A = null;
 	 double[][] ZH = null;
 	 try{JZN_A  = A_AB.minus(B_AB);
@@ -831,7 +831,7 @@ if(sign_AB == 1){
 		String s ="";
 	for(int i = 0;i<JZN_A.getRowDimension();i++){
 		for(int j = 0;j<JZN_A.getColumnDimension();j++){
-			s = s + String.valueOf(df.format(ZH[i][j]))+"ï¿½ï¿½";
+			s = s + String.valueOf(df.format(ZH[i][j]))+"£ß";
 		}
 		s = s + "\n";
 	}
@@ -839,11 +839,11 @@ if(sign_AB == 1){
 		 JZdilog.setMsg(s);
 	 JZdilog.show();
 	 }catch(Exception e){
-		 Toast.makeText(getActivity(), "ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ã£¡", Toast.LENGTH_SHORT).show();
+		 Toast.makeText(getActivity(), "ÎÞ·¨¼ÆËã£¡", Toast.LENGTH_SHORT).show();
 	 }	
 		 }
 else if(sign_AB ==3){
-	DecimalFormat df = new DecimalFormat("########.############");  //ï¿½ï¿½ï¿?
+	DecimalFormat df = new DecimalFormat("########.############");  //¹æ¸ñ»¯
 	 Matrix JZN_A = null;
 	 double[][] ZH = null;
 	 try{JZN_A  = B_AB.minus(A_AB);
@@ -853,7 +853,7 @@ else if(sign_AB ==3){
 		String s ="";
 	for(int i = 0;i<JZN_A.getRowDimension();i++){
 		for(int j = 0;j<JZN_A.getColumnDimension();j++){
-			s = s + String.valueOf(df.format(ZH[i][j]))+"ï¿½ï¿½";
+			s = s + String.valueOf(df.format(ZH[i][j]))+"£ß";
 		}
 		s = s + "\n";
 	}
@@ -861,12 +861,12 @@ else if(sign_AB ==3){
 		 JZdilog.setMsg(s);
 	 JZdilog.show();
 	 }catch(Exception e){
-		 Toast.makeText(getActivity(), "ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ã£¡", Toast.LENGTH_SHORT).show();
+		 Toast.makeText(getActivity(), "ÎÞ·¨¼ÆËã£¡", Toast.LENGTH_SHORT).show();
 	 }	
 	 
 		 }
 else if(sign_AB == 4){
-	DecimalFormat df = new DecimalFormat("########.############");  //ï¿½ï¿½ï¿?
+	DecimalFormat df = new DecimalFormat("########.############");  //¹æ¸ñ»¯
 	 Matrix JZN_A = null;
 	 double[][] ZH = null;
 	 try{JZN_A  = A_AB.times(B_AB);
@@ -876,19 +876,19 @@ else if(sign_AB == 4){
 		String s ="";
 	for(int i = 0;i<JZN_A.getRowDimension();i++){
 		for(int j = 0;j<JZN_A.getColumnDimension();j++){
-			s = s + String.valueOf(df.format(ZH[i][j]))+"ï¿½ï¿½";
+			s = s + String.valueOf(df.format(ZH[i][j]))+"£ß";
 		}
 		s = s + "\n";
 	}
-		JZdilog.setTitle("Aï¿½ï¿½B");
+		JZdilog.setTitle("A¡ÁB");
 		 JZdilog.setMsg(s);
 	 JZdilog.show();
 	 }catch(Exception e){
-		 Toast.makeText(getActivity(), "ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ã£¡", Toast.LENGTH_SHORT).show();
+		 Toast.makeText(getActivity(), "ÎÞ·¨¼ÆËã£¡", Toast.LENGTH_SHORT).show();
 	 }		
 		 }
 else if(sign_AB == 5){
-	DecimalFormat df = new DecimalFormat("########.############");  //ï¿½ï¿½ï¿?
+	DecimalFormat df = new DecimalFormat("########.############");  //¹æ¸ñ»¯
 	 Matrix JZN_A = null;
 	 double[][] ZH = null;
 	 try{JZN_A  = B_AB.times(A_AB);
@@ -898,15 +898,15 @@ else if(sign_AB == 5){
 		String s ="";
 	for(int i = 0;i<JZN_A.getRowDimension();i++){
 		for(int j = 0;j<JZN_A.getColumnDimension();j++){
-			s = s + String.valueOf(df.format(ZH[i][j]))+"ï¿½ï¿½";
+			s = s + String.valueOf(df.format(ZH[i][j]))+"£ß";
 		}
 		s = s + "\n";
 	}
-		JZdilog.setTitle("Bï¿½ï¿½A");
+		JZdilog.setTitle("B¡ÁA");
 		 JZdilog.setMsg(s);
 	 JZdilog.show();
 	 }catch(Exception e){
-		 Toast.makeText(getActivity(), "ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ã£¡", Toast.LENGTH_SHORT).show();
+		 Toast.makeText(getActivity(), "ÎÞ·¨¼ÆËã£¡", Toast.LENGTH_SHORT).show();
 	 }		
 		 }
 			break;
@@ -936,16 +936,16 @@ else if(sign_AB == 5){
 		case R.id.douhao_JZ:
 			if(JU_A.hasFocus()){
 				if (index_JZA < 0 || index_JZA >= editA.length() ){
-					editA.append("ï¿½ï¿½");
+					editA.append("£ß");
 				}else{
-					editA.insert(index_JZA,"ï¿½ï¿½");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+					editA.insert(index_JZA,"£ß");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
 				 }
 				
 			}else if(JU_B.hasFocus()){
 				if (index_JZB < 0 || index_JZB >= editB.length() ){
-					editB.append("ï¿½ï¿½");
+					editB.append("£ß");
 				}else{
-					editB.insert(index_JZB,"ï¿½ï¿½");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+					editB.insert(index_JZB,"£ß");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
 				 }
 			}
 			++index_JZA;
@@ -956,14 +956,14 @@ else if(sign_AB == 5){
 				if (index_JZA < 0 || index_JZA >= editA.length() ){
 					editA.append(".");
 				}else{
-					editA.insert(index_JZA,".");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+					editA.insert(index_JZA,".");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
 				 }
 				
 			}else if(JU_B.hasFocus()){
 				if (index_JZB < 0 || index_JZB >= editB.length() ){
 					editB.append(".");
 				}else{
-					editB.insert(index_JZB,".");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+					editB.insert(index_JZB,".");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
 				 }
 			}
 			++index_JZA;
@@ -974,14 +974,14 @@ else if(sign_AB == 5){
 				if (index_JZA < 0 || index_JZA >= editA.length() ){
 					editA.append("\n");
 				}else{
-					editA.insert(index_JZA,"\n");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+					editA.insert(index_JZA,"\n");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
 				 }
 				
 			}else if(JU_B.hasFocus()){
 				if (index_JZB < 0 || index_JZB >= editB.length() ){
 					editB.append("\n");
 				}else{
-					editB.insert(index_JZB,"\n");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+					editB.insert(index_JZB,"\n");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
 				 }
 			}
 			++index_JZA;
@@ -992,14 +992,14 @@ else if(sign_AB == 5){
 				if(index_JZA==0){
 					index_JZA=1;
 				}else{
-					editA.delete(index_JZA-1, index_JZA);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+					editA.delete(index_JZA-1, index_JZA);//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
 				 }
 				
 			}else if(JU_B.hasFocus()){
 				if(index_JZB==0){
 					index_JZB=1;
 				}else{
-					editB.delete(index_JZB-1, index_JZB);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+					editB.delete(index_JZB-1, index_JZB);//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
 				 }
 			}
 			
@@ -1011,14 +1011,14 @@ else if(sign_AB == 5){
 				if (index_JZA < 0 || index_JZA >= editA.length() ){
 					editA.append("0");
 				}else{
-					editA.insert(index_JZA,"0");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+					editA.insert(index_JZA,"0");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
 				 }
 				
 			}else if(JU_B.hasFocus()){
 				if (index_JZB < 0 || index_JZB >= editB.length() ){
 					editB.append("0");
 				}else{
-					editB.insert(index_JZB,"0");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+					editB.insert(index_JZB,"0");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
 				 }
 			}
 			++index_JZA;
@@ -1029,14 +1029,14 @@ else if(sign_AB == 5){
 				if (index_JZA < 0 || index_JZA >= editA.length() ){
 					editA.append("1");
 				}else{
-					editA.insert(index_JZA,"1");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+					editA.insert(index_JZA,"1");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
 				 }
 				
 			}else if(JU_B.hasFocus()){
 				if (index_JZB < 0 || index_JZB >= editB.length() ){
 					editB.append("1");
 				}else{
-					editB.insert(index_JZB,"1");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+					editB.insert(index_JZB,"1");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
 				 }
 			}
 			++index_JZA;
@@ -1047,14 +1047,14 @@ else if(sign_AB == 5){
 				if (index_JZA < 0 || index_JZA >= editA.length() ){
 					editA.append("2");
 				}else{
-					editA.insert(index_JZA,"2");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+					editA.insert(index_JZA,"2");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
 				 }
 				
 			}else if(JU_B.hasFocus()){
 				if (index_JZB < 0 || index_JZB >= editB.length() ){
 					editB.append("2");
 				}else{
-					editB.insert(index_JZB,"2");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+					editB.insert(index_JZB,"2");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
 				 }
 			}
 			++index_JZA;
@@ -1065,14 +1065,14 @@ else if(sign_AB == 5){
 				if (index_JZA < 0 || index_JZA >= editA.length() ){
 					editA.append("3");
 				}else{
-					editA.insert(index_JZA,"3");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+					editA.insert(index_JZA,"3");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
 				 }
 				
 			}else if(JU_B.hasFocus()){
 				if (index_JZB < 0 || index_JZB >= editB.length() ){
 					editB.append("3");
 				}else{
-					editB.insert(index_JZB,"3");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+					editB.insert(index_JZB,"3");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
 				 }
 			}
 			++index_JZA;
@@ -1083,14 +1083,14 @@ else if(sign_AB == 5){
 				if (index_JZA < 0 || index_JZA >= editA.length() ){
 					editA.append("4");
 				}else{
-					editA.insert(index_JZA,"4");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+					editA.insert(index_JZA,"4");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
 				 }
 				
 			}else if(JU_B.hasFocus()){
 				if (index_JZB < 0 || index_JZB >= editB.length() ){
 					editB.append("4");
 				}else{
-					editB.insert(index_JZB,"4");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+					editB.insert(index_JZB,"4");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
 				 }
 			}
 			++index_JZA;
@@ -1101,14 +1101,14 @@ else if(sign_AB == 5){
 				if (index_JZA < 0 || index_JZA >= editA.length() ){
 					editA.append("5");
 				}else{
-					editA.insert(index_JZA,"5");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+					editA.insert(index_JZA,"5");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
 				 }
 				
 			}else if(JU_B.hasFocus()){
 				if (index_JZB < 0 || index_JZB >= editB.length() ){
 					editB.append("5");
 				}else{
-					editB.insert(index_JZB,"5");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+					editB.insert(index_JZB,"5");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
 				 }
 			}
 			++index_JZA;
@@ -1119,14 +1119,14 @@ else if(sign_AB == 5){
 				if (index_JZA < 0 || index_JZA >= editA.length() ){
 					editA.append("6");
 				}else{
-					editA.insert(index_JZA,"6");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+					editA.insert(index_JZA,"6");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
 				 }
 				
 			}else if(JU_B.hasFocus()){
 				if (index_JZB < 0 || index_JZB >= editB.length() ){
 					editB.append("6");
 				}else{
-					editB.insert(index_JZB,"6");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+					editB.insert(index_JZB,"6");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
 				 }
 			}
 			++index_JZA;
@@ -1137,14 +1137,14 @@ else if(sign_AB == 5){
 				if (index_JZA < 0 || index_JZA >= editA.length() ){
 					editA.append("7");
 				}else{
-					editA.insert(index_JZA,"7");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+					editA.insert(index_JZA,"7");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
 				 }
 				
 			}else if(JU_B.hasFocus()){
 				if (index_JZB < 0 || index_JZB >= editB.length() ){
 					editB.append("7");
 				}else{
-					editB.insert(index_JZB,"7");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+					editB.insert(index_JZB,"7");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
 				 }
 			}
 			++index_JZA;
@@ -1155,14 +1155,14 @@ else if(sign_AB == 5){
 				if (index_JZA < 0 || index_JZA >= editA.length() ){
 					editA.append("8");
 				}else{
-					editA.insert(index_JZA,"8");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+					editA.insert(index_JZA,"8");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
 				 }
 				
 			}else if(JU_B.hasFocus()){
 				if (index_JZB < 0 || index_JZB >= editB.length() ){
 					editB.append("8");
 				}else{
-					editB.insert(index_JZB,"8");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+					editB.insert(index_JZB,"8");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
 				 }
 			}
 			++index_JZA;
@@ -1173,14 +1173,14 @@ else if(sign_AB == 5){
 				if (index_JZA < 0 || index_JZA >= editA.length() ){
 					editA.append("9");
 				}else{
-					editA.insert(index_JZA,"9");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+					editA.insert(index_JZA,"9");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
 				 }
 				
 			}else if(JU_B.hasFocus()){
 				if (index_JZB < 0 || index_JZB >= editB.length() ){
 					editB.append("9");
 				}else{
-					editB.insert(index_JZB,"9");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+					editB.insert(index_JZB,"9");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
 				 }
 			}
 			++index_JZA;
@@ -1191,14 +1191,14 @@ else if(sign_AB == 5){
 				if (index_JZA < 0 || index_JZA >= editA.length() ){
 					editA.append("-");
 				}else{
-					editA.insert(index_JZA,"-");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+					editA.insert(index_JZA,"-");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
 				 }
 				
 			}else if(JU_B.hasFocus()){
 				if (index_JZB < 0 || index_JZB >= editB.length() ){
 					editB.append("-");
 				}else{
-					editB.insert(index_JZB,"-");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+					editB.insert(index_JZB,"-");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
 				 }
 			}
 			++index_JZA;
@@ -1215,7 +1215,7 @@ else if(sign_AB == 5){
 
 }
 	
-	//ï¿½ï¿½È¥ï¿½ï¿½ï¿½ï¿½	
+	//³ýÈ¥½¹µã	
 		public void chujiaodian(EditText et){
 			et.setImeOptions(EditorInfo.IME_FLAG_NO_EXTRACT_UI);  
 

@@ -6,9 +6,6 @@ package com.example.weight;
 
 
 
-import com.example.utils.FastBlur;
-import com.example.main.R;
-
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
@@ -19,12 +16,14 @@ import android.graphics.drawable.BitmapDrawable;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
-
 import android.view.ViewTreeObserver;
 import android.widget.DatePicker;
 import android.widget.DatePicker.OnDateChangedListener;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.example.main.R;
+import com.example.utils.FastBlur;
 
 @SuppressLint("NewApi")
 public class Zhoudatepk extends Dialog implements OnDateChangedListener{
@@ -59,7 +58,7 @@ mCallBack = callBack;
 
 
 Context themeContext = getContext();
-//將設置alertdialog的settitle和setButton方法注释掉，因为下面要使用setContentView（View view）方法
+//置alertdialog的settitle和setButton方法注释掉，因为下面要使用setContentView（View view）方法
 //代替原有的setView（View view）方法，区别是替换的范围不同。替换后就不需要设置alertdialog的title和button了。
 // setButton(BUTTON_POSITIVE,
 // themeContext.getText(R.string.date_time_set), this);

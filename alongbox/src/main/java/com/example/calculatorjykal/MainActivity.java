@@ -1,4 +1,4 @@
-package com.example.main;
+package com.example.calculatorjykal;
 
 
 import android.annotation.SuppressLint;
@@ -12,7 +12,6 @@ import android.graphics.Rect;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,7 +20,9 @@ import android.view.animation.Animation;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.main.MenuFragment.SLMenuListOnItemClickListener;
+import com.avos.avoscloud.AVOSCloud;
+import com.avos.avoscloud.feedback.FeedbackAgent;
+import com.example.calculatorjykal.MenuFragment.SLMenuListOnItemClickListener;
 import com.example.module.about.Guanyu;
 import com.example.module.calculate.Jisuanqi;
 import com.example.module.conversionSystem.Jinzhizh;
@@ -31,7 +32,6 @@ import com.example.module.statistics.Tongji;
 import com.example.module.timer.Jishiqi;
 import com.example.module.timer.jishiqi.FragmentActivityListener;
 import com.umeng.analytics.MobclickAgent;
-import com.umeng.fb.FeedbackAgent;
 import com.umeng.update.UmengUpdateAgent;
 
 import net.simonvt.menudrawer.DraggableDrawer;
@@ -47,13 +47,13 @@ import java.util.List;
 public class MainActivity extends ActivityGroup implements SLMenuListOnItemClickListener, FragmentActivityListener {
     private EditText rsText;
     private MenuDrawer m;
-    //ï¿½ï¿½Ê±ï¿½ï¿½page
+    //¼ÆÊ±Æ÷page
     private ArrayList<View> pageViews;
-    //ï¿½ï¿½ï¿½Ë·ï¿½ï¿½ï¿½
-    FeedbackAgent fb;
+    //ÓÑÃË·´À¡
     Fragment fragment = null;
 
     private List<Fragment> fragmentList = new ArrayList<Fragment>();
+    private FeedbackAgent agent;
 
     @SuppressLint("NewApi")
     @Override
@@ -61,6 +61,12 @@ public class MainActivity extends ActivityGroup implements SLMenuListOnItemClick
         super.onCreate(savedInstanceState);
         UmengUpdateAgent.setUpdateOnlyWifi(false);
         UmengUpdateAgent.update(this);
+        //³õÊ¼»¯·´À¡
+        AVOSCloud.initialize(getApplicationContext()
+                , "7Y6gLzAxf29pxDkEnGqgrkvQ-gzGzoHsz"
+                , "5vxAiQAfP9zPtnRqD9eaOPKn");
+        agent = new FeedbackAgent(getApplicationContext());
+        agent.sync();
         LayoutInflater lf = getLayoutInflater();
         View v = lf.inflate(R.layout.frame_menu, null);
         m = MenuDrawer.attach(this, MenuDrawer.Type.OVERLAY, Position.RIGHT);
@@ -80,14 +86,12 @@ public class MainActivity extends ActivityGroup implements SLMenuListOnItemClick
         Fragment fragment = fragmentList.get(0);
         FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.content, fragment);
-        Animation animation = new AlphaAnimation(0, 1.0f);   //AlphaAnimation ï¿½ï¿½ï¿½Æ½ï¿½ï¿½ï¿½Í¸ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½Ð§ï¿½ï¿½
+        Animation animation = new AlphaAnimation(0, 1.0f);   //AlphaAnimation ¿ØÖÆ½¥±äÍ¸Ã÷µÄ¶¯»­Ð§¹û
         animation.setDuration(900);
         m.setAnimation(animation);
         fragmentTransaction.commit();
         rsText = (EditText) findViewById(R.id.rsText);
-        //ï¿½ï¿½ï¿½ï¿½
-        fb = new FeedbackAgent(MainActivity.this);
-        fb.sync();
+
     }
 
     //Êµï¿½Ö°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ³ï¿½
@@ -98,7 +102,7 @@ public class MainActivity extends ActivityGroup implements SLMenuListOnItemClick
         if (keyCode == KeyEvent.KEYCODE_BACK) {
             if ((System.currentTimeMillis() - mExitTime) > 2000) {
                 Object mHelperUtils;
-                Toast.makeText(this, "ï¿½Ù°ï¿½Ò»ï¿½ï¿½ï¿½Ë³ï¿½ï¿½ï¿½ï¿½ï¿½", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "ÔÙ°´Ò»´ÎÍË³ö³ÌÐò", Toast.LENGTH_SHORT).show();
                 mExitTime = System.currentTimeMillis();
             } else {
                 finish();
@@ -129,7 +133,8 @@ public class MainActivity extends ActivityGroup implements SLMenuListOnItemClick
                 pingFen();
                 break;
             case 9:
-                fb.startFeedbackActivity();
+                //´ò¿ªÓÃ»§·´À¡
+                agent.startDefaultThreadActivity();
                 break;
             default:
                 fragment = fragmentList.get(position);
@@ -138,16 +143,16 @@ public class MainActivity extends ActivityGroup implements SLMenuListOnItemClick
         ((DraggableDrawer) m).setOnMenuCloseListener(new DraggableDrawer.OnMenuCloseListner() {
             @Override
             public void onClose() {
+                if (fragment == null) {
+                    return;
+                }
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
                 transaction.replace(R.id.content, fragment);
-                Log.d("flag", "onClose: "+fragment);
                 transaction.commit();
                 fragment = null;
             }
         });
-        Log.d("flag", "null: "+fragment);
         if (fragment != null) {
-            Log.d("flag", "null: "+fragment);
             m.closeMenu();
         }
     }
@@ -181,12 +186,12 @@ public class MainActivity extends ActivityGroup implements SLMenuListOnItemClick
                 path = Environment.getExternalStorageDirectory() + "/mnt/sdcard/" + "screenShot.png";
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("image/*");
-                intent.putExtra(Intent.EXTRA_SUBJECT, "ï¿½ï¿½ï¿½ï¿½");
-                intent.putExtra(Intent.EXTRA_TITLE, "ï¿½ï¿½ï¿½ï¿½");
-                intent.putExtra(Intent.EXTRA_TEXT, "Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Â£ï¿?");
+                intent.putExtra(Intent.EXTRA_SUBJECT, "·ÖÏí");
+                intent.putExtra(Intent.EXTRA_TITLE, "·ÖÏí");
+                intent.putExtra(Intent.EXTRA_TEXT, "Ò»¸ö²»´íµÄ¼ÆËãÆ÷£¡·ÖÏíÒ»ÏÂ£¡");
                 intent.putExtra(Intent.EXTRA_STREAM, Uri.parse("file:///" + path));
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                MainActivity.this.startActivity(Intent.createChooser(intent, "ï¿½ï¿½ï¿½ï¿½"));
+                MainActivity.this.startActivity(Intent.createChooser(intent, "·ÖÏí"));
             }
 
         }).start();

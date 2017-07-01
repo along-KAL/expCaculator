@@ -12,7 +12,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnLongClickListener;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.view.WindowManager.LayoutParams;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
@@ -33,7 +32,7 @@ import java.text.DecimalFormat;
 public class Jihe extends Fragment implements OnClickListener,OnLongClickListener{
 	 private Button mButton;
 	    private PopupWindow mPopupWindow;
-	  //ï¿½ï¿½Ä»ï¿½ï¿½
+	  //ÆÁÄ»¸ß
 		int pm_G;
 		int pm_K;
 		LinearLayout jh_ll;
@@ -80,7 +79,7 @@ public class Jihe extends Fragment implements OnClickListener,OnLongClickListene
     	
     	
     	
-    	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    	//Èý½ÇÐÎ
     	double alpha_text=0;
     	 double a_text=0;
     	 double A_text=0;
@@ -99,21 +98,21 @@ public class Jihe extends Fragment implements OnClickListener,OnLongClickListene
     	 double C_text=0;
     	 double d_text=0;
     	 double r_text=0;
-    	 //ï¿½ï¿½Ô²
+    	 //ÍÖÔ²
     	 double p=0;
     	 double q=0;
     	 
     	 double p_text=0;
     	 double q_text=0;
     	 
-    	 //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    	 //ÕýÈý½ÇÐÎ
     	 double h=0;
     	 
     	 double h_text=0;
     	 //3d
     	 double V=0;
     	 double V_text=0;
-    	 //ï¿½ï¿½ï¿½ï¿½
+    	 //ÖùÌå
     	 double B=0;
     	 double B_text=0;
          
@@ -122,27 +121,27 @@ public class Jihe extends Fragment implements OnClickListener,OnLongClickListene
             Bundle savedInstanceState) {
       rootView = inflater.inflate(R.layout.fragment_jihe, container, false);
         
-      //ï¿½ï¿½ï¿½ï¿½ï¿½Ä»ï¿½ï¿½Ð?
+      //»ñµÃÆÁÄ»´óÐ¡
       		DisplayMetrics dm = new DisplayMetrics();
       		this.getActivity().getWindowManager().getDefaultDisplay().getMetrics(dm);
-      		pm_K = dm.widthPixels;//ï¿½ï¿½ï¿?
-      		pm_G = dm.heightPixels ;//ï¿½ß¶ï¿½
+      		pm_K = dm.widthPixels;//¿í¶È
+      		pm_G = dm.heightPixels ;//¸ß¶È
       		 TableLayout jh_tl = (TableLayout)rootView.findViewById(R.id.jh_tl);
       		ScrollView  jh_sl = (ScrollView)rootView.findViewById(R.id.scrollView_jh);
       		 mButton = (Button) rootView.findViewById(R.id.btn_test_popupwindow);
       		 jh_ll = (LinearLayout)rootView.findViewById(R.id.jh_ll);
-      		 //ï¿½ï¿½ï¿½Ã¿Ø¼ï¿½ï¿½ï¿½Ð¡
-             android.view.ViewGroup.LayoutParams lp_jh;        
+      		 //ÉèÖÃ¿Ø¼þ´óÐ¡
+             ViewGroup.LayoutParams lp_jh;
              lp_jh=jh_tl.getLayoutParams();
              lp_jh.height= pm_G*2/5;      
              jh_tl.setLayoutParams(lp_jh);
              
-             android.view.ViewGroup.LayoutParams ls_jh;        
+             ViewGroup.LayoutParams ls_jh;
              ls_jh=jh_sl.getLayoutParams();
              ls_jh.height=pm_G/2;        
              jh_sl.setLayoutParams(ls_jh);
              
-             android.view.ViewGroup.LayoutParams bt_jh;        
+             ViewGroup.LayoutParams bt_jh;
              bt_jh=mButton.getLayoutParams();
              bt_jh.height=pm_G/20;        
              mButton.setLayoutParams(bt_jh);
@@ -198,7 +197,7 @@ public class Jihe extends Fragment implements OnClickListener,OnLongClickListene
               textView6 = (TextView)rootView.findViewById(R.id.textView6);
               textView7 = (TextView)rootView.findViewById(R.id.textView7);
               textView8 = (TextView)rootView.findViewById(R.id.textView8);
-            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+            //³ö½¹µã
       		chujiaodian(editText1);
       		chujiaodian(editText2);
       		chujiaodian(editText3);
@@ -228,7 +227,7 @@ public class Jihe extends Fragment implements OnClickListener,OnLongClickListene
         ImageButton jh_simianti = (ImageButton)popupView.findViewById(R.id.JH2button7);
         ImageButton jh_yuanzhu = (ImageButton)popupView.findViewById(R.id.JH2button8);
       //  ImageButton jh_changfangxing = (ImageButton)popupView.findViewById(R.id.JH2button6);
-        //ï¿½ï¿½ï¿½Ã¼ï¿½ï¿½ï¿½
+        //ÉèÖÃ¼àÌý
         jh_zhengN.setOnClickListener(this);
         jh_sanjiaoxing.setOnClickListener(this);
         jh_yuan.setOnClickListener(this);
@@ -269,7 +268,7 @@ public class Jihe extends Fragment implements OnClickListener,OnLongClickListene
 
         @Override
         public void onClick(View v) {
-        	Editable edit1 = editText1.getEditableText();//ï¿½ï¿½È¡EditTextï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        	Editable edit1 = editText1.getEditableText();//»ñÈ¡EditTextµÄÎÄ×Ö
         	Editable edit2 = editText2.getEditableText();
         	Editable edit3 = editText3.getEditableText();
         	Editable edit4 = editText4.getEditableText();
@@ -298,11 +297,11 @@ public class Jihe extends Fragment implements OnClickListener,OnLongClickListene
         		textView6.setVisibility(View.GONE);
         		textView7.setVisibility(View.GONE);
         		textView8.setVisibility(View.GONE);	
-        		textView1.setText("ï¿½ï¿½ï¿?(A)");
-        		textView2.setText("ï¿½Ü³ï¿½(P)");
-        		textView3.setText("ï¿½ï¿½ï¿½ï¿½(N)");
-        		textView4.setText("ï¿½ß³ï¿½(a)");
-        		textView5.setText("aï¿½ï¿½ï¿½ÔµÄ½ï¿½(ï¿½ï¿½)[ï¿½ï¿½]");
+        		textView1.setText("Ãæ»ý(A)");
+        		textView2.setText("ÖÜ³¤(P)");
+        		textView3.setText("±ßÊý(N)");
+        		textView4.setText("±ß³¤(a)");
+        		textView5.setText("aËù¶ÔµÄ½Ç(¦Á)[¶È]");
         	
         	editText1.setVisibility(View.VISIBLE);
         	editText2.setVisibility(View.VISIBLE);
@@ -312,7 +311,7 @@ public class Jihe extends Fragment implements OnClickListener,OnLongClickListene
         	editText6.setVisibility(View.GONE);
         	editText7.setVisibility(View.GONE);
         	editText8.setVisibility(View.GONE);
-        	mPopupWindow.dismiss(); //ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½Â¼ï¿½Ö®ï¿½ï¿½Ø±ï¿½Men
+        	mPopupWindow.dismiss(); //ÏìÓ¦µã»÷ÊÂ¼þÖ®ºó¹Ø±ÕMen
         	break;
         	case R.id.JH1button2:
         		sign=12;
@@ -324,14 +323,14 @@ public class Jihe extends Fragment implements OnClickListener,OnLongClickListene
         		textView6.setVisibility(View.VISIBLE);
         		textView7.setVisibility(View.VISIBLE);
         		textView8.setVisibility(View.VISIBLE);	
-        		textView1.setText("ï¿½ï¿½ï¿?(A)");
-        		textView2.setText("ï¿½Ü³ï¿½(P)");
-        		textView3.setText("ï¿½ß³ï¿½(a)");
-        		textView4.setText("ï¿½ß³ï¿½(b)");
-        		textView5.setText("ï¿½ß³ï¿½(c)");
-        		textView6.setText("aï¿½ï¿½ï¿½ÔµÄ½ï¿½(ï¿½ï¿½)[ï¿½ï¿½]");
-        		textView7.setText("bï¿½ï¿½ï¿½ÔµÄ½ï¿½(ï¿½ï¿½)[ï¿½ï¿½]");
-        		textView8.setText("cï¿½ï¿½ï¿½ÔµÄ½ï¿½(ï¿½ï¿½)[ï¿½ï¿½]");
+        		textView1.setText("Ãæ»ý(A)");
+        		textView2.setText("ÖÜ³¤(P)");
+        		textView3.setText("±ß³¤(a)");
+        		textView4.setText("±ß³¤(b)");
+        		textView5.setText("±ß³¤(c)");
+        		textView6.setText("aËù¶ÔµÄ½Ç(¦Á)[¶È]");
+        		textView7.setText("bËù¶ÔµÄ½Ç(¦Â)[¶È]");
+        		textView8.setText("cËù¶ÔµÄ½Ç(¦Ã)[¶È]");
         	editText1.setVisibility(View.VISIBLE);
         	editText2.setVisibility(View.VISIBLE);
         	editText3.setVisibility(View.VISIBLE);
@@ -340,7 +339,7 @@ public class Jihe extends Fragment implements OnClickListener,OnLongClickListene
         	editText6.setVisibility(View.VISIBLE);
         	editText7.setVisibility(View.VISIBLE);
         	editText8.setVisibility(View.VISIBLE);
-        	mPopupWindow.dismiss(); //ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½Â¼ï¿½Ö®ï¿½ï¿½Ø±ï¿½Menu 
+        	mPopupWindow.dismiss(); //ÏìÓ¦µã»÷ÊÂ¼þÖ®ºó¹Ø±ÕMenu 
         		break;
         	case R.id.JH1button3:
         		sign=13;
@@ -352,10 +351,10 @@ public class Jihe extends Fragment implements OnClickListener,OnLongClickListene
         		textView6.setVisibility(View.GONE);
         		textView7.setVisibility(View.GONE);
         		textView8.setVisibility(View.GONE);	
-        		textView1.setText("ï¿½ï¿½ï¿?(A)");
-        		textView2.setText("ï¿½Ü³ï¿½(P)");
-        		textView3.setText("Ö±ï¿½ï¿½(d)");
-        		textView4.setText("ï¿½ë¾¶(r)");
+        		textView1.setText("Ãæ»ý(A)");
+        		textView2.setText("ÖÜ³¤(P)");
+        		textView3.setText("Ö±¾¶(d)");
+        		textView4.setText("°ë¾¶(r)");
         		
         	editText1.setVisibility(View.VISIBLE);
         	editText2.setVisibility(View.VISIBLE);
@@ -365,7 +364,7 @@ public class Jihe extends Fragment implements OnClickListener,OnLongClickListene
         	editText6.setVisibility(View.GONE);
         	editText7.setVisibility(View.GONE);
         	editText8.setVisibility(View.GONE);
-        	mPopupWindow.dismiss(); //ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½Â¼ï¿½Ö®ï¿½ï¿½Ø±ï¿½Menu 
+        	mPopupWindow.dismiss(); //ÏìÓ¦µã»÷ÊÂ¼þÖ®ºó¹Ø±ÕMenu 
         		break;
         	case R.id.JH1button4:
         		sign=14;
@@ -377,10 +376,10 @@ public class Jihe extends Fragment implements OnClickListener,OnLongClickListene
         		textView6.setVisibility(View.GONE);
         		textView7.setVisibility(View.GONE);
         		textView8.setVisibility(View.GONE);	
-        		textView1.setText("ï¿½ï¿½ï¿?(A)");
-        		textView2.setText("Ö±ï¿½ï¿½(P)");
-        		textView3.setText("Ö±ï¿½ï¿½(q)");
-        		textView4.setText("ï¿½Ü³ï¿½(C)");
+        		textView1.setText("Ãæ»ý(A)");
+        		textView2.setText("Ö±¾¶(P)");
+        		textView3.setText("Ö±¾¶(q)");
+        		textView4.setText("ÖÜ³¤(C)");
         	
         	editText1.setVisibility(View.VISIBLE);
         	editText2.setVisibility(View.VISIBLE);
@@ -390,7 +389,7 @@ public class Jihe extends Fragment implements OnClickListener,OnLongClickListene
         	editText6.setVisibility(View.GONE);
         	editText7.setVisibility(View.GONE);
         	editText8.setVisibility(View.GONE);
-        	mPopupWindow.dismiss(); //ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½Â¼ï¿½Ö®ï¿½ï¿½Ø±ï¿½Menu 
+        	mPopupWindow.dismiss(); //ÏìÓ¦µã»÷ÊÂ¼þÖ®ºó¹Ø±ÕMenu 
         		break;
         	case R.id.JH1button5:
         		sign=15;
@@ -402,10 +401,10 @@ public class Jihe extends Fragment implements OnClickListener,OnLongClickListene
         		textView6.setVisibility(View.GONE);
         		textView7.setVisibility(View.GONE);
         		textView8.setVisibility(View.GONE);	
-        		textView1.setText("ï¿½ï¿½ï¿?(A)");
-        		textView2.setText("ï¿½Ü³ï¿½(P)");
-        		textView3.setText("ï¿½ß³ï¿½(a)");
-        		textView4.setText("ï¿½ï¿½(h)");
+        		textView1.setText("Ãæ»ý(A)");
+        		textView2.setText("ÖÜ³¤(P)");
+        		textView3.setText("±ß³¤(a)");
+        		textView4.setText("¸ß(h)");
         	
         	editText1.setVisibility(View.VISIBLE);
         	editText2.setVisibility(View.VISIBLE);
@@ -415,7 +414,7 @@ public class Jihe extends Fragment implements OnClickListener,OnLongClickListene
         	editText6.setVisibility(View.GONE);
         	editText7.setVisibility(View.GONE);
         	editText8.setVisibility(View.GONE);
-        	mPopupWindow.dismiss(); //ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½Â¼ï¿½Ö®ï¿½ï¿½Ø±ï¿½Menu 
+        	mPopupWindow.dismiss(); //ÏìÓ¦µã»÷ÊÂ¼þÖ®ºó¹Ø±ÕMenu 
         		break;
         	case R.id.JH1button6:
         		sign=16;
@@ -427,11 +426,11 @@ public class Jihe extends Fragment implements OnClickListener,OnLongClickListene
         		textView6.setVisibility(View.GONE);
         		textView7.setVisibility(View.GONE);
         		textView8.setVisibility(View.GONE);	
-        		textView1.setText("ï¿½ï¿½ï¿?(A)");
-        		textView2.setText("ï¿½ï¿½ï¿?(V)");
-        		textView3.setText("ï¿½ë¾¶(r)");
-        		textView4.setText("Ö±ï¿½ï¿½(d)");
-        		textView5.setText("ï¿½ï¿½(h)");
+        		textView1.setText("Ãæ»ý(A)");
+        		textView2.setText("Ìå»ý(V)");
+        		textView3.setText("°ë¾¶(r)");
+        		textView4.setText("Ö±¾¶(d)");
+        		textView5.setText("¸ß(h)");
         	
         	editText1.setVisibility(View.VISIBLE);
         	editText2.setVisibility(View.VISIBLE);
@@ -441,7 +440,7 @@ public class Jihe extends Fragment implements OnClickListener,OnLongClickListene
         	editText6.setVisibility(View.GONE);
         	editText7.setVisibility(View.GONE);
         	editText8.setVisibility(View.GONE);
-        	mPopupWindow.dismiss(); //ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½Â¼ï¿½Ö®ï¿½ï¿½Ø±ï¿½Menu 
+        	mPopupWindow.dismiss(); //ÏìÓ¦µã»÷ÊÂ¼þÖ®ºó¹Ø±ÕMenu 
         		break;
         	case R.id.JH1button7:
         		sign=17;
@@ -453,8 +452,8 @@ public class Jihe extends Fragment implements OnClickListener,OnLongClickListene
         		textView6.setVisibility(View.GONE);
         		textView7.setVisibility(View.GONE);
         		textView8.setVisibility(View.GONE);	
-        		textView1.setText("ï¿½ï¿½ï¿?(A)");
-        		textView2.setText("ï¿½ï¿½ï¿?(V)");
+        		textView1.setText("Ãæ»ý(A)");
+        		textView2.setText("Ìå»ý(V)");
         		textView3.setText("Semi-axis(a)");
         		textView4.setText("Semi-axis(b)");
         		textView5.setText("Semi-axis(c)");
@@ -467,7 +466,7 @@ public class Jihe extends Fragment implements OnClickListener,OnLongClickListene
         	editText6.setVisibility(View.GONE);
         	editText7.setVisibility(View.GONE);
         	editText8.setVisibility(View.GONE);
-        	mPopupWindow.dismiss(); //ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½Â¼ï¿½Ö®ï¿½ï¿½Ø±ï¿½Menu 
+        	mPopupWindow.dismiss(); //ÏìÓ¦µã»÷ÊÂ¼þÖ®ºó¹Ø±ÕMenu 
         		break;
         	case R.id.JH1button8:
         		sign=18;
@@ -479,12 +478,12 @@ public class Jihe extends Fragment implements OnClickListener,OnLongClickListene
         		textView6.setVisibility(View.VISIBLE);
         		textView7.setVisibility(View.GONE);
         		textView8.setVisibility(View.GONE);	
-        		textView1.setText("ï¿½ï¿½ï¿?(A)");
+        		textView1.setText("Ãæ»ý(A)");
         		textView2.setText("Base area(B)");
-        		textView3.setText("ï¿½ï¿½ï¿? (V)");
-        		textView4.setText("ï¿½ï¿½ï¿½ï¿½ (N)");
-        		textView5.setText("ï¿½ß³ï¿½ (a)");
-        		textView6.setText("ï¿½ï¿½ (h)");
+        		textView3.setText("Ìå»ý (V)");
+        		textView4.setText("±ßÊý (N)");
+        		textView5.setText("±ß³¤ (a)");
+        		textView6.setText("¸ß (h)");
         	editText1.setVisibility(View.VISIBLE);
         	editText2.setVisibility(View.VISIBLE);
         	editText3.setVisibility(View.VISIBLE);
@@ -493,7 +492,7 @@ public class Jihe extends Fragment implements OnClickListener,OnLongClickListene
         	editText6.setVisibility(View.VISIBLE);
         	editText7.setVisibility(View.GONE);
         	editText8.setVisibility(View.GONE);
-        	mPopupWindow.dismiss(); //ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½Â¼ï¿½Ö®ï¿½ï¿½Ø±ï¿½Menu 
+        	mPopupWindow.dismiss(); //ÏìÓ¦µã»÷ÊÂ¼þÖ®ºó¹Ø±ÕMenu 
         		break;
         	case R.id.JH2button1:
         		sign=21;
@@ -505,12 +504,12 @@ public class Jihe extends Fragment implements OnClickListener,OnLongClickListene
         		textView6.setVisibility(View.VISIBLE);
         		textView7.setVisibility(View.GONE);
         		textView8.setVisibility(View.GONE);	
-        		textView1.setText("ï¿½ï¿½ï¿?(A)");
-        		textView2.setText("ï¿½ß³ï¿½(a)");
-        		textView3.setText("ï¿½ß³ï¿½(b)");
-        		textView4.setText("ï¿½ß³ï¿½(c)");
-        		textView5.setText("aï¿½ï¿½ï¿½ÔµÄ½ï¿½(ï¿½ï¿½)[ï¿½ï¿½]");
-        		textView6.setText("bï¿½ï¿½ï¿½ÔµÄ½ï¿½(ï¿½ï¿½)[ï¿½ï¿½]");
+        		textView1.setText("Ãæ»ý(A)");
+        		textView2.setText("±ß³¤(a)");
+        		textView3.setText("±ß³¤(b)");
+        		textView4.setText("±ß³¤(c)");
+        		textView5.setText("aËù¶ÔµÄ½Ç(¦Á)[¶È]");
+        		textView6.setText("bËù¶ÔµÄ½Ç(¦Â)[¶È]");
         	
         	editText1.setVisibility(View.VISIBLE);
         	editText2.setVisibility(View.VISIBLE);
@@ -520,7 +519,7 @@ public class Jihe extends Fragment implements OnClickListener,OnLongClickListene
         	editText6.setVisibility(View.VISIBLE);
         	editText7.setVisibility(View.GONE);
         	editText8.setVisibility(View.GONE);
-        	mPopupWindow.dismiss(); //ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½Â¼ï¿½Ö®ï¿½ï¿½Ø±ï¿½Menu 
+        	mPopupWindow.dismiss(); //ÏìÓ¦µã»÷ÊÂ¼þÖ®ºó¹Ø±ÕMenu 
         		break;
         	case R.id.JH2button2:
         		sign=22;
@@ -532,13 +531,13 @@ public class Jihe extends Fragment implements OnClickListener,OnLongClickListene
         		textView6.setVisibility(View.VISIBLE);
         		textView7.setVisibility(View.VISIBLE);
         		textView8.setVisibility(View.GONE);	
-        		textView1.setText("ï¿½ï¿½ï¿?(A)");
-        		textView2.setText("ï¿½Ü³ï¿½(P)");
-        		textView3.setText("ï¿½ß³ï¿½(a)");
-        		textView4.setText("ï¿½ß³ï¿½(b)");
-        		textView5.setText("ï¿½ï¿½(h)");
-        		textView6.setText("aï¿½ï¿½ï¿½ÔµÄ½ï¿½(ï¿½ï¿½)[ï¿½ï¿½]");
-        		textView7.setText("bï¿½ï¿½ï¿½ÔµÄ½ï¿½(ï¿½ï¿½)[ï¿½ï¿½]");
+        		textView1.setText("Ãæ»ý(A)");
+        		textView2.setText("ÖÜ³¤(P)");
+        		textView3.setText("±ß³¤(a)");
+        		textView4.setText("±ß³¤(b)");
+        		textView5.setText("¸ß(h)");
+        		textView6.setText("aËù¶ÔµÄ½Ç(¦Á)[¶È]");
+        		textView7.setText("bËù¶ÔµÄ½Ç(¦Â)[¶È]");
         		
         	editText1.setVisibility(View.VISIBLE);
         	editText2.setVisibility(View.VISIBLE);
@@ -548,7 +547,7 @@ public class Jihe extends Fragment implements OnClickListener,OnLongClickListene
         	editText6.setVisibility(View.VISIBLE);
         	editText7.setVisibility(View.VISIBLE);
         	editText8.setVisibility(View.GONE);
-        	mPopupWindow.dismiss(); //ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½Â¼ï¿½Ö®ï¿½ï¿½Ø±ï¿½Menu 
+        	mPopupWindow.dismiss(); //ÏìÓ¦µã»÷ÊÂ¼þÖ®ºó¹Ø±ÕMenu 
         		break;
         	case R.id.JH2button3:
         		sign=23;
@@ -560,12 +559,12 @@ public class Jihe extends Fragment implements OnClickListener,OnLongClickListene
         		textView6.setVisibility(View.VISIBLE);
         		textView7.setVisibility(View.GONE);
         		textView8.setVisibility(View.GONE);	
-        		textView1.setText("ï¿½ï¿½ï¿?(A)");
-        		textView2.setText("ï¿½Ü³ï¿½(P)");
-        		textView3.setText("ï¿½ß³ï¿½(a)");
-        		textView4.setText("Ö±ï¿½ï¿½(p)");
-        		textView5.setText("Ö±ï¿½ï¿½(q)");
-        		textView6.setText("aï¿½ï¿½ï¿½ÔµÄ½ï¿½(ï¿½ï¿½)[ï¿½ï¿½]");
+        		textView1.setText("Ãæ»ý(A)");
+        		textView2.setText("ÖÜ³¤(P)");
+        		textView3.setText("±ß³¤(a)");
+        		textView4.setText("Ö±¾¶(p)");
+        		textView5.setText("Ö±¾¶(q)");
+        		textView6.setText("aËù¶ÔµÄ½Ç(¦Á)[¶È]");
         		
         	editText1.setVisibility(View.VISIBLE);
         	editText2.setVisibility(View.VISIBLE);
@@ -575,7 +574,7 @@ public class Jihe extends Fragment implements OnClickListener,OnLongClickListene
         	editText6.setVisibility(View.VISIBLE);
         	editText7.setVisibility(View.GONE);
         	editText8.setVisibility(View.GONE);
-        	mPopupWindow.dismiss(); //ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½Â¼ï¿½Ö®ï¿½ï¿½Ø±ï¿½Menu 
+        	mPopupWindow.dismiss(); //ÏìÓ¦µã»÷ÊÂ¼þÖ®ºó¹Ø±ÕMenu 
         		break;
         	case R.id.JH2button4:
         		sign=24;
@@ -587,11 +586,11 @@ public class Jihe extends Fragment implements OnClickListener,OnLongClickListene
         		textView6.setVisibility(View.VISIBLE);
         		textView7.setVisibility(View.GONE);
         		textView8.setVisibility(View.GONE);	
-        		textView1.setText("ï¿½ï¿½ï¿?(A)");
-        		textView2.setText("ï¿½Ü³ï¿½(P)");
-        		textView3.setText("ï¿½ß³ï¿½(a)");
-        		textView4.setText("ï¿½ß³ï¿½(b)");
-        		textView5.setText("ï¿½ß³ï¿½(c)");
+        		textView1.setText("Ãæ»ý(A)");
+        		textView2.setText("ÖÜ³¤(P)");
+        		textView3.setText("±ß³¤(a)");
+        		textView4.setText("±ß³¤(b)");
+        		textView5.setText("±ß³¤(c)");
         		textView6.setText("Side(d)");
         		
       		
@@ -603,7 +602,7 @@ public class Jihe extends Fragment implements OnClickListener,OnLongClickListene
         	editText6.setVisibility(View.VISIBLE);
         	editText7.setVisibility(View.GONE);
         	editText8.setVisibility(View.GONE);
-        	mPopupWindow.dismiss(); //ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½Â¼ï¿½Ö®ï¿½ï¿½Ø±ï¿½Menu 
+        	mPopupWindow.dismiss(); //ÏìÓ¦µã»÷ÊÂ¼þÖ®ºó¹Ø±ÕMenu 
         		break;
         	case R.id.JH2button5:
         		sign=25;
@@ -615,12 +614,12 @@ public class Jihe extends Fragment implements OnClickListener,OnLongClickListene
         		textView6.setVisibility(View.VISIBLE);
         		textView7.setVisibility(View.GONE);
         		textView8.setVisibility(View.GONE);	
-        		textView1.setText("ï¿½ï¿½ï¿?(A)");
-        		textView2.setText("ï¿½Ü³ï¿½(P)");
-        		textView3.setText("ï¿½ß³ï¿½(a)");
-        		textView4.setText("ï¿½ß³ï¿½(b)");
-        		textView5.setText("ï¿½ï¿½(h)");
-        		textView6.setText("aï¿½ï¿½ï¿½ÔµÄ½ï¿½(ï¿½ï¿½)[ï¿½ï¿½]");
+        		textView1.setText("Ãæ»ý(A)");
+        		textView2.setText("ÖÜ³¤(P)");
+        		textView3.setText("±ß³¤(a)");
+        		textView4.setText("±ß³¤(b)");
+        		textView5.setText("¸ß(h)");
+        		textView6.setText("aËù¶ÔµÄ½Ç(¦Á)[¶È]");
         		
         		
         	editText1.setVisibility(View.VISIBLE);
@@ -631,7 +630,7 @@ public class Jihe extends Fragment implements OnClickListener,OnLongClickListene
         	editText6.setVisibility(View.VISIBLE);
         	editText7.setVisibility(View.GONE);
         	editText8.setVisibility(View.GONE);
-        	mPopupWindow.dismiss(); //ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½Â¼ï¿½Ö®ï¿½ï¿½Ø±ï¿½Menu 
+        	mPopupWindow.dismiss(); //ÏìÓ¦µã»÷ÊÂ¼þÖ®ºó¹Ø±ÕMenu 
         		break;
         	case R.id.JH2button6:
         		sign=26;
@@ -643,10 +642,10 @@ public class Jihe extends Fragment implements OnClickListener,OnLongClickListene
         		textView6.setVisibility(View.GONE);
         		textView7.setVisibility(View.GONE);
         		textView8.setVisibility(View.GONE);	
-        		textView1.setText("ï¿½ï¿½ï¿?(A)");
-        		textView2.setText("ï¿½ï¿½ï¿? (V)");
-        		textView3.setText("ï¿½ë¾¶ (r)");
-        		textView4.setText("Ö±ï¿½ï¿½ (d)");
+        		textView1.setText("Ãæ»ý(A)");
+        		textView2.setText("Ìå»ý (V)");
+        		textView3.setText("°ë¾¶ (r)");
+        		textView4.setText("Ö±¾¶ (d)");
 
         	editText1.setVisibility(View.VISIBLE);
         	editText2.setVisibility(View.VISIBLE);
@@ -656,7 +655,7 @@ public class Jihe extends Fragment implements OnClickListener,OnLongClickListene
         	editText6.setVisibility(View.GONE);
         	editText7.setVisibility(View.GONE);
         	editText8.setVisibility(View.GONE);
-        	mPopupWindow.dismiss(); //ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½Â¼ï¿½Ö®ï¿½ï¿½Ø±ï¿½Menu 
+        	mPopupWindow.dismiss(); //ÏìÓ¦µã»÷ÊÂ¼þÖ®ºó¹Ø±ÕMenu 
         		break;
         		
          	case R.id.JH2button7:
@@ -669,9 +668,9 @@ public class Jihe extends Fragment implements OnClickListener,OnLongClickListene
         		textView6.setVisibility(View.GONE);
         		textView7.setVisibility(View.GONE);
         		textView8.setVisibility(View.GONE);	
-        		textView1.setText("ï¿½ï¿½ï¿?(A)");
-        		textView2.setText("ï¿½ï¿½ï¿?(V)");
-        		textView3.setText("ï¿½ß³ï¿½(a)");
+        		textView1.setText("Ãæ»ý(A)");
+        		textView2.setText("Ìå»ý(V)");
+        		textView3.setText("±ß³¤(a)");
 
         	editText1.setVisibility(View.VISIBLE);
         	editText2.setVisibility(View.VISIBLE);
@@ -681,7 +680,7 @@ public class Jihe extends Fragment implements OnClickListener,OnLongClickListene
         	editText6.setVisibility(View.GONE);
         	editText7.setVisibility(View.GONE);
         	editText8.setVisibility(View.GONE);
-        	mPopupWindow.dismiss(); //ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½Â¼ï¿½Ö®ï¿½ï¿½Ø±ï¿½Menu 
+        	mPopupWindow.dismiss(); //ÏìÓ¦µã»÷ÊÂ¼þÖ®ºó¹Ø±ÕMenu 
         		break;
           	case R.id.JH2button8:
         		sign=28;
@@ -693,11 +692,11 @@ public class Jihe extends Fragment implements OnClickListener,OnLongClickListene
         		textView6.setVisibility(View.GONE);
         		textView7.setVisibility(View.GONE);
         		textView8.setVisibility(View.GONE);	
-        		textView1.setText("ï¿½ï¿½ï¿?(A)");
-        		textView2.setText("ï¿½ï¿½ï¿?(V)");
-        		textView3.setText("ï¿½ë¾¶(r)");
-        		textView4.setText("Ö±ï¿½ï¿½(d)");
-        		textView5.setText("ï¿½ï¿½(h)");
+        		textView1.setText("Ãæ»ý(A)");
+        		textView2.setText("Ìå»ý(V)");
+        		textView3.setText("°ë¾¶(r)");
+        		textView4.setText("Ö±¾¶(d)");
+        		textView5.setText("¸ß(h)");
         	
         		
         	editText1.setVisibility(View.VISIBLE);
@@ -708,56 +707,56 @@ public class Jihe extends Fragment implements OnClickListener,OnLongClickListene
         	editText6.setVisibility(View.GONE);
         	editText7.setVisibility(View.GONE);
         	editText8.setVisibility(View.GONE);
-        	mPopupWindow.dismiss(); //ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½Â¼ï¿½Ö®ï¿½ï¿½Ø±ï¿½Menu 
+        	mPopupWindow.dismiss(); //ÏìÓ¦µã»÷ÊÂ¼þÖ®ºó¹Ø±ÕMenu 
         		break;
         	case R.id.dian_jh:
 if(editText1.hasFocus()){
 	if (index_1 < 0 || index_1 >= edit1.length() ){
 		edit1.append(".");
 	}else{
-		edit1.insert(index_1,".");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+		edit1.insert(index_1,".");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
 	 }
     			}else if(editText2.hasFocus()){
     				if (index_2 < 0 || index_2 >= edit2.length() ){
     					edit2.append(".");
     				}else{
-    					edit2.insert(index_2,".");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+    					edit2.insert(index_2,".");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
     				 }
     			}else if(editText3.hasFocus()){
     				if (index_3 < 0 || index_3 >= edit3.length() ){
     					edit3.append(".");
     				}else{
-    					edit3.insert(index_3,".");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+    					edit3.insert(index_3,".");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
     				 }
     			}else if(editText4.hasFocus()){
     				if (index_4 < 0 || index_4 >= edit4.length() ){
     					edit4.append(".");
     				}else{
-    					edit4.insert(index_4,".");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+    					edit4.insert(index_4,".");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
     				 }
     			}else if(editText5.hasFocus()){
     				if (index_5 < 0 || index_5 >= edit5.length() ){
     					edit5.append(".");
     				}else{
-    					edit5.insert(index_5,".");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+    					edit5.insert(index_5,".");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
     				 }
     			}else if(editText6.hasFocus()){
     				if (index_6 < 0 || index_6 >= edit6.length() ){
     					edit6.append(".");
     				}else{
-    					edit6.insert(index_6,".");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+    					edit6.insert(index_6,".");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
     				 }
     			}else if(editText7.hasFocus()){
     				if (index_7 < 0 || index_7 >= edit7.length() ){
     					edit7.append(".");
     				}else{
-    					edit7.insert(index_7,".");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+    					edit7.insert(index_7,".");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
     				 }
     			}else if(editText8.hasFocus()){
     				if (index_8 < 0 || index_8 >= edit8.length() ){
     					edit8.append(".");
     				}else{
-    					edit8.insert(index_8,".");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+    					edit8.insert(index_8,".");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
     				 }
     			}
 ++index_1;
@@ -840,49 +839,49 @@ if(editText1.hasFocus()){
         			if (index_1 < 0 || index_1 >= edit1.length() ){
         				edit1.append("0");
         			}else{
-        				edit1.insert(index_1,"0");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        				edit1.insert(index_1,"0");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         			 }
         		    			}else if(editText2.hasFocus()){
         		    				if (index_2 < 0 || index_2 >= edit2.length() ){
         		    					edit2.append("0");
         		    				}else{
-        		    					edit2.insert(index_2,"0");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit2.insert(index_2,"0");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText3.hasFocus()){
         		    				if (index_3 < 0 || index_3 >= edit3.length() ){
         		    					edit3.append("0");
         		    				}else{
-        		    					edit3.insert(index_3,"0");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit3.insert(index_3,"0");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText4.hasFocus()){
         		    				if (index_4 < 0 || index_4 >= edit4.length() ){
         		    					edit4.append("0");
         		    				}else{
-        		    					edit4.insert(index_4,"0");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit4.insert(index_4,"0");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText5.hasFocus()){
         		    				if (index_5 < 0 || index_5 >= edit5.length() ){
         		    					edit5.append("0");
         		    				}else{
-        		    					edit5.insert(index_5,"0");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit5.insert(index_5,"0");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText6.hasFocus()){
         		    				if (index_6 < 0 || index_6 >= edit6.length() ){
         		    					edit6.append("0");
         		    				}else{
-        		    					edit6.insert(index_6,"0");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit6.insert(index_6,"0");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText7.hasFocus()){
         		    				if (index_7 < 0 || index_7 >= edit7.length() ){
         		    					edit7.append("0");
         		    				}else{
-        		    					edit7.insert(index_7,"0");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit7.insert(index_7,"0");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText8.hasFocus()){
         		    				if (index_8 < 0 || index_8 >= edit8.length() ){
         		    					edit8.append("0");
         		    				}else{
-        		    					edit8.insert(index_8,"0");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit8.insert(index_8,"0");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}
         		++index_1;
@@ -899,49 +898,49 @@ if(editText1.hasFocus()){
         			if (index_1 < 0 || index_1 >= edit1.length() ){
         				edit1.append("1");
         			}else{
-        				edit1.insert(index_1,"1");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        				edit1.insert(index_1,"1");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         			 }
         		    			}else if(editText2.hasFocus()){
         		    				if (index_2 < 0 || index_2 >= edit2.length() ){
         		    					edit2.append("1");
         		    				}else{
-        		    					edit2.insert(index_2,"1");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit2.insert(index_2,"1");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText3.hasFocus()){
         		    				if (index_3 < 0 || index_3 >= edit3.length() ){
         		    					edit3.append("1");
         		    				}else{
-        		    					edit3.insert(index_3,"1");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit3.insert(index_3,"1");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText4.hasFocus()){
         		    				if (index_4 < 0 || index_4 >= edit4.length() ){
         		    					edit4.append("1");
         		    				}else{
-        		    					edit4.insert(index_4,"1");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit4.insert(index_4,"1");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText5.hasFocus()){
         		    				if (index_5 < 0 || index_5 >= edit5.length() ){
         		    					edit5.append("1");
         		    				}else{
-        		    					edit5.insert(index_5,"1");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit5.insert(index_5,"1");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText6.hasFocus()){
         		    				if (index_6 < 0 || index_6 >= edit6.length() ){
         		    					edit6.append("1");
         		    				}else{
-        		    					edit6.insert(index_6,"1");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit6.insert(index_6,"1");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText7.hasFocus()){
         		    				if (index_7 < 0 || index_7 >= edit7.length() ){
         		    					edit7.append("1");
         		    				}else{
-        		    					edit7.insert(index_7,"1");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit7.insert(index_7,"1");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText8.hasFocus()){
         		    				if (index_8 < 0 || index_8 >= edit8.length() ){
         		    					edit8.append("1");
         		    				}else{
-        		    					edit8.insert(index_8,"1");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit8.insert(index_8,"1");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}
         		++index_1;
@@ -958,49 +957,49 @@ if(editText1.hasFocus()){
         			if (index_1 < 0 || index_1 >= edit1.length() ){
         				edit1.append("2");
         			}else{
-        				edit1.insert(index_1,"2");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        				edit1.insert(index_1,"2");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         			 }
         		    			}else if(editText2.hasFocus()){
         		    				if (index_2 < 0 || index_2 >= edit2.length() ){
         		    					edit2.append("2");
         		    				}else{
-        		    					edit2.insert(index_2,"2");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit2.insert(index_2,"2");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText3.hasFocus()){
         		    				if (index_3 < 0 || index_3 >= edit3.length() ){
         		    					edit3.append("2");
         		    				}else{
-        		    					edit3.insert(index_3,"2");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit3.insert(index_3,"2");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText4.hasFocus()){
         		    				if (index_4 < 0 || index_4 >= edit4.length() ){
         		    					edit4.append("2");
         		    				}else{
-        		    					edit4.insert(index_4,"2");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit4.insert(index_4,"2");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText5.hasFocus()){
         		    				if (index_5 < 0 || index_5 >= edit5.length() ){
         		    					edit5.append("2");
         		    				}else{
-        		    					edit5.insert(index_5,"2");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit5.insert(index_5,"2");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText6.hasFocus()){
         		    				if (index_6 < 0 || index_6 >= edit6.length() ){
         		    					edit6.append("2");
         		    				}else{
-        		    					edit6.insert(index_6,"2");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit6.insert(index_6,"2");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText7.hasFocus()){
         		    				if (index_7 < 0 || index_7 >= edit7.length() ){
         		    					edit7.append("2");
         		    				}else{
-        		    					edit7.insert(index_7,"2");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit7.insert(index_7,"2");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText8.hasFocus()){
         		    				if (index_8 < 0 || index_8 >= edit8.length() ){
         		    					edit8.append("2");
         		    				}else{
-        		    					edit8.insert(index_8,"2");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit8.insert(index_8,"2");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}
         		++index_1;
@@ -1017,49 +1016,49 @@ if(editText1.hasFocus()){
         			if (index_1 < 0 || index_1 >= edit1.length() ){
         				edit1.append("3");
         			}else{
-        				edit1.insert(index_1,"3");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        				edit1.insert(index_1,"3");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         			 }
         		    			}else if(editText2.hasFocus()){
         		    				if (index_2 < 0 || index_2 >= edit2.length() ){
         		    					edit2.append("3");
         		    				}else{
-        		    					edit2.insert(index_2,"3");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit2.insert(index_2,"3");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText3.hasFocus()){
         		    				if (index_3 < 0 || index_3 >= edit3.length() ){
         		    					edit3.append("3");
         		    				}else{
-        		    					edit3.insert(index_3,"3");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit3.insert(index_3,"3");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText4.hasFocus()){
         		    				if (index_4 < 0 || index_4 >= edit4.length() ){
         		    					edit4.append("3");
         		    				}else{
-        		    					edit4.insert(index_4,"3");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit4.insert(index_4,"3");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText5.hasFocus()){
         		    				if (index_5 < 0 || index_5 >= edit5.length() ){
         		    					edit5.append("3");
         		    				}else{
-        		    					edit5.insert(index_5,"3");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit5.insert(index_5,"3");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText6.hasFocus()){
         		    				if (index_6 < 0 || index_6 >= edit6.length() ){
         		    					edit6.append("3");
         		    				}else{
-        		    					edit6.insert(index_6,"3");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit6.insert(index_6,"3");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText7.hasFocus()){
         		    				if (index_7 < 0 || index_7 >= edit7.length() ){
         		    					edit7.append("3");
         		    				}else{
-        		    					edit7.insert(index_7,"3");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit7.insert(index_7,"3");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText8.hasFocus()){
         		    				if (index_8 < 0 || index_8 >= edit8.length() ){
         		    					edit8.append("3");
         		    				}else{
-        		    					edit8.insert(index_8,"3");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit8.insert(index_8,"3");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}
         		++index_1;
@@ -1076,49 +1075,49 @@ if(editText1.hasFocus()){
         			if (index_1 < 0 || index_1 >= edit1.length() ){
         				edit1.append("4");
         			}else{
-        				edit1.insert(index_1,"4");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        				edit1.insert(index_1,"4");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         			 }
         		    			}else if(editText2.hasFocus()){
         		    				if (index_2 < 0 || index_2 >= edit2.length() ){
         		    					edit2.append("4");
         		    				}else{
-        		    					edit2.insert(index_2,"4");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit2.insert(index_2,"4");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText3.hasFocus()){
         		    				if (index_3 < 0 || index_3 >= edit3.length() ){
         		    					edit3.append("4");
         		    				}else{
-        		    					edit3.insert(index_3,"4");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit3.insert(index_3,"4");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText4.hasFocus()){
         		    				if (index_4 < 0 || index_4 >= edit4.length() ){
         		    					edit4.append("4");
         		    				}else{
-        		    					edit4.insert(index_4,"4");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit4.insert(index_4,"4");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText5.hasFocus()){
         		    				if (index_5 < 0 || index_5 >= edit5.length() ){
         		    					edit5.append("4");
         		    				}else{
-        		    					edit5.insert(index_5,"4");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit5.insert(index_5,"4");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText6.hasFocus()){
         		    				if (index_6 < 0 || index_6 >= edit6.length() ){
         		    					edit6.append("4");
         		    				}else{
-        		    					edit6.insert(index_6,"4");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit6.insert(index_6,"4");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText7.hasFocus()){
         		    				if (index_7 < 0 || index_7 >= edit7.length() ){
         		    					edit7.append("4");
         		    				}else{
-        		    					edit7.insert(index_7,"4");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit7.insert(index_7,"4");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText8.hasFocus()){
         		    				if (index_8 < 0 || index_8 >= edit8.length() ){
         		    					edit8.append("4");
         		    				}else{
-        		    					edit8.insert(index_8,"4");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit8.insert(index_8,"4");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}
         		++index_1;
@@ -1135,49 +1134,49 @@ if(editText1.hasFocus()){
         			if (index_1 < 0 || index_1 >= edit1.length() ){
         				edit1.append("5");
         			}else{
-        				edit1.insert(index_1,"5");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        				edit1.insert(index_1,"5");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         			 }
         		    			}else if(editText2.hasFocus()){
         		    				if (index_2 < 0 || index_2 >= edit2.length() ){
         		    					edit2.append("5");
         		    				}else{
-        		    					edit2.insert(index_2,"5");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit2.insert(index_2,"5");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText3.hasFocus()){
         		    				if (index_3 < 0 || index_3 >= edit3.length() ){
         		    					edit3.append("5");
         		    				}else{
-        		    					edit3.insert(index_3,"5");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit3.insert(index_3,"5");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText4.hasFocus()){
         		    				if (index_4 < 0 || index_4 >= edit4.length() ){
         		    					edit4.append("5");
         		    				}else{
-        		    					edit4.insert(index_4,"5");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit4.insert(index_4,"5");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText5.hasFocus()){
         		    				if (index_5 < 0 || index_5 >= edit5.length() ){
         		    					edit5.append("5");
         		    				}else{
-        		    					edit5.insert(index_5,"5");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit5.insert(index_5,"5");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText6.hasFocus()){
         		    				if (index_6 < 0 || index_6 >= edit6.length() ){
         		    					edit6.append("5");
         		    				}else{
-        		    					edit6.insert(index_6,"5");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit6.insert(index_6,"5");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText7.hasFocus()){
         		    				if (index_7 < 0 || index_7 >= edit7.length() ){
         		    					edit7.append("5");
         		    				}else{
-        		    					edit7.insert(index_7,"5");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit7.insert(index_7,"5");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText8.hasFocus()){
         		    				if (index_8 < 0 || index_8 >= edit8.length() ){
         		    					edit8.append("5");
         		    				}else{
-        		    					edit8.insert(index_8,"5");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit8.insert(index_8,"5");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}
         		++index_1;
@@ -1194,49 +1193,49 @@ if(editText1.hasFocus()){
         			if (index_1 < 0 || index_1 >= edit1.length() ){
         				edit1.append("6");
         			}else{
-        				edit1.insert(index_1,"6");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        				edit1.insert(index_1,"6");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         			 }
         		    			}else if(editText2.hasFocus()){
         		    				if (index_2 < 0 || index_2 >= edit2.length() ){
         		    					edit2.append("6");
         		    				}else{
-        		    					edit2.insert(index_2,"6");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit2.insert(index_2,"6");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText3.hasFocus()){
         		    				if (index_3 < 0 || index_3 >= edit3.length() ){
         		    					edit3.append("6");
         		    				}else{
-        		    					edit3.insert(index_3,"6");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit3.insert(index_3,"6");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText4.hasFocus()){
         		    				if (index_4 < 0 || index_4 >= edit4.length() ){
         		    					edit4.append("6");
         		    				}else{
-        		    					edit4.insert(index_4,"6");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit4.insert(index_4,"6");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText5.hasFocus()){
         		    				if (index_5 < 0 || index_5 >= edit5.length() ){
         		    					edit5.append("6");
         		    				}else{
-        		    					edit5.insert(index_5,"6");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit5.insert(index_5,"6");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText6.hasFocus()){
         		    				if (index_6 < 0 || index_6 >= edit6.length() ){
         		    					edit6.append("6");
         		    				}else{
-        		    					edit6.insert(index_6,"6");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit6.insert(index_6,"6");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText7.hasFocus()){
         		    				if (index_7 < 0 || index_7 >= edit7.length() ){
         		    					edit7.append("6");
         		    				}else{
-        		    					edit7.insert(index_7,"6");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit7.insert(index_7,"6");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText8.hasFocus()){
         		    				if (index_8 < 0 || index_8 >= edit8.length() ){
         		    					edit8.append("6");
         		    				}else{
-        		    					edit8.insert(index_8,"6");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit8.insert(index_8,"6");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}
         		++index_1;
@@ -1253,49 +1252,49 @@ if(editText1.hasFocus()){
         			if (index_1 < 0 || index_1 >= edit1.length() ){
         				edit1.append("7");
         			}else{
-        				edit1.insert(index_1,"7");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        				edit1.insert(index_1,"7");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         			 }
         		    			}else if(editText2.hasFocus()){
         		    				if (index_2 < 0 || index_2 >= edit2.length() ){
         		    					edit2.append("7");
         		    				}else{
-        		    					edit2.insert(index_2,"7");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit2.insert(index_2,"7");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText3.hasFocus()){
         		    				if (index_3 < 0 || index_3 >= edit3.length() ){
         		    					edit3.append("7");
         		    				}else{
-        		    					edit3.insert(index_3,"7");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit3.insert(index_3,"7");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText4.hasFocus()){
         		    				if (index_4 < 0 || index_4 >= edit4.length() ){
         		    					edit4.append("7");
         		    				}else{
-        		    					edit4.insert(index_4,"7");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit4.insert(index_4,"7");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText5.hasFocus()){
         		    				if (index_5 < 0 || index_5 >= edit5.length() ){
         		    					edit5.append("7");
         		    				}else{
-        		    					edit5.insert(index_5,"7");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit5.insert(index_5,"7");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText6.hasFocus()){
         		    				if (index_6 < 0 || index_6 >= edit6.length() ){
         		    					edit6.append("7");
         		    				}else{
-        		    					edit6.insert(index_6,"7");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit6.insert(index_6,"7");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText7.hasFocus()){
         		    				if (index_7 < 0 || index_7 >= edit7.length() ){
         		    					edit7.append("7");
         		    				}else{
-        		    					edit7.insert(index_7,"7");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit7.insert(index_7,"7");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText8.hasFocus()){
         		    				if (index_8 < 0 || index_8 >= edit8.length() ){
         		    					edit8.append("7");
         		    				}else{
-        		    					edit8.insert(index_8,"7");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit8.insert(index_8,"7");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}
         		++index_1;
@@ -1312,49 +1311,49 @@ if(editText1.hasFocus()){
         			if (index_1 < 0 || index_1 >= edit1.length() ){
         				edit1.append("8");
         			}else{
-        				edit1.insert(index_1,"8");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        				edit1.insert(index_1,"8");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         			 }
         		    			}else if(editText2.hasFocus()){
         		    				if (index_2 < 0 || index_2 >= edit2.length() ){
         		    					edit2.append("8");
         		    				}else{
-        		    					edit2.insert(index_2,"8");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit2.insert(index_2,"8");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText3.hasFocus()){
         		    				if (index_3 < 0 || index_3 >= edit3.length() ){
         		    					edit3.append("8");
         		    				}else{
-        		    					edit3.insert(index_3,"8");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit3.insert(index_3,"8");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText4.hasFocus()){
         		    				if (index_4 < 0 || index_4 >= edit4.length() ){
         		    					edit4.append("8");
         		    				}else{
-        		    					edit4.insert(index_4,"8");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit4.insert(index_4,"8");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText5.hasFocus()){
         		    				if (index_5 < 0 || index_5 >= edit5.length() ){
         		    					edit5.append("8");
         		    				}else{
-        		    					edit5.insert(index_5,"8");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit5.insert(index_5,"8");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText6.hasFocus()){
         		    				if (index_6 < 0 || index_6 >= edit6.length() ){
         		    					edit6.append("8");
         		    				}else{
-        		    					edit6.insert(index_6,"8");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit6.insert(index_6,"8");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText7.hasFocus()){
         		    				if (index_7 < 0 || index_7 >= edit7.length() ){
         		    					edit7.append("8");
         		    				}else{
-        		    					edit7.insert(index_7,"8");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit7.insert(index_7,"8");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText8.hasFocus()){
         		    				if (index_8 < 0 || index_8 >= edit8.length() ){
         		    					edit8.append("8");
         		    				}else{
-        		    					edit8.insert(index_8,"8");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit8.insert(index_8,"8");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}
         		++index_1;
@@ -1371,49 +1370,49 @@ if(editText1.hasFocus()){
         			if (index_1 < 0 || index_1 >= edit1.length() ){
         				edit1.append("9");
         			}else{
-        				edit1.insert(index_1,"9");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        				edit1.insert(index_1,"9");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         			 }
         		    			}else if(editText2.hasFocus()){
         		    				if (index_2 < 0 || index_2 >= edit2.length() ){
         		    					edit2.append("9");
         		    				}else{
-        		    					edit2.insert(index_2,"9");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit2.insert(index_2,"9");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText3.hasFocus()){
         		    				if (index_3 < 0 || index_3 >= edit3.length() ){
         		    					edit3.append("9");
         		    				}else{
-        		    					edit3.insert(index_3,"9");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit3.insert(index_3,"9");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText4.hasFocus()){
         		    				if (index_4 < 0 || index_4 >= edit4.length() ){
         		    					edit4.append("9");
         		    				}else{
-        		    					edit4.insert(index_4,"9");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit4.insert(index_4,"9");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText5.hasFocus()){
         		    				if (index_5 < 0 || index_5 >= edit5.length() ){
         		    					edit5.append("9");
         		    				}else{
-        		    					edit5.insert(index_5,"9");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit5.insert(index_5,"9");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText6.hasFocus()){
         		    				if (index_6 < 0 || index_6 >= edit6.length() ){
         		    					edit6.append("9");
         		    				}else{
-        		    					edit6.insert(index_6,"9");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit6.insert(index_6,"9");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText7.hasFocus()){
         		    				if (index_7 < 0 || index_7 >= edit7.length() ){
         		    					edit7.append("9");
         		    				}else{
-        		    					edit7.insert(index_7,"9");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit7.insert(index_7,"9");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}else if(editText8.hasFocus()){
         		    				if (index_8 < 0 || index_8 >= edit8.length() ){
         		    					edit8.append("9");
         		    				}else{
-        		    					edit8.insert(index_8,"9");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+        		    					edit8.insert(index_8,"9");//¹â±êËùÔÚÎ»ÖÃ²åÈëÎÄ×Ö
         		    				 }
         		    			}
         		++index_1;
@@ -1447,7 +1446,7 @@ if(editText1.hasFocus()){
         		break;
         		//jisuan
         	case R.id.jisuan_jh:
-        		//ï¿½ï¿½Öµ
+        		//¸³Öµ
             	if(sign ==11){
             		try{
             		if( editText1.getText().toString().equals(""))
@@ -1465,7 +1464,7 @@ if(editText1.hasFocus()){
             		if(editText5.getText().toString().equals(""))
             		alpha=0;else            	
             		alpha=Math.toRadians(Double.parseDouble( editText5.getText().toString()));
-            		}catch(Exception e){Toast.makeText(getActivity(), "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", Toast.LENGTH_SHORT).show();}
+            		}catch(Exception e){Toast.makeText(getActivity(), "ÊäÈëÓÐÎó£¡", Toast.LENGTH_SHORT).show();}
             		ZNBX();
             		ZNBXtext();
             	}
@@ -1495,7 +1494,7 @@ if(editText1.hasFocus()){
                     		if(editText8.getText().toString().equals(""))
                     		gamma=0;else
                     		gamma=Math.toRadians(Double.parseDouble( editText8.getText().toString()));
-                		}catch(Exception e){Toast.makeText(getActivity(), "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", Toast.LENGTH_SHORT).show();}
+                		}catch(Exception e){Toast.makeText(getActivity(), "ÊäÈëÓÐÎó£¡", Toast.LENGTH_SHORT).show();}
             			RYSJX();
                 		RYSJXtext();
             	}
@@ -1515,7 +1514,7 @@ if(editText1.hasFocus()){
                 		r=0;else
                 		r=Double.parseDouble( editText4.getText().toString());
                 		
-                		}catch(Exception e){Toast.makeText(getActivity(), "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", Toast.LENGTH_SHORT).show();}
+                		}catch(Exception e){Toast.makeText(getActivity(), "ÊäÈëÓÐÎó£¡", Toast.LENGTH_SHORT).show();}
                 		YUAN();
                 		YUANtext();
             	}
@@ -1535,7 +1534,7 @@ if(editText1.hasFocus()){
                 		C=0;else
                 		C=Double.parseDouble( editText4.getText().toString());
                 		
-                		}catch(Exception e){Toast.makeText(getActivity(), "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", Toast.LENGTH_SHORT).show();}
+                		}catch(Exception e){Toast.makeText(getActivity(), "ÊäÈëÓÐÎó£¡", Toast.LENGTH_SHORT).show();}
             		TUOYUAN();
             		TUOYUANtext();
             	}
@@ -1555,7 +1554,7 @@ if(editText1.hasFocus()){
                 		h=0;else
                 		h=Double.parseDouble( editText4.getText().toString());
                 		
-                		}catch(Exception e){Toast.makeText(getActivity(), "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", Toast.LENGTH_SHORT).show();}
+                		}catch(Exception e){Toast.makeText(getActivity(), "ÊäÈëÓÐÎó£¡", Toast.LENGTH_SHORT).show();}
             		ZHENGSANJIAOXING();
             		ZHENGSANJIAOXINGtext();
             	}
@@ -1579,7 +1578,7 @@ if(editText1.hasFocus()){
                     		h=0;else
                     		h=Double.parseDouble( editText5.getText().toString());
                 		
-                		}catch(Exception e){Toast.makeText(getActivity(), "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", Toast.LENGTH_SHORT).show();}
+                		}catch(Exception e){Toast.makeText(getActivity(), "ÊäÈëÓÐÎó£¡", Toast.LENGTH_SHORT).show();}
             		ZHUITI();
             		ZHUITItext();
             	}
@@ -1603,7 +1602,7 @@ else if(sign ==17){
     		c=0;else
     		c=Double.parseDouble( editText5.getText().toString());
 		
-		}catch(Exception e){Toast.makeText(getActivity(), "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", Toast.LENGTH_SHORT).show();}
+		}catch(Exception e){Toast.makeText(getActivity(), "ÊäÈëÓÐÎó£¡", Toast.LENGTH_SHORT).show();}
 	TUOQIU();
 	TUOQIUtext();
             	}
@@ -1632,7 +1631,7 @@ if(editText6.getText().toString().equals(""))
     		h=0;else
     		h=Double.parseDouble( editText6.getText().toString());
 		
-		}catch(Exception e){Toast.makeText(getActivity(), "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", Toast.LENGTH_SHORT).show();}
+		}catch(Exception e){Toast.makeText(getActivity(), "ÊäÈëÓÐÎó£¡", Toast.LENGTH_SHORT).show();}
 	ZHUITI();
 	ZHUITItext();
 }
@@ -1660,7 +1659,7 @@ if(editText6.getText().toString().equals(""))
                     		beta=0;else
                     		beta=Double.parseDouble( editText6.getText().toString());
                 		
-                		}catch(Exception e){Toast.makeText(getActivity(), "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", Toast.LENGTH_SHORT).show();}
+                		}catch(Exception e){Toast.makeText(getActivity(), "ÊäÈëÓÐÎó£¡", Toast.LENGTH_SHORT).show();}
             		ZHIJIAOSANJIAOXING();
             		ZHIJIAOSANJIAOXINGtext();
             		
@@ -1692,7 +1691,7 @@ if(editText6.getText().toString().equals(""))
                     		beta=0;else
                     		beta=Double.parseDouble( editText7.getText().toString());
                 		
-                		}catch(Exception e){Toast.makeText(getActivity(), "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", Toast.LENGTH_SHORT).show();}
+                		}catch(Exception e){Toast.makeText(getActivity(), "ÊäÈëÓÐÎó£¡", Toast.LENGTH_SHORT).show();}
             		DENGYAOSANJIAOXING();
             		DENGYAOSANJIAOXINGtext();
             	}
@@ -1720,7 +1719,7 @@ if(editText6.getText().toString().equals(""))
                     			alpha=Double.parseDouble( editText6.getText().toString());
                 		
                 		
-                		}catch(Exception e){Toast.makeText(getActivity(), "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", Toast.LENGTH_SHORT).show();}
+                		}catch(Exception e){Toast.makeText(getActivity(), "ÊäÈëÓÐÎó£¡", Toast.LENGTH_SHORT).show();}
             		LINGXING();
             		LINGXINGtext();
             	}
@@ -1748,7 +1747,7 @@ if(editText6.getText().toString().equals(""))
                     			d=Double.parseDouble( editText6.getText().toString());
                 		
                 		
-                		}catch(Exception e){Toast.makeText(getActivity(), "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", Toast.LENGTH_SHORT).show();}
+                		}catch(Exception e){Toast.makeText(getActivity(), "ÊäÈëÓÐÎó£¡", Toast.LENGTH_SHORT).show();}
             		TIXING();
             		TIXINGtext();
             	}
@@ -1776,7 +1775,7 @@ if(editText6.getText().toString().equals(""))
                     			alpha=Double.parseDouble( editText6.getText().toString());
                 		
                 		
-                		}catch(Exception e){Toast.makeText(getActivity(), "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", Toast.LENGTH_SHORT).show();}
+                		}catch(Exception e){Toast.makeText(getActivity(), "ÊäÈëÓÐÎó£¡", Toast.LENGTH_SHORT).show();}
             		PINGXINGSIBIANXING();
             		PINGXINGSIBIANXINGtext();
             	}
@@ -1797,7 +1796,7 @@ if(editText6.getText().toString().equals(""))
                 		
                 		
                 		
-                		}catch(Exception e){Toast.makeText(getActivity(), "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", Toast.LENGTH_SHORT).show();}
+                		}catch(Exception e){Toast.makeText(getActivity(), "ÊäÈëÓÐÎó£¡", Toast.LENGTH_SHORT).show();}
             		QIU();
             		QIUtext();
             	}
@@ -1816,7 +1815,7 @@ if(editText6.getText().toString().equals(""))
                 		
                 		
                 		
-                		}catch(Exception e){Toast.makeText(getActivity(), "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", Toast.LENGTH_SHORT).show();}
+                		}catch(Exception e){Toast.makeText(getActivity(), "ÊäÈëÓÐÎó£¡", Toast.LENGTH_SHORT).show();}
             		SIMIANTI();
             		SIMIANTItext();
             	}
@@ -1839,7 +1838,7 @@ if(editText6.getText().toString().equals(""))
                 		h=0;else
                 		h=Double.parseDouble( editText5.getText().toString());
 
-                		}catch(Exception e){Toast.makeText(getActivity(), "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", Toast.LENGTH_SHORT).show();}
+                		}catch(Exception e){Toast.makeText(getActivity(), "ÊäÈëÓÐÎó£¡", Toast.LENGTH_SHORT).show();}
             		YUANZHU();
             		YUANZHUtext();
             	}
@@ -1875,7 +1874,7 @@ if(editText6.getText().toString().equals(""))
         	
         }
         
-//ï¿½ï¿½ï¿½ï¿½nï¿½ï¿½ï¿½ï¿½
+//ËãÕýn±äÐÎ
         public  void ZNBX(){
         	
         	if(N!=0&&alpha==0)
@@ -1939,7 +1938,7 @@ if(editText6.getText().toString().equals(""))
         	}
         
          void ZNBXtext(){      	
-        	 if(A==0||P==0||a==0||N==0||alpha==0){ Toast.makeText(getActivity(), "ï¿½ï¿½ï¿½Ý²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ã£¡", Toast.LENGTH_SHORT).show();return;}
+        	 if(A==0||P==0||a==0||N==0||alpha==0){ Toast.makeText(getActivity(), "Êý¾Ý²»¹»£¡ÎÞ·¨¼ÆËã£¡", Toast.LENGTH_SHORT).show();return;}
          	
          	else{
         		alpha_text=(N-2)*Math.PI/N ;  	
@@ -1950,11 +1949,11 @@ if(editText6.getText().toString().equals(""))
         		A_text=N*Math.pow(a, 2)*Math.cos(Math.PI/N)/(4*Math.sin(Math.PI/N));      	
         	//	N=-2*(Math.PI)/(alpha-(Math.PI));
         	     		N_text=P/a;
-        		if(Math.abs(alpha_text-alpha)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-        		if(Math.abs(a_text-a)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-        		if(Math.abs(A_text-A)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-        		if(Math.abs(N_text-N)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;} 
-        		if(Math.abs(P_text-P)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
+        		if(Math.abs(alpha_text-alpha)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+        		if(Math.abs(a_text-a)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+        		if(Math.abs(A_text-A)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+        		if(Math.abs(N_text-N)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;} 
+        		if(Math.abs(P_text-P)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
         }
         		DecimalFormat df1 = new DecimalFormat("###.###########");   
         		DecimalFormat df2 = new DecimalFormat("###.###########");
@@ -1969,7 +1968,7 @@ if(editText6.getText().toString().equals(""))
         	 editText5.setText(String.valueOf(df5.format(Math.toDegrees(alpha))));
         	 }
     	
-//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//ÈÎÒâÈý½ÇÐÎ
          public void RYSJX(){
         	 if(beta!=0&&gamma!=0&&alpha==0){
         		 alpha=Math.PI-beta-gamma;
@@ -2217,7 +2216,7 @@ if(editText6.getText().toString().equals(""))
         	}
          }
          void RYSJXtext(){      	
-        	 if(A==0||P==0||a==0||b==0||c==0||alpha==0||beta==0||gamma==0){ Toast.makeText(getActivity(), "ï¿½ï¿½ï¿½Ý²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ã£¡", Toast.LENGTH_SHORT).show();return;}
+        	 if(A==0||P==0||a==0||b==0||c==0||alpha==0||beta==0||gamma==0){ Toast.makeText(getActivity(), "Êý¾Ý²»¹»£¡ÎÞ·¨¼ÆËã£¡", Toast.LENGTH_SHORT).show();return;}
          	
          	else{
          		alpha_text=Math.PI-beta-gamma;	
@@ -2229,14 +2228,14 @@ if(editText6.getText().toString().equals(""))
          										A_text=a*c*Math.sin(beta)/2 ;
          												P_text=a+b+c;
         	     	
-        		if(Math.abs(alpha_text-alpha)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-        		if(Math.abs(a_text-a)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-        		if(Math.abs(A_text-A)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-        		if(Math.abs(b_text-b)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;} 
-        		if(Math.abs(P_text-P)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-        		if(Math.abs(gamma_text-gamma)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-        		if(Math.abs(beta_text-beta)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;} 
-        		if(Math.abs(c_text-c)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
+        		if(Math.abs(alpha_text-alpha)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+        		if(Math.abs(a_text-a)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+        		if(Math.abs(A_text-A)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+        		if(Math.abs(b_text-b)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;} 
+        		if(Math.abs(P_text-P)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+        		if(Math.abs(gamma_text-gamma)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+        		if(Math.abs(beta_text-beta)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;} 
+        		if(Math.abs(c_text-c)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
         }
         		DecimalFormat df1 = new DecimalFormat("###.###########");   
         		DecimalFormat df2 = new DecimalFormat("###.###########");
@@ -2305,7 +2304,7 @@ if(editText6.getText().toString().equals(""))
          }
          void YUANtext(){
 
-         	 if(A==0||C==0||d==0||r==0){ Toast.makeText(getActivity(), "ï¿½ï¿½ï¿½Ý²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ã£¡", Toast.LENGTH_SHORT).show();return;}
+         	 if(A==0||C==0||d==0||r==0){ Toast.makeText(getActivity(), "Êý¾Ý²»¹»£¡ÎÞ·¨¼ÆËã£¡", Toast.LENGTH_SHORT).show();return;}
           	
           	else{
           		r_text=d/2;  	
@@ -2314,10 +2313,10 @@ if(editText6.getText().toString().equals(""))
           		d_text=C/Math.PI;  	
          		
          	     		
-         		if(Math.abs(r_text-r)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-         		if(Math.abs(A_text-A)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-         		if(Math.abs(C_text-C)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-         		if(Math.abs(d_text-d)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;} 
+         		if(Math.abs(r_text-r)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+         		if(Math.abs(A_text-A)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+         		if(Math.abs(C_text-C)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+         		if(Math.abs(d_text-d)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;} 
          		
          }
          		DecimalFormat df1 = new DecimalFormat("###.###########");   
@@ -2332,7 +2331,7 @@ if(editText6.getText().toString().equals(""))
          	
          }
         
-  //ï¿½ï¿½Ô²
+  //ÍÖÔ²
          public void TUOYUAN(){
         	 if(A==0&&p!=0&&q!=0)
           	{
@@ -2365,7 +2364,7 @@ if(editText6.getText().toString().equals(""))
           	
          }
          void TUOYUANtext(){
-        	 if(A==0||C==0||q==0||p==0){ Toast.makeText(getActivity(), "ï¿½ï¿½ï¿½Ý²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ã£¡", Toast.LENGTH_SHORT).show();return;}
+        	 if(A==0||C==0||q==0||p==0){ Toast.makeText(getActivity(), "Êý¾Ý²»¹»£¡ÎÞ·¨¼ÆËã£¡", Toast.LENGTH_SHORT).show();return;}
            	
            	else{
            		A_text=Math.PI*p*q;  	
@@ -2374,10 +2373,10 @@ if(editText6.getText().toString().equals(""))
            		q_text=A/(Math.PI*p);  	
           		
           	     		
-          		if(Math.abs(r_text-r)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-          		if(Math.abs(A_text-A)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-          		if(Math.abs(C_text-C)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-          		if(Math.abs(d_text-d)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;} 
+          		if(Math.abs(r_text-r)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+          		if(Math.abs(A_text-A)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+          		if(Math.abs(C_text-C)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+          		if(Math.abs(d_text-d)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;} 
           		
           }
           		DecimalFormat df1 = new DecimalFormat("###.###########");   
@@ -2392,7 +2391,7 @@ if(editText6.getText().toString().equals(""))
           	
          }
          
-      //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+      //ÕýÈý½ÇÐÎ
          public void ZHENGSANJIAOXING(){
         	 if(A==0&&a!=0)
            	{
@@ -2442,7 +2441,7 @@ if(editText6.getText().toString().equals(""))
          }
          void ZHENGSANJIAOXINGtext(){
 
-        	 if(A==0||P==0||a==0||h==0){ Toast.makeText(getActivity(), "ï¿½ï¿½ï¿½Ý²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ã£¡", Toast.LENGTH_SHORT).show();return;}
+        	 if(A==0||P==0||a==0||h==0){ Toast.makeText(getActivity(), "Êý¾Ý²»¹»£¡ÎÞ·¨¼ÆËã£¡", Toast.LENGTH_SHORT).show();return;}
             	
             	else{
             		A_text=a*h/2 ;  	
@@ -2451,10 +2450,10 @@ if(editText6.getText().toString().equals(""))
             		h_text=a*Math.sqrt(3)/2 ;  	
            		
            	     		
-           		if(Math.abs(A_text-A)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-           		if(Math.abs(P_text-P)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-           		if(Math.abs(a_text-a)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-           		if(Math.abs(h_text-h)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;} 
+           		if(Math.abs(A_text-A)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+           		if(Math.abs(P_text-P)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+           		if(Math.abs(a_text-a)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+           		if(Math.abs(h_text-h)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;} 
            		
            }
            		DecimalFormat df1 = new DecimalFormat("###.###########");   
@@ -2469,7 +2468,7 @@ if(editText6.getText().toString().equals(""))
            	
          }
          
-         //ï¿½ï¿½ï¿½ï¿½
+         //ÁâÐÎ
          public void LINGXING(){
         	 if(a==0&&P!=0)
             	{
@@ -2584,7 +2583,7 @@ else if(A==0&&p!=0&&q!=0){
            	}
          }
          void LINGXINGtext(){
-        	 if(A==0||P==0||a==0||p==0||q==0||alpha==0){ Toast.makeText(getActivity(), "ï¿½ï¿½ï¿½Ý²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ã£¡", Toast.LENGTH_SHORT).show();return;}
+        	 if(A==0||P==0||a==0||p==0||q==0||alpha==0){ Toast.makeText(getActivity(), "Êý¾Ý²»¹»£¡ÎÞ·¨¼ÆËã£¡", Toast.LENGTH_SHORT).show();return;}
            	
            	else{
            		A_text=(p*q)/2 ;
@@ -2594,12 +2593,12 @@ else if(A==0&&p!=0&&q!=0){
            		q_text=2*A/p  ;  	
            		alpha_text = Math.atan(p/q)*2;
            		
-          		if(Math.abs(A_text-A)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-          		if(Math.abs(P_text-P)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;} 
-          		if(Math.abs(a_text-a)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-          		if(Math.abs(p_text-p)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-          		if(Math.abs(q_text-q)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;} 
-          		if(Math.abs(alpha_text-alpha)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
+          		if(Math.abs(A_text-A)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+          		if(Math.abs(P_text-P)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;} 
+          		if(Math.abs(a_text-a)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+          		if(Math.abs(p_text-p)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+          		if(Math.abs(q_text-q)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;} 
+          		if(Math.abs(alpha_text-alpha)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
           		
           		
           }
@@ -2622,7 +2621,7 @@ else if(A==0&&p!=0&&q!=0){
         	
          }
          
-         //Ö±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+         //Ö±½ÇÈý½ÇÐÎ
          public void ZHIJIAOSANJIAOXING(){
         	 if(b==0&&A!=0&&a!=0)
             	{
@@ -2767,7 +2766,7 @@ else if(A==0&&a!=0&&b!=0){
             	}
          }
          void ZHIJIAOSANJIAOXINGtext(){
-        	 if(A==0||a==0||b==0||c==0||alpha==0||beta==0){ Toast.makeText(getActivity(), "ï¿½ï¿½ï¿½Ý²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ã£¡", Toast.LENGTH_SHORT).show();return;}
+        	 if(A==0||a==0||b==0||c==0||alpha==0||beta==0){ Toast.makeText(getActivity(), "Êý¾Ý²»¹»£¡ÎÞ·¨¼ÆËã£¡", Toast.LENGTH_SHORT).show();return;}
          	
          	else{
          		A_text=a*b/2 ;  	
@@ -2776,12 +2775,12 @@ else if(A==0&&a!=0&&b!=0){
          		c_text=a/Math.sin(alpha)  ;  	
          		alpha_text = Math.asin(a/c);
          		beta_text = Math.asin(b/c);
-        		if(Math.abs(A_text-A)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-        		if(Math.abs(a_text-a)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-        		if(Math.abs(b_text-b)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-        		if(Math.abs(c_text-c)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;} 
-        		if(Math.abs(alpha_text-alpha)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-        		if(Math.abs(beta_text-beta)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;} 
+        		if(Math.abs(A_text-A)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+        		if(Math.abs(a_text-a)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+        		if(Math.abs(b_text-b)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+        		if(Math.abs(c_text-c)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;} 
+        		if(Math.abs(alpha_text-alpha)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+        		if(Math.abs(beta_text-beta)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;} 
         }
         		DecimalFormat df1 = new DecimalFormat("###.###########");   
         		DecimalFormat df2 = new DecimalFormat("###.###########");
@@ -2799,7 +2798,7 @@ else if(A==0&&a!=0&&b!=0){
         	
          }
        
-     //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+     //µÈÑüÈý½ÇÐÎ
          public void DENGYAOSANJIAOXING(){
         	 if(b==0&&A!=0&&h!=0)
          	{
@@ -2934,7 +2933,7 @@ else if(A==0&&a!=0&&h!=0){
          	}
          }
          void DENGYAOSANJIAOXINGtext(){
-        	 if(A==0||P==0||a==0||b==0||h==0||alpha==0||beta==0){ Toast.makeText(getActivity(), "ï¿½ï¿½ï¿½Ý²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ã£¡", Toast.LENGTH_SHORT).show();return;}
+        	 if(A==0||P==0||a==0||b==0||h==0||alpha==0||beta==0){ Toast.makeText(getActivity(), "Êý¾Ý²»¹»£¡ÎÞ·¨¼ÆËã£¡", Toast.LENGTH_SHORT).show();return;}
           	
           	else{
           		A_text=b*h/2  ;
@@ -2944,13 +2943,13 @@ else if(A==0&&a!=0&&h!=0){
           		h_text=a*Math.sin(alpha) ;  	
           		alpha_text = (Math.PI-beta)/2;
           		beta_text = Math.PI-2*alpha;
-         		if(Math.abs(A_text-A)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-         		if(Math.abs(P_text-P)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;} 
-         		if(Math.abs(a_text-a)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-         		if(Math.abs(b_text-b)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-         		if(Math.abs(h_text-h)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;} 
-         		if(Math.abs(alpha_text-alpha)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-         		if(Math.abs(beta_text-beta)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;} 
+         		if(Math.abs(A_text-A)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+         		if(Math.abs(P_text-P)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;} 
+         		if(Math.abs(a_text-a)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+         		if(Math.abs(b_text-b)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+         		if(Math.abs(h_text-h)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;} 
+         		if(Math.abs(alpha_text-alpha)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+         		if(Math.abs(beta_text-beta)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;} 
          		
          }
          		DecimalFormat df1 = new DecimalFormat("###.###########");   
@@ -2973,7 +2972,7 @@ else if(A==0&&a!=0&&h!=0){
          
          
          
-         //Æ½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½
+         //Æ½ÐÐËÄ±ßÐÎ
          public void PINGXINGSIBIANXING(){
         	 if(b==0&&A!=0&&h!=0)
          	{
@@ -3025,7 +3024,7 @@ else if(A==0&&a!=0&&h!=0){
 			
          }
          void PINGXINGSIBIANXINGtext(){
-        	 if(A==0||P==0||a==0||b==0||h==0||alpha==0||beta==0){ Toast.makeText(getActivity(), "ï¿½ï¿½ï¿½Ý²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ã£¡", Toast.LENGTH_SHORT).show();return;}
+        	 if(A==0||P==0||a==0||b==0||h==0||alpha==0||beta==0){ Toast.makeText(getActivity(), "Êý¾Ý²»¹»£¡ÎÞ·¨¼ÆËã£¡", Toast.LENGTH_SHORT).show();return;}
            	
            	else{
            		A_text=b*h ;
@@ -3035,12 +3034,12 @@ else if(A==0&&a!=0&&h!=0){
            		h_text=a*Math.sin(alpha) ;  	
            		alpha_text = Math.asin(h/a);
            		
-          		if(Math.abs(A_text-A)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-          		if(Math.abs(P_text-P)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;} 
-          		if(Math.abs(a_text-a)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-          		if(Math.abs(b_text-b)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-          		if(Math.abs(h_text-h)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;} 
-          		if(Math.abs(alpha_text-alpha)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
+          		if(Math.abs(A_text-A)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+          		if(Math.abs(P_text-P)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;} 
+          		if(Math.abs(a_text-a)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+          		if(Math.abs(b_text-b)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+          		if(Math.abs(h_text-h)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;} 
+          		if(Math.abs(alpha_text-alpha)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
          
           		
           }
@@ -3061,7 +3060,7 @@ else if(A==0&&a!=0&&h!=0){
           	
          }
          
-     //ï¿½ï¿½ï¿½ï¿½
+     //ÌÝÐÎ
          public void TIXING(){
         	 if(a==0&&P!=0&&b!=0&&c!=0&&d!=0)
           	{
@@ -3113,7 +3112,7 @@ else if(A==0&&a!=0&&h!=0){
  			
          }
          void TIXINGtext(){
-         	 if(A==0||P==0||a==0||b==0||c==0||d==0){ Toast.makeText(getActivity(), "ï¿½ï¿½ï¿½Ý²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ã£¡", Toast.LENGTH_SHORT).show();return;}
+         	 if(A==0||P==0||a==0||b==0||c==0||d==0){ Toast.makeText(getActivity(), "Êý¾Ý²»¹»£¡ÎÞ·¨¼ÆËã£¡", Toast.LENGTH_SHORT).show();return;}
             	
             	else{
             		A_text=((a+b)/(4*(b-a)))*Math.sqrt((-a+b+c+d)*(a-b+c+d)*(a-b+c-d)*(a-b-c+d)) ;
@@ -3123,12 +3122,12 @@ else if(A==0&&a!=0&&h!=0){
             		c_text=P-a-b-d ;  	
             		d_text = P-a-b-c;
             		
-           		if(Math.abs(A_text-A)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-           		if(Math.abs(P_text-P)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;} 
-           		if(Math.abs(a_text-a)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-           		if(Math.abs(b_text-b)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-           		if(Math.abs(c_text-c)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;} 
-           		if(Math.abs(d_text-d)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
+           		if(Math.abs(A_text-A)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+           		if(Math.abs(P_text-P)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;} 
+           		if(Math.abs(a_text-a)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+           		if(Math.abs(b_text-b)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+           		if(Math.abs(c_text-c)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;} 
+           		if(Math.abs(d_text-d)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
           
            		
            }
@@ -3148,7 +3147,7 @@ else if(A==0&&a!=0&&h!=0){
            	 editText6.setText(String.valueOf(df6.format(d)));
            	
          }
-      //×µï¿½ï¿½
+      //×µÌå
          public void ZHUITI(){
         	 if(r==0&&A!=0&&h!=0)
            	{
@@ -3199,7 +3198,7 @@ else if(A==0&&a!=0&&h!=0){
            	}
          }
          void ZHUITItext(){
-        	 if(A==0||V==0||r==0||d==0||h==0){ Toast.makeText(getActivity(), "ï¿½ï¿½ï¿½Ý²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ã£¡", Toast.LENGTH_SHORT).show();return;}
+        	 if(A==0||V==0||r==0||d==0||h==0){ Toast.makeText(getActivity(), "Êý¾Ý²»¹»£¡ÎÞ·¨¼ÆËã£¡", Toast.LENGTH_SHORT).show();return;}
          	
          	else{
          		A_text=Math.PI*r*(r+Math.sqrt(Math.pow(r, 2)+Math.pow(h, 2))) ;
@@ -3209,11 +3208,11 @@ else if(A==0&&a!=0&&h!=0){
          		h_text=3*V/(Math.PI*Math.pow(r, 2)) ;  	
          		
          		
-        		if(Math.abs(A_text-A)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-        		if(Math.abs(V_text-V)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;} 
-        		if(Math.abs(r_text-r)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-        		if(Math.abs(d_text-d)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-        		if(Math.abs(h_text-h)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;} 
+        		if(Math.abs(A_text-A)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+        		if(Math.abs(V_text-V)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;} 
+        		if(Math.abs(r_text-r)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+        		if(Math.abs(d_text-d)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+        		if(Math.abs(h_text-h)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;} 
         		
        
         		
@@ -3234,7 +3233,7 @@ else if(A==0&&a!=0&&h!=0){
         	
         	
          }
-         //ï¿½ï¿½ï¿½ï¿½
+         //ÍÖÇò
          public void TUOQIU(){
         	 if(A==0&&a!=0&&b!=0&&c!=0)
             	{
@@ -3292,7 +3291,7 @@ else if(A==0&&a!=0&&h!=0){
             	}
          }
          void TUOQIUtext(){
-        	 if(A==0||V==0||a==0||b==0||c==0){ Toast.makeText(getActivity(), "ï¿½ï¿½ï¿½Ý²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ã£¡", Toast.LENGTH_SHORT).show();return;}
+        	 if(A==0||V==0||a==0||b==0||c==0){ Toast.makeText(getActivity(), "Êý¾Ý²»¹»£¡ÎÞ·¨¼ÆËã£¡", Toast.LENGTH_SHORT).show();return;}
           	
           	else{
           		A_text=4*Math.PI*Math.pow((Math.pow(a, 1.6075)*Math.pow(b, 1.6075)+Math.pow(a, 1.6075)*Math.pow(c, 1.6075)+Math.pow(b, 1.6075)*Math.pow(c, 1.6075))/3, 1/1.6075);
@@ -3302,11 +3301,11 @@ else if(A==0&&a!=0&&h!=0){
           		c_text=3*V/(4*Math.PI*a*b);
           		
           		
-         		if(Math.abs(A_text-A)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-         		if(Math.abs(V_text-V)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;} 
-         		if(Math.abs(a_text-a)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-         		if(Math.abs(b_text-b)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-         		if(Math.abs(c_text-c)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;} 
+         		if(Math.abs(A_text-A)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+         		if(Math.abs(V_text-V)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;} 
+         		if(Math.abs(a_text-a)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+         		if(Math.abs(b_text-b)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+         		if(Math.abs(c_text-c)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;} 
          		
         
          		
@@ -3328,7 +3327,7 @@ else if(A==0&&a!=0&&h!=0){
          	
          }
          
-         //ï¿½ï¿½ï¿½ï¿½
+         //ÖùÌå
          public void ZHUTI(){
         	 if(A==0&&B!=0&&N!=0&&a!=0&&h!=0)
          	{
@@ -3386,7 +3385,7 @@ else if(A==0&&a!=0&&h!=0){
 			
          }
          void ZHUTItext(){
-        	 if(A==0||B==0||V==0||N==0||a==0||h==0){ Toast.makeText(getActivity(), "ï¿½ï¿½ï¿½Ý²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ã£¡", Toast.LENGTH_SHORT).show();return;}
+        	 if(A==0||B==0||V==0||N==0||a==0||h==0){ Toast.makeText(getActivity(), "Êý¾Ý²»¹»£¡ÎÞ·¨¼ÆËã£¡", Toast.LENGTH_SHORT).show();return;}
            	
            	else{
            		A_text=2*B+N*a*h;
@@ -3396,11 +3395,11 @@ else if(A==0&&a!=0&&h!=0){
            		a_text=Math.sqrt(4*V/(N*h*Math.cos(Math.PI/N)/Math.sin(Math.PI/N)));
            		h_text=V/B;
            		
-          		if(Math.abs(A_text-A)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-          		if(Math.abs(B_text-B)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;} 
-          		if(Math.abs(V_text-V)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-          		if(Math.abs(a_text-a)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-          		if(Math.abs(h_text-h)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;} 
+          		if(Math.abs(A_text-A)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+          		if(Math.abs(B_text-B)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;} 
+          		if(Math.abs(V_text-V)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+          		if(Math.abs(a_text-a)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+          		if(Math.abs(h_text-h)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;} 
           		
          
           		
@@ -3421,7 +3420,7 @@ else if(A==0&&a!=0&&h!=0){
           	editText6.setText(String.valueOf(df5.format(h)));
           	
          }
-  //ï¿½ï¿½
+  //Çò
          public void QIU(){
         	 if(r==0&&A!=0)
           	{
@@ -3466,7 +3465,7 @@ else if(A==0&&a!=0&&h!=0){
  			
          }
          void QIUtext(){
-         	 if(A==0||V==0||r==0||d==0){ Toast.makeText(getActivity(), "ï¿½ï¿½ï¿½Ý²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ã£¡", Toast.LENGTH_SHORT).show();return;}
+         	 if(A==0||V==0||r==0||d==0){ Toast.makeText(getActivity(), "Êý¾Ý²»¹»£¡ÎÞ·¨¼ÆËã£¡", Toast.LENGTH_SHORT).show();return;}
             	
             	else{
             		A_text=4*Math.PI*Math.pow(r, 2);
@@ -3475,10 +3474,10 @@ else if(A==0&&a!=0&&h!=0){
             	
             		d_text=2*r;
             		
-           		if(Math.abs(A_text-A)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-           		if(Math.abs(V_text-V)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;} 
-           		if(Math.abs(r_text-r)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-           		if(Math.abs(d_text-d)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
+           		if(Math.abs(A_text-A)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+           		if(Math.abs(V_text-V)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;} 
+           		if(Math.abs(r_text-r)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+           		if(Math.abs(d_text-d)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
            		
            		
           
@@ -3499,7 +3498,7 @@ else if(A==0&&a!=0&&h!=0){
            	
          }
          
-         //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+         //ËÄÃæÌå
          public void SIMIANTI(){
         	 if(a==0&&A!=0)
            	{
@@ -3533,7 +3532,7 @@ else if(A==0&&a!=0&&h!=0){
   			
          }
          void SIMIANTItext(){
-        	 if(A==0||V==0||a==0){ Toast.makeText(getActivity(), "ï¿½ï¿½ï¿½Ý²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ã£¡", Toast.LENGTH_SHORT).show();return;}
+        	 if(A==0||V==0||a==0){ Toast.makeText(getActivity(), "Êý¾Ý²»¹»£¡ÎÞ·¨¼ÆËã£¡", Toast.LENGTH_SHORT).show();return;}
          	
          	else{
          		A_text=1.7320508075*Math.pow(a, 2);
@@ -3542,9 +3541,9 @@ else if(A==0&&a!=0&&h!=0){
          		
          	
          		
-        		if(Math.abs(A_text-A)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½1", Toast.LENGTH_SHORT).show();return;}
-        		if(Math.abs(V_text-V)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½2", Toast.LENGTH_SHORT).show();return;} 
-        		if(Math.abs(a_text-a)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½3", Toast.LENGTH_SHORT).show();return;}
+        		if(Math.abs(A_text-A)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡1", Toast.LENGTH_SHORT).show();return;}
+        		if(Math.abs(V_text-V)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡2", Toast.LENGTH_SHORT).show();return;} 
+        		if(Math.abs(a_text-a)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡3", Toast.LENGTH_SHORT).show();return;}
         		
         		
         		
@@ -3565,7 +3564,7 @@ else if(A==0&&a!=0&&h!=0){
        
          }
          
-        //Ô²ï¿½ï¿½
+        //Ô²Öù
          public void YUANZHU(){
         	 if(A==0&&r!=0&&h!=0)
           	{
@@ -3623,7 +3622,7 @@ else if(A==0&&a!=0&&h!=0){
  			
          }
          void YUANZHUtext(){
-          	 if(A==0||V==0||r==0||d==0||h==0){ Toast.makeText(getActivity(), "ï¿½ï¿½ï¿½Ý²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ã£¡", Toast.LENGTH_SHORT).show();return;}
+          	 if(A==0||V==0||r==0||d==0||h==0){ Toast.makeText(getActivity(), "Êý¾Ý²»¹»£¡ÎÞ·¨¼ÆËã£¡", Toast.LENGTH_SHORT).show();return;}
             	
             	else{
             		A_text=2*Math.PI*r*(h+r);
@@ -3633,11 +3632,11 @@ else if(A==0&&a!=0&&h!=0){
             		d_text=2*r;
             		h_text=A/(2*Math.PI*r)-r;
             		
-           		if(Math.abs(A_text-A)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-           		if(Math.abs(V_text-V)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;} 
-           		if(Math.abs(r_text-r)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-           		if(Math.abs(d_text-d)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;}
-           		if(Math.abs(h_text-h)>0.01){ Toast.makeText(getActivity(), "ï¿½ï¿½Ã¬ï¿½Ü£ï¿½", Toast.LENGTH_SHORT).show();return;} 
+           		if(Math.abs(A_text-A)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+           		if(Math.abs(V_text-V)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;} 
+           		if(Math.abs(r_text-r)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+           		if(Math.abs(d_text-d)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;}
+           		if(Math.abs(h_text-h)>0.01){ Toast.makeText(getActivity(), "ÓÐÃ¬¶Ü£¡", Toast.LENGTH_SHORT).show();return;} 
            		
           
            		
@@ -3663,7 +3662,7 @@ else if(A==0&&a!=0&&h!=0){
          
          
          
-         //ï¿½ï¿½È¥ï¿½ï¿½ï¿½ï¿½	
+         //³ýÈ¥½¹µã	
     		public void chujiaodian(EditText et){
     			et.setImeOptions(EditorInfo.IME_FLAG_NO_EXTRACT_UI);  
 
@@ -3671,7 +3670,7 @@ else if(A==0&&a!=0&&h!=0){
     		  		
     		          et.setInputType(InputType.TYPE_NULL);
     		  } else {
-    		  	getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+    		  	getActivity().getWindow().setSoftInputMode(LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
     		          try {
     		                  Class<EditText> cls = EditText.class;
     		                  Method setSoftInputShownOnFocus;

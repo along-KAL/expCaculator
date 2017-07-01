@@ -1,4 +1,4 @@
-package com.example.main;
+package com.example.calculatorjykal;
 
 import java.util.ArrayList;
 import android.annotation.SuppressLint;
@@ -19,7 +19,6 @@ import android.widget.ImageView;
 import android.widget.ListView;
 
 
-import com.example.main.R;
 import com.example.adapter.NavDrawerListAdapter;
 import com.example.entity.NavDrawerItem;
 
@@ -119,7 +118,7 @@ public class MenuFragment extends Fragment implements OnItemClickListener {
        animation.setDuration(800);
        set.addAnimation(animation);
        */
-   Animation  animation = new TranslateAnimation(-20, 0, 0, 0);    //RotateAnimation  ?????????Å£?????ßπ??  
+   Animation  animation = new TranslateAnimation(-20, 0, 0, 0);    //RotateAnimation  ???????????????ßπ??  
       animation.setDuration(200);
       set.addAnimation(animation);
       LayoutAnimationController controller = new LayoutAnimationController(set, 0);

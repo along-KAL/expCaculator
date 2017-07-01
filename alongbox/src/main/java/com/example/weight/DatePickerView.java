@@ -60,7 +60,7 @@ mCallBack = callBack;
 
 
 Context themeContext = getContext();
-//將設置alertdialog的settitle和setButton方法注释掉，因为下面要使用setContentView（View view）方法
+//置alertdialog的settitle和setButton方法注释掉，因为下面要使用setContentView（View view）方法
 //代替原有的setView（View view）方法，区别是替换的范围不同。替换后就不需要设置alertdialog的title和button了。
 // setButton(BUTTON_POSITIVE,
 // themeContext.getText(R.string.date_time_set), this);

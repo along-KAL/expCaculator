@@ -2,8 +2,8 @@
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="GB2312">
     <file url="file://$PROJECT_DIR$/alongbox/src/main/java/com/example/main/MainActivity.java" charset="GB2312" />
-    <file url="file://$PROJECT_DIR$/alongbox/src/main/java/com/example/main/MenuFragment.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/alongbox/src/main/java/com/example/module/Daojishi.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/alongbox/src/main/java/com/example/main/MenuFragment.java" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/alongbox/src/main/java/com/example/module/Daojishi.java" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/alongbox/src/main/java/com/example/module/about/Guanyu.java" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/alongbox/src/main/java/com/example/module/calculate/Changshu.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/alongbox/src/main/java/com/example/module/calculate/Jisuanqi.java" charset="GBK" />
